@@ -21,6 +21,19 @@
         font-size: 1em;
         font-weight: 400;
         margin-left: 4em;
+
+        .navLink {
+          color: darken($font-color, 40%);
+          transition: all 0.3s;
+
+          &.active {
+            color: $font-color;
+          }
+
+          &:hover {
+            color: $font-color;
+          }
+        }
       }
     }
   }

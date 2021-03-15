@@ -1,26 +1,37 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 import classes from './Header.module.scss'
 
 const Header = () => {
+  const links = [
+    { to: '/', title: 'Home' },
+    { to: '/projects', title: 'Projects' },
+  ]
+
   return (
     <div className={'mainContainer'}>
       <header className={classes.headerContainer}>
         <div className={classes.nameContainer}>
           {/* TODO: Добавить лого */}
           <h1 className={classes.nameTitle}>
-            <Link to={'/'}>Valentin Alekhin</Link>
+            <NavLink to={'/'}>Valentin Alekhin</NavLink>
           </h1>
         </div>
         <nav className={classes.navContainer}>
           <ul className={classes.navList}>
-            <li className={classes.navItem}>
-              <Link to={'/'}>Home</Link>
-            </li>
-            <li className={classes.navItem}>
-              <Link to={'/projects'}>Projects</Link>
-            </li>
+            {links.map(({ to, title }, i) => (
+              <li key={i} className={classes.navItem}>
+                <NavLink
+                  exact
+                  className={classes.navLink}
+                  activeClassName={classes.active}
+                  to={to}
+                >
+                  {title}
+                </NavLink>
+              </li>
+            ))}
           </ul>
         </nav>
       </header>
