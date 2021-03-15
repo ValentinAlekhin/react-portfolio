@@ -8,10 +8,13 @@ import Projects from './pages/Projects/Projects'
 import Project from './pages/Project/Project'
 
 import Header from './components/Header/Header'
+import Socials from './components/Socials/Socials'
 
 const App = () => (
   <div>
     <Header />
+
+    <Socials />
 
     <Switch>
       <Route exact path="/" component={Home} />

@@ -1,0 +1,40 @@
+@import '../../style/index.scss';
+
+.socialsContainer {
+  position: fixed;
+  top: 50%;
+  left: 1%;
+  transform: translateY(-50%);
+
+  @include md {
+    left: 1%;
+  }
+
+  @include lg {
+    left: 2.5%;
+  }
+
+  @include xl {
+    left: 5%;
+  }
+
+  .socialsList {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 10em;
+
+    .socialItem {
+      .socialIco path {
+        fill: #fff;
+        transition: all 0.3s;
+      }
+
+      &:hover {
+        .socialIco path {
+          fill: gray;
+        }
+      }
+    }
+  }
+}
