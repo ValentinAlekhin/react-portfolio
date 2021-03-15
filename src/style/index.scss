@@ -1,0 +1,45 @@
+@import './media';
+
+$background-color: #000;
+$font-color: #fefefe;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: $background-color;
+  color: $font-color;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: $font-color;
+}
+
+.mainContainer {
+  margin: 0 auto;
+  width: 95%;
+
+  @include md {
+    width: 98%;
+  }
+
+  @include lg {
+    width: 95%;
+  }
+
+  @include xl {
+    width: 90%;
+  }
+}
+
+.fluid {
+  width: 100%;
+}
