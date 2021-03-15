@@ -26,13 +26,13 @@
 
     .socialItem {
       .socialIco path {
-        fill: #fff;
+        fill: $font-color;
         transition: all 0.3s;
       }
 
       &:hover {
         .socialIco path {
-          fill: gray;
+          fill: darken($font-color, 40%);
         }
       }
     }
