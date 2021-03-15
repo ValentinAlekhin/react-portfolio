@@ -11,7 +11,11 @@ const Socials = () => {
     <div className={classes.socialsContainer}>
       <ul className={classes.socialsList}>
         <li className={classes.socialItem}>
-          <a href="/" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://t.me/alekhin_vv"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <TelegramIcon
               className={classes.socialIco}
               style={{ width: '25px', height: '25px' }}
@@ -19,7 +23,11 @@ const Socials = () => {
           </a>
         </li>
         <li className={classes.socialItem}>
-          <a href="/social.href" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://github.com/ValentinAlekhin"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <GitHubIcon
               className={classes.socialIco}
               style={{ width: '25px', height: '25px' }}
