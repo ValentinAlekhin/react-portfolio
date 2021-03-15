@@ -1,6 +1,8 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 
+import { ReactComponent as Icon } from './abstract.svg'
+
 import classes from './Header.module.scss'
 
 const Header = () => {
@@ -13,7 +15,7 @@ const Header = () => {
     <div className={'mainContainer'}>
       <header className={classes.headerContainer}>
         <div className={classes.nameContainer}>
-          {/* TODO: Добавить лого */}
+          <Icon style={{ fill: '#fff', height: '1.5em', width: '1.5em' }} />
           <h1 className={classes.nameTitle}>
             <NavLink to={'/'}>Valentin Alekhin</NavLink>
           </h1>
