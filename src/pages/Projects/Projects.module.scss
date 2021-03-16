@@ -1,19 +1,17 @@
 @import '../../style/index.scss';
 
 .Projects {
+  width: 100%;
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: minmax(200px, 1fr);
   grid-gap: 1em;
+  margin-top: 2em;
 
   @include sm {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
   }
 
   @include lg {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  @include xl {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
   }
 }

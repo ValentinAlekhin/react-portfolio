@@ -18,6 +18,10 @@ html {
 body {
   color: $font-color;
   font-family: 'Roboto', sans-serif;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 ul {

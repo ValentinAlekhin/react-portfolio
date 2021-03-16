@@ -9,11 +9,12 @@ const Projects = () => {
     <div className="mainContainer">
       <div className="contentContainer">
         <div className={classes.Projects}>
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
+          <ProjectCard
+            title="Ника Дмитриева NEW"
+            description="Это что такое типа того но если вдруг что то норм Это что такое типа того но если вдруг что то норм"
+            status="in work"
+            skills={['js', 'React', 'Redux', 'Express', 'MongoDB']}
+          />
         </div>
       </div>
     </div>
