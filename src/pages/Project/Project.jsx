@@ -1,9 +1,28 @@
-import React from 'react'
+import React, { useContext } from 'react'
 
-import './Project.module.scss'
+import classes from './Project.module.scss'
 
-const Project = () => {
-  return <div>Project</div>
+import { ProjectsContext } from '../../context/ProjectsContext'
+
+import Skills from '../../components/Skills/Skills'
+
+const Project = ({ match }) => {
+  const id = parseInt(match.params.id)
+  const { title, description, skills } = useContext(ProjectsContext).find(
+    el => el.id === id
+  )
+
+  return (
+    <div className="mainContainer">
+      <div className="contentContainer">
+        <div className={classes.Project}>
+          <h2 className={classes.title}>{title}</h2>
+          <p className={classes.description}>{description}</p>
+          <Skills list={skills} />
+        </div>
+      </div>
+    </div>
+  )
 }
 
 export default Project
