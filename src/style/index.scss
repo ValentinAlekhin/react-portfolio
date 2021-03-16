@@ -13,6 +13,11 @@ html {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+
+  &::selection {
+    background: #9b9b9b;
+    color: $background-color;
+  }
 }
 
 body {
