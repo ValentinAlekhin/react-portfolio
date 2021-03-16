@@ -2,6 +2,12 @@
 
 .Project {
   margin-top: 3em;
+  padding: 1em;
+  border-radius: 5px;
+  background-color: rgba($font-color, 0.05);
+  backdrop-filter: blur(4px);
+  transition: all 0.3s;
+
   .title {
     font-size: 3em;
   }
@@ -17,5 +23,8 @@
   }
 
   .video {
+  }
+
+  .links {
   }
 }
