@@ -19,6 +19,7 @@ const Projects = () => {
               description={el.shortDescription}
               status={el.status}
               skills={el.skills}
+              id={el.id}
             />
           ))}
         </div>
