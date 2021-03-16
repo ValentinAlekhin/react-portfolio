@@ -48,18 +48,18 @@ a {
 
 .contentContainer {
   margin: 0 auto;
-  width: 95%;
+  width: 90%;
 
   @include md {
-    width: 98%;
+    width: 85%;
   }
 
   @include lg {
-    width: 95%;
+    width: 80%;
   }
 
   @include xl {
-    width: 90%;
+    width: 75%;
   }
 }
 
