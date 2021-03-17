@@ -10,17 +10,17 @@
 
   .titleAndLinks {
     align-items: center;
+    margin-bottom: 2.5rem;
   }
 
   .title {
     font-size: 3rem;
-    margin-right: 1rem;
+    margin-right: 2rem;
   }
 
   .description {
-    margin-top: 1rem;
     font-size: 1.2rem;
-    line-height: 1.6;
+    line-height: 1.4;
     color: darken($font-color, 30%);
   }
 
