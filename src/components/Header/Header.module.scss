@@ -2,10 +2,14 @@
 
 .headerContainer {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   text-transform: uppercase;
   margin-top: 2rem;
+
+  @include md {
+    justify-content: space-between;
+  }
 
   .nameContainer {
     display: flex;
@@ -19,6 +23,12 @@
   }
 
   .navContainer {
+    display: none;
+
+    @include md {
+      display: block;
+    }
+
     .navList {
       display: flex;
 
