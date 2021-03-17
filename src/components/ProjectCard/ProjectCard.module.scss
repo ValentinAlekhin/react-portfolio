@@ -33,4 +33,14 @@
     margin-top: 0.5rem;
     color: darken($font-color, 30%);
   }
+
+  .skillsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+
+    .skillText {
+      color: darken($font-color, 10%);
+    }
+  }
 }

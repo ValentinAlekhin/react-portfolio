@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 import classes from './ProjectCard.module.scss'
 
-import Badges from '../Badges/Badges'
+import Badge from '../../ui/Badge/Badge'
 
 const ProjectCard = ({ status, title, description, skills, id }) => {
   return (
@@ -11,7 +11,11 @@ const ProjectCard = ({ status, title, description, skills, id }) => {
       <span className={classes.status}>{status}</span>
       <h4 className={classes.title}>{title}</h4>
       <p className={classes.description}>{description}</p>
-      <Badges list={skills} />
+      <div className={classes.skillsContainer}>
+        {skills.map((el, i) => (
+          <Badge key={i} text={el} />
+        ))}
+      </div>
     </Link>
   )
 }

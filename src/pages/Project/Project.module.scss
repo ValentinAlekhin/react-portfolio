@@ -8,8 +8,13 @@
   backdrop-filter: blur(4px);
   transition: all 0.3s;
 
+  .titleAndLinks {
+    align-items: center;
+  }
+
   .title {
     font-size: 3rem;
+    margin-right: 1rem;
   }
 
   .description {
@@ -25,6 +30,10 @@
   .video {
   }
 
+  .titleAndLinks,
+  .skills,
   .links {
+    display: flex;
+    flex-wrap: wrap;
   }
 }
