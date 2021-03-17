@@ -19,7 +19,12 @@ const projects = [
       'MongoDB',
     ],
     status: 'in progress',
-    links: [{ title: 'GitHub', href: 'github.com' }],
+    links: [
+      { title: 'GitHub', href: 'github.com' },
+      { title: 'GitHub', href: 'github.com' },
+      { title: 'GitHub', href: 'github.com' },
+      { title: 'GitHub', href: 'github.com' },
+    ],
     markdown:
       'https://raw.githubusercontent.com/ValentinAlekhin/sort-files-by-type/master/README.md',
   },
@@ -30,7 +35,12 @@ const projects = [
       'Описание как описание что ни есть описание того чо нет в общем это есть  описание длинное такое специально для тестов верстки короче Описание как описание что ни есть описание того чо нет в общем это есть  описание длинное такое специально для тестов верстки короче Описание как описание что ни есть описание того чо нет в общем это есть  описание длинное такое специально для тестов верстки короче Описание как описание что ни есть описание того чо нет в общем это есть  описание длинное такое специально для тестов верстки короче',
     skills: ['JavaScript', 'ReactJS', 'NodeJS', 'Express', 'MongoDB'],
     status: 'in progress',
-    links: [{ title: 'GitHub', href: 'github.com' }],
+    links: [
+      { title: 'GitHub', href: 'github.com' },
+      { title: 'GitHub', href: 'github.com' },
+      { title: 'GitHub', href: 'github.com' },
+      { title: 'GitHub', href: 'github.com' },
+    ],
   },
   {
     title: 'Ника Дмитриева new',
