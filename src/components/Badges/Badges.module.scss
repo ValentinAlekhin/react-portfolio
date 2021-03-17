@@ -1,11 +1,11 @@
 @import '../../style/index.scss';
 
-.skillsList {
+.badgesList {
   display: flex;
   flex-wrap: wrap;
   margin-top: 0.5rem;
 
-  .skillsItem {
+  .badgesItem {
     background: rgba($font-color, 0.1);
     color: darken($font-color, 10%);
     border-radius: 5px;

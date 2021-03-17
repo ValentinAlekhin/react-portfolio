@@ -4,7 +4,7 @@ import classes from './Project.module.scss'
 
 import { ProjectsContext } from '../../context/ProjectsContext'
 
-import Skills from '../../components/Skills/Skills'
+import Badges from '../../components/Badges/Badges'
 import Markdown from '../../components/Markdown/Markdown'
 
 const Project = ({ match }) => {
@@ -20,7 +20,7 @@ const Project = ({ match }) => {
           <h2 className={classes.title}>{title}</h2>
           <p className={classes.description}>{description}</p>
           {markdown ? <Markdown url={markdown} /> : null}
-          <Skills list={skills} />
+          <Badges list={skills} />
         </div>
       </div>
     </div>
