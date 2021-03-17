@@ -46,15 +46,15 @@ $hr-line-color: #21262d;
     overflow: hidden;
     transition: all 0.5s ease-in-out;
     height: 0px;
-    margin-bottom: 1em;
+    margin-bottom: 1rem;
 
     h1 {
-      font-size: 2em;
+      font-size: 2rem;
     }
 
     h1,
     h2 {
-      padding-bottom: 0.3em;
+      padding-bottom: 0.3rem;
       border-bottom: 1px solid $hr-line-color;
     }
 
@@ -76,16 +76,16 @@ $hr-line-color: #21262d;
     }
 
     ol {
-      padding-left: 2em;
+      padding-left: 2rem;
 
       li + li {
-        margin-top: 0.25em;
+        margin-top: 0.25rem;
       }
     }
 
     code,
     pre > code:not() {
-      padding: 0.2em 0.4em;
+      padding: 0.2em 0.4rem;
       margin: 0;
       font-size: 85%;
       background-color: #2f333a;

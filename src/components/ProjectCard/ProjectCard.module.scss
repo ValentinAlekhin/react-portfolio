@@ -2,7 +2,7 @@
 
 .ProjectCard {
   position: relative;
-  padding: 1em;
+  padding: 1rem;
   border-radius: 5px;
   background-color: rgba($font-color, 0.05);
   backdrop-filter: blur(4px);
@@ -21,16 +21,16 @@
   .status {
     text-transform: uppercase;
     color: darken($font-color, 70%);
-    font-size: 0.8em;
+    font-size: 0.8rem;
   }
 
   .title {
-    margin-top: 0.3em;
-    font-size: 1.5em;
+    margin-top: 0.3rem;
+    font-size: 1.5rem;
   }
 
   .description {
-    margin-top: 0.5em;
+    margin-top: 0.5rem;
     color: darken($font-color, 30%);
   }
 }

@@ -1,20 +1,20 @@
 @import '../../style/index.scss';
 
 .Project {
-  margin-top: 3em;
-  padding: 1em;
+  margin-top: 3rem;
+  padding: 1rem;
   border-radius: 5px;
   background-color: rgba($font-color, 0.05);
   backdrop-filter: blur(4px);
   transition: all 0.3s;
 
   .title {
-    font-size: 3em;
+    font-size: 3rem;
   }
 
   .description {
-    margin-top: 1em;
-    font-size: 1.2em;
+    margin-top: 1rem;
+    font-size: 1.2rem;
     line-height: 1.6;
     color: darken($font-color, 30%);
   }

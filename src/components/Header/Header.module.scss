@@ -5,15 +5,15 @@
   justify-content: space-between;
   align-items: center;
   text-transform: uppercase;
-  margin-top: 2em;
+  margin-top: 2rem;
 
   .nameContainer {
     display: flex;
     align-items: center;
 
     .nameTitle {
-      margin-left: 0.5em;
-      font-size: 1.5em;
+      margin-left: 0.5rem;
+      font-size: 1.5rem;
       letter-spacing: 0.5px;
     }
   }
@@ -23,9 +23,9 @@
       display: flex;
 
       .navItem {
-        font-size: 1em;
+        font-size: 1rem;
         font-weight: 400;
-        margin-left: 4em;
+        margin-left: 4rem;
 
         .navLink {
           color: darken($font-color, 40%);

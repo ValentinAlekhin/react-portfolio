@@ -4,8 +4,8 @@
   width: 100%;
   display: grid;
   grid-template-columns: minmax(200px, 1fr);
-  grid-gap: 1em;
-  margin-top: 2em;
+  grid-gap: 1rem;
+  margin-top: 2rem;
 
   @include sm {
     grid-template-columns: repeat(2, minmax(200px, 1fr));
