@@ -8,11 +8,14 @@ import Projects from './pages/Projects/Projects'
 import Project from './pages/Project/Project'
 
 import Header from './components/Header/Header'
+import SideNav from './components/SideNav/SideNav'
 import Socials from './components/Socials/Socials'
 
 const App = () => (
   <div>
     <Header />
+
+    <SideNav />
 
     <Socials />
 
