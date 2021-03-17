@@ -5,6 +5,7 @@ import classes from './Project.module.scss'
 import { ProjectsContext } from '../../context/ProjectsContext'
 
 import Skills from '../../components/Skills/Skills'
+import Markdown from '../../components/Markdown/Markdown'
 
 const Project = ({ match }) => {
   const id = parseInt(match.params.id)
@@ -18,6 +19,11 @@ const Project = ({ match }) => {
         <div className={classes.Project}>
           <h2 className={classes.title}>{title}</h2>
           <p className={classes.description}>{description}</p>
+          <Markdown
+            url={
+              'https://raw.githubusercontent.com/ValentinAlekhin/sort-files-by-type/master/README.md'
+            }
+          />
           <Skills list={skills} />
         </div>
       </div>
