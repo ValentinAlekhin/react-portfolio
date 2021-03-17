@@ -9,9 +9,9 @@ import Markdown from '../../components/Markdown/Markdown'
 
 const Project = ({ match }) => {
   const id = parseInt(match.params.id)
-  const { title, description, skills } = useContext(ProjectsContext).find(
-    el => el.id === id
-  )
+  const { title, description, skills, markdown } = useContext(
+    ProjectsContext
+  ).find(el => el.id === id)
 
   return (
     <div className="mainContainer">
@@ -19,11 +19,7 @@ const Project = ({ match }) => {
         <div className={classes.Project}>
           <h2 className={classes.title}>{title}</h2>
           <p className={classes.description}>{description}</p>
-          <Markdown
-            url={
-              'https://raw.githubusercontent.com/ValentinAlekhin/sort-files-by-type/master/README.md'
-            }
-          />
+          {markdown ? <Markdown url={markdown} /> : null}
           <Skills list={skills} />
         </div>
       </div>

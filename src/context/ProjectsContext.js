@@ -20,6 +20,8 @@ const projects = [
     ],
     status: 'in progress',
     links: [{ title: 'GitHub', href: 'github.com' }],
+    markdown:
+      'https://raw.githubusercontent.com/ValentinAlekhin/sort-files-by-type/master/README.md',
   },
   {
     title: 'Ника Дмитриева new',
