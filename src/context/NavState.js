@@ -12,17 +12,15 @@ const NavState = ({ children }) => {
 
   const toggleMenuMode = () => {
     const body = document.body
-    const scrollY = body.style.top
 
     if (isMenuOpen) {
-      body.style.position = ''
-      body.style.top = ''
-      window.scrollTo(0, parseInt(scrollY || '0') * -1)
+      body.style.height = ''
+      body.style.overflowY = ''
 
       toggleMenu(false)
     } else {
-      body.style.position = 'fixed'
-      body.style.top = `-${scrollY}`
+      body.style.height = '100vh'
+      body.style.overflowY = 'hidden'
 
       toggleMenu(true)
     }

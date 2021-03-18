@@ -9,12 +9,11 @@ import { respondTo } from '../../style/_respondTo'
 
 const Wrapper = styled.div`
   position: fixed;
-  top: ${({ top }) => top};
-  left: ${({ left }) => left};
-  transform: translate(-50%, -50%);
-  height: ${({ open, units }) => (open ? 500 + units : 0)};
-  width: ${({ open, units }) => (open ? 500 + units : 0)};
-  border-radius: 100%;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  transform: ${({ open }) => (open ? 'translateX(0)' : 'translateX(100%)')};
   background-color: gray;
   z-index: 5;
   overflow: hidden;
@@ -24,7 +23,7 @@ const Wrapper = styled.div`
 `
 
 const Content = styled.div`
-  position: fixed;
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -61,40 +60,15 @@ const StyledNavLink = styled(NavLink)`
 `
 
 const SideNav = () => {
-  const { isMenuOpen, toggleMenuMode, coords } = useContext(MenuContext)
-
-  const units = window.innerWidth > window.innerHeight ? 'vw' : 'vh'
-
-  let top = 0
-  let left = 0
-  if (coords) {
-    top = coords.top || 0
-    left = coords.left || 0
-  }
-
-  const contentCoords = {
-    top: window.innerHeight / 2 + 'px',
-    left: window.innerWidth / 2 + 'px',
-  }
+  const { isMenuOpen, toggleMenuMode } = useContext(MenuContext)
 
   const links = [
     { to: '/', title: 'Home' },
     { to: '/projects', title: 'Projects' },
   ]
 
-  const scrollHandler = e => {
-    if (isMenuOpen) {
-    }
-  }
-
   return (
-    <Wrapper
-      open={isMenuOpen}
-      top={top}
-      left={left}
-      units={units}
-      onScroll={scrollHandler}
-    >
+    <Wrapper open={isMenuOpen}>
       <Content>
         <nav>
           <NavList>
