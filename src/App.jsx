@@ -3,12 +3,14 @@ import { Switch, Route, Redirect } from 'react-router-dom'
 
 import './App.scss'
 
+import NavState from './context/NavState'
+
 import Home from './pages/Home/Home'
 import Projects from './pages/Projects/Projects'
 import Project from './pages/Project/Project'
 
 import Header from './components/Header/Header'
-import NavState from './context/NavState'
+import SideNav from './components/SideNav/SideNav'
 import Socials from './components/Socials/Socials'
 
 const App = () => {
@@ -23,7 +25,7 @@ const App = () => {
     <NavState>
       <Header toggleSidenav={toggle} isOpen={sidenav} />
 
-      {/* <SideNav isOpen={sidenav} toggle={toggle} /> */}
+      <SideNav />
 
       <Socials />
 

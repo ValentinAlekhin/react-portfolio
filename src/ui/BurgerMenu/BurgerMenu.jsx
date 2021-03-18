@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect, useRef } from 'react'
 import styled from 'styled-components'
 
 import { MenuContext } from '../../context/NavState'
@@ -20,6 +20,7 @@ const BurgerItem = styled.div`
   transition: all 0.3s linear;
   border-radius: 3px;
   transform-origin: 1px;
+  z-index: 20;
 
   &:last-child {
     margin-bottom: 0;
@@ -40,7 +41,13 @@ const BurgerItem = styled.div`
 `
 
 const BurgerMenu = props => {
-  const { isMenuOpen, toggleMenuMode } = useContext(MenuContext)
+  const { isMenuOpen, toggleMenuMode, setBurgerCoords } = useContext(
+    MenuContext
+  )
+  const burgerRef = useRef()
+
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  useEffect(() => setBurgerCoords(burgerRef), [burgerRef])
 
   const clickHandler = () => {
     toggleMenuMode()
@@ -51,7 +58,13 @@ const BurgerMenu = props => {
   const size = props.size || '30px'
 
   return (
-    <BurgerWrapper size={size} onClick={clickHandler} className={className}>
+    <BurgerWrapper
+      id="burgerMenu"
+      size={size}
+      onClick={clickHandler}
+      className={className}
+      ref={burgerRef}
+    >
       {Array(3)
         .fill('')
         .map((_, i) => (
