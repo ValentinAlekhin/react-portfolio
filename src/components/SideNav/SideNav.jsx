@@ -3,13 +3,13 @@ import { NavLink } from 'react-router-dom'
 
 import classes from './SideNav.module.scss'
 
-const SideNav = () => {
+const SideNav = ({ isOpen, toggle }) => {
   const links = [
     { to: '/', title: 'Home' },
     { to: '/projects', title: 'Projects' },
   ]
 
-  return (
+  return isOpen ? (
     <div className={classes.SideNav}>
       <nav className={classes.navContainer}>
         <ul className={classes.navList}>
@@ -28,7 +28,7 @@ const SideNav = () => {
         </ul>
       </nav>
     </div>
-  )
+  ) : null
 }
 
 export default SideNav

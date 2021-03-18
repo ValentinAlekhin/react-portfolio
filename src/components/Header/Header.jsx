@@ -5,7 +5,7 @@ import { ReactComponent as Icon } from './abstract.svg'
 
 import classes from './Header.module.scss'
 
-const Header = () => {
+const Header = ({ toggleSidenav }) => {
   const links = [
     { to: '/', title: 'Home' },
     { to: '/projects', title: 'Projects' },
@@ -20,6 +20,9 @@ const Header = () => {
             <NavLink to={'/'}>Valentin Alekhin</NavLink>
           </h1>
         </div>
+        <button onClick={toggleSidenav} className={classes.sideNav}>
+          Close
+        </button>
         <nav className={classes.navContainer}>
           <ul className={classes.navList}>
             {links.map(({ to, title }, i) => (

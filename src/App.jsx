@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Switch, Route, Redirect } from 'react-router-dom'
 
 import './App.scss'
@@ -11,21 +11,30 @@ import Header from './components/Header/Header'
 import SideNav from './components/SideNav/SideNav'
 import Socials from './components/Socials/Socials'
 
-const App = () => (
-  <div>
-    <Header />
+const App = () => {
+  const [sidenav, setSidenav] = useState(false)
 
-    <SideNav />
+  const toggle = () => {
+    setSidenav(sidenav ? false : true)
+    console.log(sidenav)
+  }
 
-    <Socials />
+  return (
+    <div>
+      <Header toggleSidenav={toggle} />
 
-    <Switch>
-      <Route exact path="/" component={Home} />
-      <Route path="/projects" component={Projects} />
-      <Route path="/project/:id" component={Project} />
-      <Redirect to={'/'} />
-    </Switch>
-  </div>
-)
+      <SideNav isOpen={sidenav} toggle={toggle} />
+
+      <Socials />
+
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route path="/projects" component={Projects} />
+        <Route path="/project/:id" component={Project} />
+        <Redirect to={'/'} />
+      </Switch>
+    </div>
+  )
+}
 
 export default App

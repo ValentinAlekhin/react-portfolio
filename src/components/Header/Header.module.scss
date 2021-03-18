@@ -22,6 +22,12 @@
     }
   }
 
+  .sideNav {
+    @include md {
+      // display: none;
+    }
+  }
+
   .navContainer {
     display: none;
 
