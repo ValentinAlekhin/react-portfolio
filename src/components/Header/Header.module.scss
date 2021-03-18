@@ -2,7 +2,7 @@
 
 .headerContainer {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   text-transform: uppercase;
   margin-top: 2rem;
@@ -17,14 +17,18 @@
 
     .nameTitle {
       margin-left: 0.5rem;
-      font-size: 1.5rem;
+      font-size: 1.3rem;
       letter-spacing: 0.5px;
+
+      @include sm {
+        font-size: 1.5rem;
+      }
     }
   }
 
   .sideNav {
     @include md {
-      // display: none;
+      display: none;
     }
   }
 
