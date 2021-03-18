@@ -15,6 +15,12 @@
     display: flex;
     align-items: center;
 
+    .icon {
+      fill: $font-color;
+      height: 1.5rem;
+      width: 1.5rem;
+    }
+
     .nameTitle {
       margin-left: 0.5rem;
       font-size: 1.3rem;

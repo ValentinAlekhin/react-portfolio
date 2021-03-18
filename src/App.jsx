@@ -8,7 +8,7 @@ import Projects from './pages/Projects/Projects'
 import Project from './pages/Project/Project'
 
 import Header from './components/Header/Header'
-import SideNav from './components/SideNav/SideNav'
+import NavState from './context/NavState'
 import Socials from './components/Socials/Socials'
 
 const App = () => {
@@ -20,10 +20,10 @@ const App = () => {
   }
 
   return (
-    <div>
+    <NavState>
       <Header toggleSidenav={toggle} isOpen={sidenav} />
 
-      <SideNav isOpen={sidenav} toggle={toggle} />
+      {/* <SideNav isOpen={sidenav} toggle={toggle} /> */}
 
       <Socials />
 
@@ -33,7 +33,7 @@ const App = () => {
         <Route path="/project/:id" component={Project} />
         <Redirect to={'/'} />
       </Switch>
-    </div>
+    </NavState>
   )
 }
 

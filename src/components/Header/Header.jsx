@@ -7,7 +7,7 @@ import { ReactComponent as Icon } from './abstract.svg'
 
 import BurgerMenu from '../../ui/BurgerMenu/BurgerMenu'
 
-const Header = ({ toggleSidenav, isOpen }) => {
+const Header = () => {
   const links = [
     { to: '/', title: 'Home' },
     { to: '/projects', title: 'Projects' },
@@ -17,16 +17,12 @@ const Header = ({ toggleSidenav, isOpen }) => {
     <div className={'mainContainer'}>
       <header className={classes.headerContainer}>
         <div className={classes.nameContainer}>
-          <Icon style={{ fill: '#fff', height: '1.5em', width: '1.5em' }} />
+          <Icon className={classes.icon} />
           <h1 className={classes.nameTitle}>
             <NavLink to={'/'}>Valentin Alekhin</NavLink>
           </h1>
         </div>
-        <BurgerMenu
-          onClick={toggleSidenav}
-          className={classes.sideNav}
-          value={isOpen}
-        >
+        <BurgerMenu className={classes.sideNav} size="35px" itemHeight="4px">
           Close
         </BurgerMenu>
         <nav className={classes.navContainer}>
