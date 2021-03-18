@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useRef } from 'react'
 import styled from 'styled-components'
 
 import { MenuContext } from '../../context/NavState'
+import { ThemeContext } from '../../context/ThemeState'
 
 const BurgerWrapper = styled.div`
   display: flex;
@@ -16,7 +17,7 @@ const BurgerItem = styled.div`
   position: relative;
   top: 0;
   height: ${({ height }) => height};
-  background-color: #fefefe;
+  background-color: ${({ theme }) => theme.fontColor};
   transition: all 0.3s linear;
   border-radius: 3px;
   transform-origin: 1px;
@@ -44,6 +45,8 @@ const BurgerMenu = props => {
   const { isMenuOpen, toggleMenuMode, setBurgerCoords } = useContext(
     MenuContext
   )
+  const { theme } = useContext(ThemeContext)
+
   const burgerRef = useRef()
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -68,7 +71,12 @@ const BurgerMenu = props => {
       {Array(3)
         .fill('')
         .map((_, i) => (
-          <BurgerItem key={i} height={itemHeight} open={isMenuOpen} />
+          <BurgerItem
+            key={i}
+            height={itemHeight}
+            open={isMenuOpen}
+            theme={theme}
+          />
         ))}
     </BurgerWrapper>
   )
