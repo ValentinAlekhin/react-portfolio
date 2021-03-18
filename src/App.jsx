@@ -1,8 +1,9 @@
-import React, { useState } from 'react'
+import React, { useContext } from 'react'
 import { Switch, Route, Redirect } from 'react-router-dom'
 
-import './App.scss'
+import GlobalStyle from './style/globalStyle'
 
+import ThemeState, { ThemeContext } from './context/ThemeState'
 import NavState from './context/NavState'
 
 import Home from './pages/Home/Home'
@@ -14,28 +15,26 @@ import SideNav from './components/SideNav/SideNav'
 import Socials from './components/Socials/Socials'
 
 const App = () => {
-  const [sidenav, setSidenav] = useState(false)
-
-  const toggle = () => {
-    setSidenav(sidenav ? false : true)
-    console.log(sidenav)
-  }
+  const { theme } = useContext(ThemeContext)
 
   return (
-    <NavState>
-      <Header toggleSidenav={toggle} isOpen={sidenav} />
+    <ThemeState>
+      <NavState>
+        <GlobalStyle theme={theme} />
+        <Header />
 
-      <SideNav />
+        <SideNav />
 
-      <Socials />
+        <Socials />
 
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route path="/projects" component={Projects} />
-        <Route path="/project/:id" component={Project} />
-        <Redirect to={'/'} />
-      </Switch>
-    </NavState>
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/projects" component={Projects} />
+          <Route path="/project/:id" component={Project} />
+          <Redirect to={'/'} />
+        </Switch>
+      </NavState>
+    </ThemeState>
   )
 }
 
