@@ -1,11 +1,13 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 
-import { ReactComponent as Icon } from './abstract.svg'
-
 import classes from './Header.module.scss'
 
-const Header = ({ toggleSidenav }) => {
+import { ReactComponent as Icon } from './abstract.svg'
+
+import BurgerMenu from '../../ui/BurgerMenu/BurgerMenu'
+
+const Header = ({ toggleSidenav, isOpen }) => {
   const links = [
     { to: '/', title: 'Home' },
     { to: '/projects', title: 'Projects' },
@@ -20,9 +22,13 @@ const Header = ({ toggleSidenav }) => {
             <NavLink to={'/'}>Valentin Alekhin</NavLink>
           </h1>
         </div>
-        <button onClick={toggleSidenav} className={classes.sideNav}>
+        <BurgerMenu
+          onClick={toggleSidenav}
+          className={classes.sideNav}
+          value={isOpen}
+        >
           Close
-        </button>
+        </BurgerMenu>
         <nav className={classes.navContainer}>
           <ul className={classes.navList}>
             {links.map(({ to, title }, i) => (

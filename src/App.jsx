@@ -21,7 +21,7 @@ const App = () => {
 
   return (
     <div>
-      <Header toggleSidenav={toggle} />
+      <Header toggleSidenav={toggle} isOpen={sidenav} />
 
       <SideNav isOpen={sidenav} toggle={toggle} />
 
