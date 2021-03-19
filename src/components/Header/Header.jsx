@@ -16,7 +16,7 @@ import {
   NavItem,
 } from './styled'
 
-import { StyledNavLink } from '../../shared/shared'
+import { StyledNavLink } from '../../shared/components'
 
 const Header = () => {
   const { theme } = useContext(ThemeContext)

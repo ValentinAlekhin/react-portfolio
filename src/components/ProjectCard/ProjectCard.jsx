@@ -1,22 +1,25 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React, { useContext } from 'react'
 
-import classes from './ProjectCard.module.scss'
+import { ThemeContext } from '../../context/ThemeState'
 
 import Badge from '../../ui/Badge/Badge'
 
+import { ProjectCardLink, Status, Title, Description, Skills } from './styled'
+
 const ProjectCard = ({ status, title, description, skills, id }) => {
+  const { theme } = useContext(ThemeContext)
+
   return (
-    <Link to={`/project/${id}`} className={classes.ProjectCard}>
-      <span className={classes.status}>{status}</span>
-      <h4 className={classes.title}>{title}</h4>
-      <p className={classes.description}>{description}</p>
-      <div className={classes.skillsContainer}>
+    <ProjectCardLink to={`/project/${id}`} theme={theme}>
+      <Status theme={theme}>{status}</Status>
+      <Title theme={theme}>{title}</Title>
+      <Description theme={theme}>{description}</Description>
+      <Skills>
         {skills.map((el, i) => (
           <Badge key={i} text={el} />
         ))}
-      </div>
-    </Link>
+      </Skills>
+    </ProjectCardLink>
   )
 }
 

@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 import { respondTo } from '../../style/_respondTo'
 
-import { StyledNavLink } from '../../shared/shared'
+import { StyledNavLink } from '../../shared/components'
 
 export const Wrapper = styled.div`
   position: fixed;

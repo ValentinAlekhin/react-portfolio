@@ -1,16 +1,20 @@
-import React from 'react'
+import React, { useContext } from 'react'
 
-import classes from './Badge.module.scss'
+import { ThemeContext } from '../../context/ThemeState'
+
+import { Wrapper, Text, Link } from './styled'
 
 const Badge = ({ text, link }) => {
-  const TextElement = <span className={classes.text}>{text}</span>
+  const { theme } = useContext(ThemeContext)
+
+  const TextElement = <Text theme={theme}>{text}</Text>
   const LinkElement = (
-    <a href={link} className={classes.link}>
+    <Link theme={theme} href={link}>
       {text}
-    </a>
+    </Link>
   )
 
-  return <div className={classes.Badge}>{link ? LinkElement : TextElement}</div>
+  return <Wrapper theme={theme}>{link ? LinkElement : TextElement}</Wrapper>
 }
 
 export default Badge
