@@ -1,23 +1,33 @@
-import React from 'react'
+import React, { useContext } from 'react'
 
-import classes from './Home.module.scss'
+import { ThemeContext } from '../../context/ThemeState'
+
+import {
+  Wrapper,
+  ImageWrapper,
+  TextWrapper,
+  MainText,
+  OtherText,
+} from './styled'
 
 const Home = () => {
+  const { theme } = useContext(ThemeContext)
+
   return (
-    <div className={classes.homeContainer}>
-      <div className={classes.imageContainer}>
+    <Wrapper>
+      <ImageWrapper>
         {/* <img
           className={classes.image}
           // TODO: Добавить нужную фотку
           src="https://c.pxhere.com/photos/d0/f2/black_wallpaper_black_and_white_casual_dark_fashion_jacket_man_model-924824.jpg!d"
           alt="man"
         /> */}
-      </div>
-      <div className={classes.textContainer}>
-        <p className={classes.mainText}>Frontend</p>
-        <p className={classes.otherText}>developer</p>
-      </div>
-    </div>
+      </ImageWrapper>
+      <TextWrapper>
+        <MainText theme={theme}>Frontend</MainText>
+        <OtherText theme={theme}>developer</OtherText>
+      </TextWrapper>
+    </Wrapper>
   )
 }
 

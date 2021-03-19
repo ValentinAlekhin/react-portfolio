@@ -1,53 +1,28 @@
-import React from 'react'
+import React, { useContext } from 'react'
 
-import { ReactComponent as TelegramIcon } from './images/Telegram.svg'
-import { ReactComponent as GitHubIcon } from './images/GitHub.svg'
-import { ReactComponent as MailIcon } from './images/Mail.svg'
+import { ThemeContext } from '../../context/ThemeState'
 
-import classes from './Socials.module.scss'
+import { List, TelegramIcon, GitHubIcon, MailIcon } from './styled'
 
 const Socials = () => {
+  const { theme } = useContext(ThemeContext)
+
+  const socials = [
+    { Ico: TelegramIcon, href: 'https://t.me/alekhin_vv' },
+    { Ico: GitHubIcon, href: 'https://github.com/ValentinAlekhin' },
+    { Ico: MailIcon, href: 'mailto:headbangernetwork@gmail.com' },
+  ]
+
   return (
-    <div className={classes.socialsContainer}>
-      <ul className={classes.socialsList}>
-        <li className={classes.socialItem}>
-          <a
-            href="https://t.me/alekhin_vv"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <TelegramIcon
-              className={classes.socialIco}
-              style={{ width: '25px', height: '25px' }}
-            />
+    <List>
+      {socials.map(({ Ico, href }, i) => (
+        <li key={i}>
+          <a href={href} target="_blank" rel="noopener noreferrer">
+            <Ico theme={theme} />
           </a>
         </li>
-        <li className={classes.socialItem}>
-          <a
-            href="https://github.com/ValentinAlekhin"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <GitHubIcon
-              className={classes.socialIco}
-              style={{ width: '25px', height: '25px' }}
-            />
-          </a>
-        </li>
-        <li className={classes.socialItem}>
-          <a
-            href="mailto:headbangernetwork@gmail.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <MailIcon
-              className={classes.socialIco}
-              style={{ width: '25px', height: '25px' }}
-            />
-          </a>
-        </li>
-      </ul>
-    </div>
+      ))}
+    </List>
   )
 }
 

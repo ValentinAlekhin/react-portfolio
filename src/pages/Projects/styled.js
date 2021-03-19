@@ -1,17 +1,19 @@
-@import '../../style/index.scss';
+import styled from 'styled-components'
 
-.Projects {
+import { respondTo } from '../../style/_respondTo'
+
+export const Wrapper = styled.div`
   width: 100%;
   display: grid;
   grid-template-columns: minmax(200px, 1fr);
   grid-gap: 1rem;
   margin-top: 2rem;
 
-  @include sm {
+  ${respondTo.xs`
     grid-template-columns: repeat(2, minmax(200px, 1fr));
-  }
+  `}
 
-  @include lg {
+  ${respondTo.xs`
     grid-template-columns: repeat(3, minmax(200px, 1fr));
-  }
-}
+  `}
+`

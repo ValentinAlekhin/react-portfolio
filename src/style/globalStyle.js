@@ -25,8 +25,6 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    transition: 0.3s linear;
-    transition-property: fill, color;
 
     &::selection {
       background: ${({ theme }) => theme.selection.background};

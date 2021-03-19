@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 import { respondTo } from '../../style/_respondTo'
+import { SVGStyles } from '../../shared/styles'
 
 import { ReactComponent as SVG } from './abstract.svg'
 
@@ -20,10 +21,7 @@ export const NameContainer = styled.div`
 `
 
 export const Icon = styled(SVG)`
-  fill: ${({ theme }) => theme.fontColor};
-  height: 1.5rem;
-  width: 1.5rem;
-  transition: all 0.3s;
+  ${SVGStyles}
 `
 
 export const Title = styled.h1`

@@ -1,43 +1,49 @@
 import React, { useContext } from 'react'
 
-import classes from './Project.module.scss'
-
+import { ThemeContext } from '../../context/ThemeState'
 import { ProjectsContext } from '../../context/ProjectsContext'
 
 import Badge from '../../ui/Badge/Badge'
 import Markdown from '../../components/Markdown/Markdown'
 
+import {
+  Wrapper,
+  ProjectHeader,
+  Title,
+  Links,
+  Description,
+  Skills,
+} from './styled'
+
 const Project = ({ match }) => {
+  const { theme } = useContext(ThemeContext)
+
   const id = parseInt(match.params.id)
   const { title, description, skills, markdown, links } = useContext(
     ProjectsContext
   ).find(el => el.id === id)
 
   return (
-    <div className="mainContainer">
-      <div className="contentContainer">
-        <div className={classes.Project}>
-          <div className={classes.titleAndLinks}>
-            <h2 className={classes.title}>{title}</h2>
-            <div className={classes.links}>
-              {links.map(({ href, title }, i) => (
-                <Badge key={i} text={title} link={href} />
-              ))}
-            </div>
-          </div>
+    <Wrapper theme={theme}>
+      <ProjectHeader>
+        <Title theme={theme}>{title}</Title>
+        <Links>
+          {links.map(({ href, title }, i) => (
+            <Badge key={i} text={title} link={href} />
+          ))}
+        </Links>
+      </ProjectHeader>
 
-          <p className={classes.description}>{description}</p>
+      <Description theme={theme}>{description}</Description>
 
-          {markdown ? <Markdown url={markdown} /> : null}
+      {markdown ? <Markdown url={markdown} /> : null}
 
-          <div className={classes.skills}>
-            {skills.map((el, i) => (
-              <Badge key={i} text={el} />
-            ))}
-          </div>
-        </div>
-      </div>
-    </div>
+      <Skills>
+        {skills.map((el, i) => (
+          <Badge key={i} text={el} />
+        ))}
+      </Skills>
+    </Wrapper>
   )
 }
 

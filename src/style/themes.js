@@ -19,6 +19,12 @@ export const dark = {
     statusColor: darken(0.7, darkThemeFontColor),
     descriptionColor: darken(0.3, darkThemeFontColor),
   },
+  markdown: {
+    background: '#151619',
+    linkColor: '#58a6ff',
+    hrLineColor: '#21262d',
+    togglerColor: darken(0.6, darkThemeFontColor),
+  },
   badge: {
     background: rgba(darkThemeFontColor, 0.1),
     textColor: darken(0.1, darkThemeFontColor),
@@ -43,6 +49,12 @@ export const light = {
     backgroundHover: rgba(lightThemeFontColor, 0.07),
     statusColor: lighten(0.5, lightThemeFontColor),
     descriptionColor: lighten(0.2, lightThemeFontColor),
+  },
+  markdown: {
+    background: 'gray',
+    linkColor: '#58a6ff',
+    hrLineColor: '#21262d',
+    togglerColor: lighten(0.1, lightThemeFontColor),
   },
   badge: {
     background: rgba(lightThemeFontColor, 0.12),

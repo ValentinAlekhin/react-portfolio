@@ -1,30 +1,29 @@
 import React, { useContext } from 'react'
 
-import classes from './Projects.module.scss'
-
+import { ThemeContext } from '../../context/ThemeState'
 import { ProjectsContext } from '../../context/ProjectsContext'
 
 import ProjectCard from '../../components/ProjectCard/ProjectCard'
 
+import { Wrapper } from './styled'
+
 const Projects = () => {
+  const { theme } = useContext(ThemeContext)
   const projects = useContext(ProjectsContext)
+
   return (
-    <div className="mainContainer">
-      <div className="contentContainer">
-        <div className={classes.Projects}>
-          {projects.map((el, i) => (
-            <ProjectCard
-              key={i}
-              title={el.title}
-              description={el.shortDescription}
-              status={el.status}
-              skills={el.skills}
-              id={el.id}
-            />
-          ))}
-        </div>
-      </div>
-    </div>
+    <Wrapper theme={theme}>
+      {projects.map((el, i) => (
+        <ProjectCard
+          key={i}
+          title={el.title}
+          description={el.shortDescription}
+          status={el.status}
+          skills={el.skills}
+          id={el.id}
+        />
+      ))}
+    </Wrapper>
   )
 }
 

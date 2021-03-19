@@ -5,3 +5,9 @@ export const glassEffect = css`
   backdrop-filter: blur(4px);
   border-radius: 5px;
 `
+export const SVGStyles = css`
+  fill: ${({ theme }) => theme.fontColor};
+  height: 1.5rem;
+  width: 1.5rem;
+  transition: all 0.3s;
+`
