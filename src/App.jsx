@@ -1,5 +1,6 @@
 import React, { useContext } from 'react'
 import { Switch, Route, Redirect } from 'react-router-dom'
+import styled from 'styled-components'
 
 import GlobalStyle from './style/globalStyle'
 
@@ -10,6 +11,7 @@ import Home from './pages/Home/Home'
 import Projects from './pages/Projects/Projects'
 import Project from './pages/Project/Project'
 
+import Background from './components/Background/Background'
 import Header from './components/Header/Header'
 import SideNav from './components/SideNav/SideNav'
 import Socials from './components/Socials/Socials'
@@ -21,6 +23,7 @@ const App = () => {
     <ThemeState>
       <NavState>
         <GlobalStyle theme={theme} />
+        <Background />
         <Header />
 
         <SideNav />

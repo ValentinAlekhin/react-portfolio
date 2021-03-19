@@ -1,6 +1,7 @@
 import { darken, lighten } from 'polished'
 
 import darkBg from './pattern.svg'
+import lightBg from './light_bg.svg'
 
 export const dark = {
   id: '0',
@@ -17,10 +18,10 @@ export const dark = {
 
 export const light = {
   id: '1',
-  background: darkBg,
+  background: lightBg,
   fontColor: '#000',
   navLink: {
-    notActiveColor: lighten(0.4, '#fefefe'),
+    notActiveColor: lighten(0.4, '#000'),
   },
   selection: {
     color: '#fff',
