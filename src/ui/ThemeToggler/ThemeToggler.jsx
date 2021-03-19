@@ -1,11 +1,8 @@
 import React, { useContext } from 'react'
-import styled from 'styled-components'
 
 import { ThemeContext } from '../../context/ThemeState'
 
-const Button = styled.button`
-  background-color: red;
-`
+import { Button } from './styled'
 
 const ThemeToggler = () => {
   const { toggleTheme } = useContext(ThemeContext)

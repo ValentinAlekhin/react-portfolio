@@ -1,76 +1,22 @@
 import React, { useContext } from 'react'
 import { NavLink } from 'react-router-dom'
-import styled from 'styled-components'
-import { respondTo } from '../../style/_respondTo'
 
 import { ThemeContext } from '../../context/ThemeState'
 
 import ThemeToggler from '../../ui/ThemeToggler/ThemeToggler'
 import BurgerMenu from '../../ui/BurgerMenu/BurgerMenu'
 
-import { ReactComponent as SVG } from './abstract.svg'
+import {
+  StyledHeader,
+  NameContainer,
+  Icon,
+  Title,
+  NavContainer,
+  NavList,
+  NavItem,
+} from './styled'
 
-const StyledHeader = styled.header`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  text-transform: uppercase;
-  margin-top: 2rem;
-
-  ${respondTo.sm`justify-content: space-between;`}
-`
-
-const NameContainer = styled.div`
-  display: flex;
-  align-items: center;
-`
-
-const Icon = styled(SVG)`
-  fill: ${({ theme }) => theme.fontColor};
-  height: 1.5rem;
-  width: 1.5rem;
-  transition: all 0.3s;
-`
-
-const Title = styled.h1`
-  margin-left: 0.5rem;
-  font-size: 1.3rem;
-  letter-spacing: 0.5px;
-
-  a {
-    color: ${({ theme }) => theme.fontColor};
-  }
-
-  ${respondTo.sm`font-size: 1.5rem;`};
-`
-
-const NavContainer = styled.nav`
-  display: none;
-
-  ${respondTo.sm`display: block;`}
-`
-
-const NavList = styled.ul`
-  display: flex;
-`
-
-const NavItem = styled.li`
-  font-size: 1rem;
-  font-weight: 400;
-  margin-left: 4rem;
-`
-
-const StyledNavLink = styled(NavLink)`
-  color: ${({ theme }) => theme.navLink.notActiveColor};
-
-  &.active {
-    color: ${({ theme }) => theme.fontColor};
-  }
-
-  &:hover {
-    color: ${({ theme }) => theme.fontColor};
-  }
-`
+import { StyledNavLink } from '../../shared/shared'
 
 const Header = () => {
   const { theme } = useContext(ThemeContext)

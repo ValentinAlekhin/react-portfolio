@@ -1,6 +1,5 @@
 import React, { useContext } from 'react'
 import { Switch, Route, Redirect } from 'react-router-dom'
-import styled from 'styled-components'
 
 import GlobalStyle from './style/globalStyle'
 
