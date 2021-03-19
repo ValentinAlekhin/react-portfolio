@@ -5,10 +5,10 @@ import { respondTo } from '../../style/_respondTo'
 
 import { ThemeContext } from '../../context/ThemeState'
 
-import { ReactComponent as Icon } from './abstract.svg'
-
 import ThemeToggler from '../../ui/ThemeToggler/ThemeToggler'
 import BurgerMenu from '../../ui/BurgerMenu/BurgerMenu'
+
+import { ReactComponent as SVG } from './abstract.svg'
 
 const StyledHeader = styled.header`
   display: flex;
@@ -23,6 +23,13 @@ const StyledHeader = styled.header`
 const NameContainer = styled.div`
   display: flex;
   align-items: center;
+`
+
+const Icon = styled(SVG)`
+  fill: ${({ theme }) => theme.fontColor};
+  height: 1.5rem;
+  width: 1.5rem;
+  transition: all 0.3s;
 `
 
 const Title = styled.h1`
@@ -55,7 +62,6 @@ const NavItem = styled.li`
 
 const StyledNavLink = styled(NavLink)`
   color: ${({ theme }) => theme.navLink.notActiveColor};
-  transition: all 0.3s;
 
   &.active {
     color: ${({ theme }) => theme.fontColor};
@@ -79,8 +85,8 @@ const Header = () => {
     <div className={'mainContainer'}>
       <StyledHeader>
         <NameContainer>
-          {/* <Icon className={classes.icon} /> */}
-          <Title>
+          <Icon theme={theme} />
+          <Title theme={theme}>
             <NavLink to={'/'}>Valentin Alekhin</NavLink>
           </Title>
         </NameContainer>
