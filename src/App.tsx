@@ -27,7 +27,7 @@ const App = () => {
 
         <SideNav />
 
-        <Socials onApp boxSize="12rem" iconSize="1.8rem" />
+        <Socials onApp boxSize="12rem" iconSize="1.8rem" direction="vertical" />
 
         <Switch>
           <Route exact path="/" component={Home} />
