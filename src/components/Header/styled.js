@@ -15,7 +15,7 @@ export const StyledHeader = styled.header`
   ${respondTo.sm`justify-content: space-between;`}
 `
 
-export const NameContainer = styled.div`
+export const NameWrapper = styled.div`
   display: flex;
   align-items: center;
 `
@@ -36,10 +36,11 @@ export const Title = styled.h1`
   ${respondTo.sm`font-size: 1.5rem;`};
 `
 
-export const NavContainer = styled.nav`
+export const NavWrapper = styled.nav`
   display: none;
+  align-items: center;
 
-  ${respondTo.sm`display: block;`}
+  ${respondTo.sm`display: flex;`};
 `
 
 export const NavList = styled.ul`
@@ -49,5 +50,5 @@ export const NavList = styled.ul`
 export const NavItem = styled.li`
   font-size: 1rem;
   font-weight: 400;
-  margin-left: 4rem;
+  margin-right: 4rem;
 `

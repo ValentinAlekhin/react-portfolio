@@ -8,10 +8,10 @@ import BurgerMenu from '../../ui/BurgerMenu/BurgerMenu'
 
 import {
   StyledHeader,
-  NameContainer,
+  NameWrapper,
   Icon,
   Title,
-  NavContainer,
+  NavWrapper,
   NavList,
   NavItem,
 } from './styled'
@@ -30,15 +30,15 @@ const Header = () => {
   return (
     <div className={'mainContainer'}>
       <StyledHeader>
-        <NameContainer>
+        <NameWrapper>
           <Icon theme={theme} />
           <Title theme={theme}>
             <NavLink to={'/'}>Valentin Alekhin</NavLink>
           </Title>
-        </NameContainer>
-        <ThemeToggler />
+        </NameWrapper>
+
         <BurgerMenu size="35px" itemHeight="4px" />
-        <NavContainer>
+        <NavWrapper>
           <NavList>
             {links.map(({ to, title }, i) => (
               <NavItem key={i}>
@@ -48,7 +48,8 @@ const Header = () => {
               </NavItem>
             ))}
           </NavList>
-        </NavContainer>
+          <ThemeToggler />
+        </NavWrapper>
       </StyledHeader>
     </div>
   )

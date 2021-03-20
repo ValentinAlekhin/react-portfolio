@@ -31,6 +31,9 @@ export const dark = {
     linkColor: '#4682b4',
     linkColorHover: lighten(0.1, '#4682b4'),
   },
+  themeToggler: {
+    background: '',
+  },
   selection: {
     color: '#000',
     background: '#9b9b9b',
@@ -42,7 +45,7 @@ export const light = {
   background: lightBg,
   fontColor: lightThemeFontColor,
   navLink: {
-    notActiveColor: lighten(0.4, lightThemeFontColor),
+    notActiveColor: lighten(0.5, lightThemeFontColor),
   },
   projectCard: {
     background: rgba(lightThemeFontColor, 0.05),
