@@ -46,3 +46,9 @@ export const SidedNavLink = styled(StyledNavLink)`
   font-size: 2.5rem;
   font-weight: 400;
 `
+export const ThemeTogglerWrapper = styled.div`
+  position: absolute;
+  bottom: 3rem;
+  left: 50%;
+  transform: translateX(-50%);
+`

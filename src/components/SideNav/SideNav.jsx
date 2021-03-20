@@ -4,8 +4,16 @@ import { ThemeContext } from '../../context/ThemeState'
 import { MenuContext } from '../../context/NavState'
 
 import Socials from '../Socials/Socials'
+import ThemeToggler from '../../ui/ThemeToggler/ThemeToggler'
 
-import { Wrapper, Content, NavList, NavItem, SidedNavLink } from './styled'
+import {
+  Wrapper,
+  Content,
+  NavList,
+  NavItem,
+  SidedNavLink,
+  ThemeTogglerWrapper,
+} from './styled'
 
 const SideNav = () => {
   const { theme } = useContext(ThemeContext)
@@ -35,8 +43,12 @@ const SideNav = () => {
             ))}
           </NavList>
         </nav>
+
         <Socials direction="horizontal" iconSize="2rem" boxSize="12rem" />
       </Content>
+      <ThemeTogglerWrapper>
+        <ThemeToggler iconSize="1.8rem" boxSize="6rem" />
+      </ThemeTogglerWrapper>
     </Wrapper>
   )
 }
