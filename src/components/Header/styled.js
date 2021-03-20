@@ -49,6 +49,6 @@ export const NavList = styled.ul`
 
 export const NavItem = styled.li`
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 500;
   margin-right: 4rem;
 `

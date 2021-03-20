@@ -20,7 +20,6 @@ import { StyledNavLink } from '../../shared/components'
 
 const Header = () => {
   const { theme } = useContext(ThemeContext)
-  console.log(theme)
 
   const links = [
     { to: '/', title: 'Home' },
