@@ -2,9 +2,15 @@ import React, { useContext } from 'react'
 
 import { ThemeContext } from '../../context/ThemeState'
 
-import { List, TelegramIcon, GitHubIcon, MailIcon } from './styled'
+import {
+  AppLevelWrapper,
+  List,
+  TelegramIcon,
+  GitHubIcon,
+  MailIcon,
+} from './styled'
 
-const Socials = ({ direction, iconSize, boxSize }) => {
+const Socials = ({ direction, iconSize, boxSize, onApp }) => {
   const { theme } = useContext(ThemeContext)
 
   const socials = [
@@ -13,7 +19,7 @@ const Socials = ({ direction, iconSize, boxSize }) => {
     { Ico: MailIcon, href: 'mailto:headbangernetwork@gmail.com' },
   ]
 
-  return (
+  const Component = () => (
     <List direction={direction} size={boxSize}>
       {socials.map(({ Ico, href }, i) => (
         <li key={i}>
@@ -23,6 +29,14 @@ const Socials = ({ direction, iconSize, boxSize }) => {
         </li>
       ))}
     </List>
+  )
+
+  return onApp ? (
+    <AppLevelWrapper>
+      <Component />
+    </AppLevelWrapper>
+  ) : (
+    <Component />
   )
 }
 

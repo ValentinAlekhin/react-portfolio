@@ -11,3 +11,8 @@ export const SVGStyles = css`
   width: 1.5rem;
   transition: all 0.3s;
 `
+
+export const mainContainerStyles = css`
+  width: 98%;
+  margin: 0 auto;
+`
