@@ -11,12 +11,16 @@ const App = () => {
 
   return (
     <>
-      {theme.id === dark.id ? (
-        <Image src={dark.background} alt="Dark background" />
-      ) : null}
-      {theme.id === light.id ? (
-        <Image src={light.background} alt="Dark background" />
-      ) : null}
+      <Image
+        src={dark.background}
+        alt="Dark background"
+        style={{ display: theme.id === dark.id ? 'block' : 'none' }}
+      />
+      <Image
+        src={light.background}
+        alt="Dark background"
+        style={{ display: theme.id === light.id ? 'block' : 'none' }}
+      />
     </>
   )
 }
