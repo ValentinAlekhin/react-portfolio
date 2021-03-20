@@ -1,5 +1,7 @@
 import styled from 'styled-components'
 
+import { respondTo } from '../../style/_respondTo'
+
 export const BurgerWrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -7,6 +9,10 @@ export const BurgerWrapper = styled.div`
   width: ${({ size }) => size};
   height: ${({ size }) => size};
   cursor: pointer;
+
+  ${respondTo.sm`
+    display: none;
+  `}
 `
 
 export const BurgerItem = styled.div`
