@@ -47,7 +47,7 @@ const SideNav = () => {
         <Socials direction="horizontal" iconSize="2rem" boxSize="12rem" />
       </Content>
       <ThemeTogglerWrapper>
-        <ThemeToggler iconSize="1.8rem" boxSize="6rem" />
+        <ThemeToggler iconSize="1.5rem" boxSize="6rem" />
       </ThemeTogglerWrapper>
     </Wrapper>
   )
