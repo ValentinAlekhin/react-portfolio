@@ -9,20 +9,27 @@ import { ReactComponent as MailSVG } from './images/Mail.svg'
 const iconStyles = css`
   ${SVGStyles};
   transition: all 0.3s;
-  width: 1.5rem;
-  height: 1.5rem;
+  width: ${({ size }) => size || '1.5rem'};
+  height: ${({ size }) => size || '1.5rem'};
 
   &:hover {
     fill: ${({ theme }) => theme.navLink.notActiveColor};
   }
 `
 
-export const List = styled.ul`
+export const List = styled.ul.attrs(({ direction, size }) => ({
+  direction: direction === 'horizontal' ? 'row' : 'column',
+  width: direction === 'horizontal' ? size : '',
+  height: direction === 'horizontal' ? '' : size,
+}))`
   display: flex;
-  flex-direction: ${({ flexDirection }) => flexDirection || 'column'};
+  flex-direction: ${({ direction }) => direction};
   justify-content: space-between;
-  height: 10rem;
+  align-items: center;
+  height: ${({ height }) => height};
+  width: ${({ width }) => width};
 `
+
 export const TelegramIcon = styled(TelegramSVG)`
   ${iconStyles}
 `
