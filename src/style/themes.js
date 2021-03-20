@@ -19,6 +19,9 @@ export const dark = {
     statusColor: darken(0.7, darkThemeFontColor),
     descriptionColor: darken(0.3, darkThemeFontColor),
   },
+  sideNav: {
+    background: lighten(0.2, '#000'),
+  },
   markdown: {
     background: '#151619',
     linkColor: '#58a6ff',
@@ -30,9 +33,6 @@ export const dark = {
     textColor: darken(0.1, darkThemeFontColor),
     linkColor: '#4682b4',
     linkColorHover: lighten(0.1, '#4682b4'),
-  },
-  themeToggler: {
-    background: '',
   },
   selection: {
     color: '#000',
@@ -52,6 +52,9 @@ export const light = {
     backgroundHover: rgba(lightThemeFontColor, 0.07),
     statusColor: lighten(0.5, lightThemeFontColor),
     descriptionColor: lighten(0.2, lightThemeFontColor),
+  },
+  sideNav: {
+    background: darken(0.1, '#fff'),
   },
   markdown: {
     background: 'gray',

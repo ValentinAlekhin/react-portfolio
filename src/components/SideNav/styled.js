@@ -11,7 +11,7 @@ export const Wrapper = styled.div`
   right: 0;
   left: 0;
   transform: ${({ open }) => (open ? 'translateX(0)' : 'translateX(100%)')};
-  background-color: gray;
+  background-color: ${({ theme }) => theme.sideNav.background};
   z-index: 5;
   overflow: hidden;
   transition: all 0.4s linear;
