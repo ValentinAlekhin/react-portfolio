@@ -4,8 +4,6 @@ import { BrowserRouter } from 'react-router-dom'
 
 import reportWebVitals from './reportWebVitals'
 
-// import './style/index.scss'
-
 import App from './App.jsx'
 
 ReactDOM.render(
