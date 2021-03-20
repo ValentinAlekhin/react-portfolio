@@ -1,6 +1,9 @@
 import { createGlobalStyle } from 'styled-components'
 
-import { mainContainerWidthInPercentage as mainContainerWidth } from './_variables'
+import {
+  mainContainerWidthInPercentage as mainContainerWidth,
+  contentContainerWidthInPercentage as contentContainerWidth,
+} from './_variables'
 import { respondTo } from './_respondTo'
 
 const GlobalStyle = createGlobalStyle`
@@ -35,10 +38,14 @@ const GlobalStyle = createGlobalStyle`
     }
   }
 
-  .mainContainer {
+  .mainContainer, .contentContainer {
     width: ${mainContainerWidth.xs}%;
     margin: 0 auto;
 
+    
+  }
+
+  .mainContainer {
     ${respondTo.sm`
       width: ${mainContainerWidth.sm}%;
     `}
@@ -53,6 +60,24 @@ const GlobalStyle = createGlobalStyle`
     
     ${respondTo.xl`
       width: ${mainContainerWidth.xl}%;
+    `}
+  }
+
+  .contentContainer {
+    ${respondTo.sm`
+      width: ${contentContainerWidth.sm}%;
+    `}
+
+    ${respondTo.md`
+      width: ${contentContainerWidth.md}%;
+    `}
+
+    ${respondTo.lg`
+      width: ${contentContainerWidth.lg}%;
+    `}
+    
+    ${respondTo.xl`
+      width: ${contentContainerWidth.xl}%;
     `}
   }
 `

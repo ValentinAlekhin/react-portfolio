@@ -9,11 +9,15 @@ export const Wrapper = styled.div`
   grid-gap: 1rem;
   margin-top: 2rem;
 
-  ${respondTo.xs`
+  ${respondTo.sm`
     grid-template-columns: repeat(2, minmax(200px, 1fr));
   `}
 
-  ${respondTo.xs`
+  ${respondTo.lg`
     grid-template-columns: repeat(3, minmax(200px, 1fr));
+  `}
+  
+  ${respondTo.xl`
+    grid-template-columns: repeat(4, minmax(200px, 1fr));
   `}
 `

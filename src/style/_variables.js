@@ -7,9 +7,21 @@ export const breakpoints = {
 }
 
 export const mainContainerWidthInPercentage = {
-  xs: 98,
-  sm: 95,
-  md: 90,
-  lg: 85,
-  xl: 80,
+  xs: 95,
+  sm: 93,
+  md: 92,
+  lg: 92,
+  xl: 92,
 }
+
+export const contentContainerWidthInPercentage = Object.entries(
+  mainContainerWidthInPercentage
+).reduce((acc, [key, value], i) => {
+  if (i === 0) {
+    acc[key] = value
+    return acc
+  }
+
+  acc[key] = value - 10
+  return acc
+}, {})

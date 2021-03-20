@@ -12,18 +12,20 @@ const Projects = () => {
   const projects = useContext(ProjectsContext)
 
   return (
-    <Wrapper theme={theme}>
-      {projects.map((el, i) => (
-        <ProjectCard
-          key={i}
-          title={el.title}
-          description={el.shortDescription}
-          status={el.status}
-          skills={el.skills}
-          id={el.id}
-        />
-      ))}
-    </Wrapper>
+    <div className="contentContainer">
+      <Wrapper theme={theme}>
+        {projects.map((el, i) => (
+          <ProjectCard
+            key={i}
+            title={el.title}
+            description={el.shortDescription}
+            status={el.status}
+            skills={el.skills}
+            id={el.id}
+          />
+        ))}
+      </Wrapper>
+    </div>
   )
 }
 
