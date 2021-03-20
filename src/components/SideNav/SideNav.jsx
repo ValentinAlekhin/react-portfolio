@@ -3,6 +3,8 @@ import React, { useContext } from 'react'
 import { ThemeContext } from '../../context/ThemeState'
 import { MenuContext } from '../../context/NavState'
 
+import Socials from '../Socials/Socials'
+
 import { Wrapper, Content, NavList, NavItem, SidedNavLink } from './styled'
 
 const SideNav = () => {
@@ -33,6 +35,7 @@ const SideNav = () => {
             ))}
           </NavList>
         </nav>
+        <Socials direction="horizontal" iconSize="2rem" boxSize="12rem" />
       </Content>
     </Wrapper>
   )
