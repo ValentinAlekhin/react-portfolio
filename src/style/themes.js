@@ -1,7 +1,7 @@
 import { darken, lighten, rgba } from 'polished'
 
-import darkBg from './pattern.svg'
-import lightBg from './light_bg.svg'
+import darkBg from './images/dark_bg.svg'
+import lightBg from './images/light_bg.svg'
 
 const darkThemeFontColor = '#fefefe'
 const lightThemeFontColor = '#000'
