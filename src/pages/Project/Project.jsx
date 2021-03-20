@@ -24,26 +24,28 @@ const Project = ({ match }) => {
   ).find(el => el.id === id)
 
   return (
-    <Wrapper theme={theme}>
-      <ProjectHeader>
-        <Title theme={theme}>{title}</Title>
-        <Links>
-          {links.map(({ href, title }, i) => (
-            <Badge key={i} text={title} link={href} />
+    <div className="contentContainer">
+      <Wrapper theme={theme}>
+        <ProjectHeader>
+          <Title theme={theme}>{title}</Title>
+          <Links>
+            {links.map(({ href, title }, i) => (
+              <Badge key={i} text={title} link={href} />
+            ))}
+          </Links>
+        </ProjectHeader>
+
+        <Description theme={theme}>{description}</Description>
+
+        {markdown ? <Markdown url={markdown} /> : null}
+
+        <Skills>
+          {skills.map((el, i) => (
+            <Badge key={i} text={el} />
           ))}
-        </Links>
-      </ProjectHeader>
-
-      <Description theme={theme}>{description}</Description>
-
-      {markdown ? <Markdown url={markdown} /> : null}
-
-      <Skills>
-        {skills.map((el, i) => (
-          <Badge key={i} text={el} />
-        ))}
-      </Skills>
-    </Wrapper>
+        </Skills>
+      </Wrapper>
+    </div>
   )
 }
 
