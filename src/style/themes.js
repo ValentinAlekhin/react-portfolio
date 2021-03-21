@@ -81,7 +81,7 @@ export const light = {
     background: rgba(lightThemeFontColor, 0.12),
     textColor: lighten(0.1, lightThemeFontColor),
     linkColor: '#4B789F',
-    linkColorHover: lighten(0.1, '#4B789F'),
+    linkColorHover: darken(0.2, '#4B789F'),
   },
   selection: {
     color: '#fff',

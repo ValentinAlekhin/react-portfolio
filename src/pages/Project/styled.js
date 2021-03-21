@@ -15,6 +15,8 @@ export const Wrapper = styled.div`
 `
 
 export const ProjectHeader = styled.div`
+  ${flexWrap}
+
   align-items: center;
   margin-bottom: 2.5rem;
 `
