@@ -1,36 +1,41 @@
 import styled from 'styled-components'
+import { motion } from 'framer-motion'
 
 import { respondTo } from '../../style/_respondTo'
 
 import { StyledNavLink } from '../../shared/components'
 
-export const Wrapper = styled.div`
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  transform: ${({ open }) => (open ? 'translateX(0)' : 'translateX(100%)')};
-  background-color: ${({ theme }) => theme.sideNav.background};
-  z-index: 5;
-  overflow: hidden;
-  transition: all 0.4s linear;
-
+export const Wrapper = styled(motion.div)`
+  position: relative;
   ${respondTo.sm`display: none;`}
 `
 
-export const Content = styled.div`
-  position: absolute;
+export const Circle = styled(motion.div)`
+  position: fixed;
+  top: 0;
+  right: 0;
+  transform: translate(50%, -50%);
+  background-color: ${({ theme }) => theme.sideNav.background};
+  border-radius: 100%;
+  z-index: 10;
+`
+
+export const Content = styled(motion.div)`
+  opacity: ${({ open }) => (open ? 1 : 0)};
+  position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  height: 80vh;
+  z-index: 10;
 `
 
 export const NavList = styled.ul`
+  margin-top: 10vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -45,10 +50,4 @@ export const SidedNavLink = styled(StyledNavLink)`
   transition: all 0.3s;
   font-size: 2.5rem;
   font-weight: 400;
-`
-export const ThemeTogglerWrapper = styled.div`
-  position: absolute;
-  bottom: 3rem;
-  left: 50%;
-  transform: translateX(-50%);
 `

@@ -3,8 +3,8 @@ import { NavLink } from 'react-router-dom'
 
 import { ThemeContext } from '../../context/ThemeState'
 
+import SideNav from '../SideNav/SideNav'
 import ThemeToggler from '../../ui/ThemeToggler/ThemeToggler'
-import BurgerMenu from '../../ui/BurgerMenu/BurgerMenu'
 
 import {
   StyledHeader,
@@ -36,7 +36,7 @@ const Header = () => {
           </Title>
         </NameWrapper>
 
-        <BurgerMenu size="35px" itemHeight="4px" />
+        <SideNav />
         <NavWrapper>
           <NavList>
             {links.map(({ to, title }, i) => (

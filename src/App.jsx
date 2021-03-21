@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
-import { Switch, Route } from 'react-router-dom'
+import { Switch, Route, useLocation } from 'react-router-dom'
 import loadable from '@loadable/component'
+import { AnimatePresence } from 'framer-motion'
 
 import GlobalStyle from './style/globalStyle'
 
@@ -19,9 +20,9 @@ const Projects = loadable(() =>
 const Project = loadable(() =>
   import(/* webpackPrefetch: true */ './pages/Project/Project')
 )
-const SideNav = loadable(() => import('./components/SideNav/SideNav'))
 
 const App = () => {
+  const location = useLocation()
   const { theme } = useContext(ThemeContext)
 
   return (
@@ -31,16 +32,16 @@ const App = () => {
         <Background />
         <Header />
 
-        <SideNav />
-
         <Socials onApp boxSize="12rem" iconSize="1.8rem" />
 
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route exact path="/projects" component={Projects} />
-          <Route exact path="/project/:id" component={Project} />
-          <Route component={Home} />
-        </Switch>
+        <AnimatePresence initial={false}>
+          <Switch location={location} key={location.pathname}>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/projects" component={Projects} />
+            <Route exact path="/project/:id" component={Project} />
+            <Route component={Home} />
+          </Switch>
+        </AnimatePresence>
       </NavState>
     </ThemeState>
   )
