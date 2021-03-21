@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.li`
   background: ${({ theme }) => theme.badge.background};
   border-radius: 5px;
   padding: 7px;

@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 
+import { respondTo } from '../../style/_respondTo'
 import { SVGStyles } from '../../shared/styles'
 
 import { ReactComponent as Icon } from './arrow.svg'
@@ -14,6 +15,20 @@ export const Wrapper = styled.div`
   line-height: 1.5;
   word-wrap: break-word;
   margin-bottom: 4rem;
+  min-height: 220px;
+  position: relative;
+
+  @media (min-width: 392px) {
+    min-height: 180px;
+  }
+
+  @media (min-width: 416px) {
+    min-height: 150px;
+  }
+
+  @media (min-width: 831px) {
+    min-height: 114px;
+  }
 `
 export const Title = styled.h6`
   color: ${({ theme }) => theme.fontColor};
@@ -31,11 +46,14 @@ export const ToggleWrapper = styled.div`
 export const Toggler = styled(Icon)`
   ${SVGStyles}
 
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
   fill: ${({ theme }) => theme.markdown.togglerColor};
   text-align: center;
   height: 30px;
   width: 30px;
-  transform: rotate(90deg);
+  transform: rotate(90deg) translateY(50%);
   transition: all ease-in-out 0.3s;
   cursor: pointer;
 
@@ -48,7 +66,7 @@ export const MarkdownBody = styled.div`
   overflow: hidden;
   transition: all 0.5s ease-in-out;
   height: 0px;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   color: ${({ theme }) => theme.fontColor};
 
   h1 {

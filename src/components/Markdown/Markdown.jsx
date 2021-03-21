@@ -36,13 +36,11 @@ const Markdown = ({ url }) => {
           />
         </MarkdownBody>
       ) : null}
-      <ToggleWrapper theme={theme}>
-        <Toggler
-          theme={theme}
-          style={height ? { transform: 'rotate(-90deg)' } : null}
-          onClick={toggle}
-        />
-      </ToggleWrapper>
+      <Toggler
+        theme={theme}
+        style={height ? { transform: 'rotate(-90deg)' } : null}
+        onClick={toggle}
+      />
     </Wrapper>
   )
 }

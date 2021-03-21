@@ -1,5 +1,6 @@
-import React, { useContext } from 'react'
-import { Switch, Route, Redirect } from 'react-router-dom'
+import React, { useContext, Suspense } from 'react'
+import { Switch, Route } from 'react-router-dom'
+import lazy from 'react-lazy-with-preload'
 
 import GlobalStyle from './style/globalStyle'
 
@@ -12,8 +13,9 @@ import Project from './pages/Project/Project'
 
 import Background from './components/Background/Background'
 import Header from './components/Header/Header'
-import SideNav from './components/SideNav/SideNav'
 import Socials from './components/Socials/Socials'
+
+const SideNav = lazy(() => import('./components/SideNav/SideNav'))
 
 const App = () => {
   const { theme } = useContext(ThemeContext)
@@ -25,15 +27,17 @@ const App = () => {
         <Background />
         <Header />
 
-        <SideNav />
+        <Suspense fallback={<div />}>
+          <SideNav />
+        </Suspense>
 
         <Socials onApp boxSize="12rem" iconSize="1.8rem" />
 
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route path="/projects" component={Projects} />
-          <Route path="/project/:id" component={Project} />
-          <Redirect to={'/'} />
+          <Route exact path="/projects" component={Projects} />
+          <Route exact path="/project/:id" component={Project} />
+          <Route component={Home} />
         </Switch>
       </NavState>
     </ThemeState>

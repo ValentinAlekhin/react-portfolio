@@ -66,7 +66,7 @@ export const Title = styled.div`
   margin-right: 2rem;
 `
 
-export const Links = styled.div`
+export const Links = styled.ul`
   ${flexWrap}
 `
 
@@ -77,6 +77,6 @@ export const Description = styled.div`
   color: ${({ theme }) => theme.projectCard.descriptionColor};
 `
 
-export const Skills = styled.div`
+export const Skills = styled.ul`
   ${flexWrap}
 `
