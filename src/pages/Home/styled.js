@@ -1,6 +1,7 @@
 import styled from 'styled-components'
+import { motion } from 'framer-motion'
 
-export const Wrapper = styled.div`
+export const Wrapper = styled(motion.div)`
   position: fixed;
   top: 50%;
   left: 50%;
@@ -8,6 +9,7 @@ export const Wrapper = styled.div`
   display: flex;
   align-items: center;
 `
+
 export const ImageWrapper = styled.div``
 
 export const TextWrapper = styled.div`

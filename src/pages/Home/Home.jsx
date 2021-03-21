@@ -10,11 +10,27 @@ import {
   OtherText,
 } from './styled'
 
+const transition = { duration: 0.5 }
+
+const variants = {
+  initial: {
+    x: '250%',
+    y: '-50%',
+    transition: { ...transition },
+  },
+  enter: { x: '-50%', y: '-50%', transition },
+  exit: {
+    x: '-350%',
+    y: '-50%',
+    transition: { ...transition },
+  },
+}
+
 const Home = () => {
   const { theme } = useContext(ThemeContext)
 
   return (
-    <Wrapper>
+    <Wrapper initial="initial" animate="enter" exit="exit" variants={variants}>
       <ImageWrapper>
         {/* <img
           className={classes.image}
