@@ -4,7 +4,7 @@ import ReactMarkdown from 'react-markdown'
 
 import { ThemeContext } from '../../context/ThemeState'
 
-import { Wrapper, Title, ToggleWrapper, Toggler, MarkdownBody } from './styled'
+import { Wrapper, Title, Toggler, MarkdownBody } from './styled'
 
 const Markdown = ({ url }) => {
   const { theme } = useContext(ThemeContext)

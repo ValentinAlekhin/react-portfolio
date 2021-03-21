@@ -1,6 +1,6 @@
-import React, { useContext, Suspense } from 'react'
+import React, { useContext } from 'react'
 import { Switch, Route } from 'react-router-dom'
-import lazy from 'react-lazy-with-preload'
+import loadable from '@loadable/component'
 
 import GlobalStyle from './style/globalStyle'
 
@@ -8,14 +8,18 @@ import ThemeState, { ThemeContext } from './context/ThemeState'
 import NavState from './context/NavState'
 
 import Home from './pages/Home/Home'
-import Projects from './pages/Projects/Projects'
-import Project from './pages/Project/Project'
 
 import Background from './components/Background/Background'
 import Header from './components/Header/Header'
 import Socials from './components/Socials/Socials'
 
-const SideNav = lazy(() => import('./components/SideNav/SideNav'))
+const Projects = loadable(() =>
+  import(/* webpackPrefetch: true */ './pages/Projects/Projects')
+)
+const Project = loadable(() =>
+  import(/* webpackPrefetch: true */ './pages/Project/Project')
+)
+const SideNav = loadable(() => import('./components/SideNav/SideNav'))
 
 const App = () => {
   const { theme } = useContext(ThemeContext)
@@ -27,9 +31,7 @@ const App = () => {
         <Background />
         <Header />
 
-        <Suspense fallback={<div />}>
-          <SideNav />
-        </Suspense>
+        <SideNav />
 
         <Socials onApp boxSize="12rem" iconSize="1.8rem" />
 

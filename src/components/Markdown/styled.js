@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 
-import { respondTo } from '../../style/_respondTo'
 import { SVGStyles } from '../../shared/styles'
 
 import { ReactComponent as Icon } from './arrow.svg'
@@ -30,17 +29,12 @@ export const Wrapper = styled.div`
     min-height: 114px;
   }
 `
-export const Title = styled.h6`
+export const Title = styled.span`
   color: ${({ theme }) => theme.fontColor};
   font-size: 1.5rem;
   font-weight: 600;
   text-align: center;
   margin: 0;
-`
-
-export const ToggleWrapper = styled.div`
-  display: flex;
-  justify-content: center;
 `
 
 export const Toggler = styled(Icon)`

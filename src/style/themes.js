@@ -1,4 +1,4 @@
-import { lazy, Suspense } from 'react'
+import loadable from '@loadable/component'
 import { darken, lighten, rgba } from 'polished'
 import anOldHope from 'react-syntax-highlighter/dist/esm/styles/hljs/an-old-hope'
 import monoBlue from 'react-syntax-highlighter/dist/esm/styles/hljs/mono-blue'
@@ -9,16 +9,14 @@ import lightBg from './images/light_bg.svg'
 const darkThemeFontColor = '#fefefe'
 const lightThemeFontColor = '#000'
 
-const SyntaxHighlighter = lazy(() =>
+const SyntaxHighlighter = loadable(() =>
   import('react-syntax-highlighter/dist/esm/default-highlight')
 )
 
 const createRenders = style => ({
   code: ({ language, value }) => {
     return (
-      <Suspense fallback={<div />}>
-        <SyntaxHighlighter style={style} language={language} children={value} />
-      </Suspense>
+      <SyntaxHighlighter style={style} language={language} children={value} />
     )
   },
 })
