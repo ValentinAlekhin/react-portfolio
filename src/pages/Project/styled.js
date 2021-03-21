@@ -12,6 +12,45 @@ export const Wrapper = styled.div`
 
   margin-top: 3rem;
   padding: 1rem;
+
+  .image-gallery {
+    margin-bottom: 4rem;
+  }
+
+  .image-gallery-slide-wrapper,
+  .image-gallery-content,
+  .image-gallery-slide,
+  .image-gallery-image {
+    border-radius: 6px;
+  }
+
+  .image-gallery-left-nav .image-gallery-svg,
+  .image-gallery-right-nav .image-gallery-svg {
+    height: 4rem;
+    width: 2rem;
+    transition: all 0.3s;
+  }
+
+  .image-gallery-icon {
+    transition: all 0.2s ease-out;
+    color: ${({ theme }) => theme.navLink.notActiveColor};
+
+    &:hover {
+      color: ${({ theme }) => theme.fontColor};
+    }
+  }
+
+  .image-gallery-thumbnail.active,
+  .image-gallery-thumbnail:hover,
+  .image-gallery-thumbnail:focus {
+    outline: none;
+    border: 4px solid ${({ theme }) => theme.fontColor};
+    border-radius: 3px;
+  }
+
+  .image-gallery-thumbnail .image-gallery-thumbnail-image {
+    border-radius: 1px;
+  }
 `
 
 export const ProjectHeader = styled.div`
@@ -34,6 +73,7 @@ export const Links = styled.div`
 export const Description = styled.div`
   font-size: 1.2rem;
   line-height: 1.4;
+  margin-bottom: 4rem;
   color: ${({ theme }) => theme.projectCard.descriptionColor};
 `
 
