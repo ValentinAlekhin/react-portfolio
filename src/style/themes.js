@@ -1,10 +1,23 @@
 import { darken, lighten, rgba } from 'polished'
+import SyntaxHighlighter from 'react-syntax-highlighter'
+import {
+  anOldHope,
+  monoBlue,
+} from 'react-syntax-highlighter/dist/esm/styles/hljs'
 
 import darkBg from './images/dark_bg.svg'
 import lightBg from './images/light_bg.svg'
 
 const darkThemeFontColor = '#fefefe'
 const lightThemeFontColor = '#000'
+
+const createRenders = style => ({
+  code: ({ language, value }) => {
+    return (
+      <SyntaxHighlighter style={style} language={language} children={value} />
+    )
+  },
+})
 
 export const dark = {
   id: '0',
@@ -27,6 +40,7 @@ export const dark = {
     linkColor: '#58a6ff',
     hrLineColor: '#21262d',
     togglerColor: darken(0.6, darkThemeFontColor),
+    renders: createRenders(anOldHope),
   },
   badge: {
     background: rgba(darkThemeFontColor, 0.1),
@@ -57,10 +71,11 @@ export const light = {
     background: darken(0.1, '#fff'),
   },
   markdown: {
-    background: 'gray',
+    background: darken(0.15, '#fff'),
     linkColor: '#58a6ff',
-    hrLineColor: '#21262d',
-    togglerColor: lighten(0.1, lightThemeFontColor),
+    hrLineColor: lighten(0.5, lightThemeFontColor),
+    togglerColor: lighten(0.5, lightThemeFontColor),
+    renders: createRenders(monoBlue),
   },
   badge: {
     background: rgba(lightThemeFontColor, 0.12),

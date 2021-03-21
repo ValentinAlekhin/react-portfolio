@@ -7,18 +7,17 @@ import { ReactComponent as Icon } from './arrow.svg'
 export const Wrapper = styled.div`
   background-color: ${({ theme }) => theme.markdown.background};
   border-radius: 6px;
-  padding: 32px;
-  padding-top: 16px;
-  padding-bottom: 16px;
+  padding: 1rem 2rem;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
     sans-serif, Apple Color Emoji, Segoe UI Emoji;
   font-size: 16px;
   line-height: 1.5;
   word-wrap: break-word;
+  margin-bottom: 4rem;
 `
 export const Title = styled.h6`
   color: ${({ theme }) => theme.fontColor};
-  font-size: 18px;
+  font-size: 1.5rem;
   font-weight: 600;
   text-align: center;
   margin: 0;
@@ -50,6 +49,7 @@ export const MarkdownBody = styled.div`
   transition: all 0.5s ease-in-out;
   height: 0px;
   margin-bottom: 1rem;
+  color: ${({ theme }) => theme.fontColor};
 
   h1 {
     font-size: 2rem;
@@ -84,6 +84,10 @@ export const MarkdownBody = styled.div`
     li + li {
       margin-top: 0.25rem;
     }
+  }
+
+  pre {
+    border-radius: 6px;
   }
 
   code,

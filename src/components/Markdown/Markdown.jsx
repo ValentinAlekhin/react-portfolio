@@ -1,24 +1,10 @@
 import React, { useEffect, useState, useRef, useContext } from 'react'
 import axios from 'axios'
 import ReactMarkdown from 'react-markdown'
-import SyntaxHighlighter from 'react-syntax-highlighter'
-import { anOldHope } from 'react-syntax-highlighter/dist/esm/styles/hljs'
 
 import { ThemeContext } from '../../context/ThemeState'
 
 import { Wrapper, Title, ToggleWrapper, Toggler, MarkdownBody } from './styled'
-
-const renderers = {
-  code: ({ language, value }) => {
-    return (
-      <SyntaxHighlighter
-        style={anOldHope}
-        language={language}
-        children={value}
-      />
-    )
-  },
-}
 
 const Markdown = ({ url }) => {
   const { theme } = useContext(ThemeContext)
@@ -41,10 +27,13 @@ const Markdown = ({ url }) => {
 
   return (
     <Wrapper theme={theme}>
-      <Title theme={theme}>README</Title>
+      <Title theme={theme}>Здесь можно посмотреть README.md файл проекта</Title>
       {markdown ? (
         <MarkdownBody theme={theme} ref={markdownBody} style={{ height }}>
-          <ReactMarkdown renderers={renderers} children={markdown} />
+          <ReactMarkdown
+            renderers={theme.markdown.renders}
+            children={markdown}
+          />
         </MarkdownBody>
       ) : null}
       <ToggleWrapper theme={theme}>
