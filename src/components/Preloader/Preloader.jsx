@@ -1,7 +1,5 @@
 import React, { useState } from 'react'
 import { AnimatePresence } from 'framer-motion'
-import Loader from 'react-loader-spinner'
-import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css'
 
 import { Wrapper, StyledLoader } from './styled'
 
