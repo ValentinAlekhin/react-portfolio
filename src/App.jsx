@@ -10,6 +10,7 @@ import NavState from './context/NavState'
 
 import Home from './pages/Home/Home'
 
+import Preloader from './components/Preloader/Preloader'
 import Background from './components/Background/Background'
 import Header from './components/Header/Header'
 import Socials from './components/Socials/Socials'
@@ -29,6 +30,7 @@ const App = () => {
     <ThemeState>
       <NavState>
         <GlobalStyle theme={theme} />
+        <Preloader />
         <Background />
         <Header />
 
