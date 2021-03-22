@@ -30,6 +30,7 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    scrollbar-width: none;
 
     &::selection {
       background: ${({ theme }) => theme.selection.background};

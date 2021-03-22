@@ -8,16 +8,16 @@ import ProjectCard from '../../components/ProjectCard/ProjectCard'
 
 import { Wrapper } from './styled'
 
-const transition = { duration: 0.5 }
+const transition = { duration: 0.3 }
 
 const variants = {
   initial: {
-    x: '200%',
+    opacity: 0,
     transition: { ...transition },
   },
-  enter: { x: 0, transition },
+  enter: { opacity: 1, transition },
   exit: {
-    x: '-200%',
+    opacity: 0,
     transition: { ...transition },
   },
 }

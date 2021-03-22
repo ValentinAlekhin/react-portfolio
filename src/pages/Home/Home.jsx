@@ -10,18 +10,16 @@ import {
   OtherText,
 } from './styled'
 
-const transition = { duration: 0.5 }
+const transition = { duration: 0.3 }
 
 const variants = {
   initial: {
-    x: '250%',
-    y: '-50%',
+    opacity: 0,
     transition: { ...transition },
   },
-  enter: { x: '-50%', y: '-50%', transition },
+  enter: { opacity: 1, transition },
   exit: {
-    x: '-350%',
-    y: '-50%',
+    opacity: 0,
     transition: { ...transition },
   },
 }

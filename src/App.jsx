@@ -36,7 +36,7 @@ const App = () => {
 
         <Socials onApp boxSize="12rem" iconSize="1.8rem" />
 
-        <AnimatePresence initial={false}>
+        <AnimatePresence initial={false} exitBeforeEnter>
           <Switch location={location} key={location.pathname}>
             <Route exact path="/" component={Home} />
             <Route exact path="/projects" component={Projects} />
