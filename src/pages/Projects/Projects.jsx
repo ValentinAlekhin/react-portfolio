@@ -8,17 +8,15 @@ import ProjectCard from '../../components/ProjectCard/ProjectCard'
 
 import { Wrapper } from './styled'
 
-const transition = { duration: 0.3 }
-
 const variants = {
-  initial: {
-    opacity: 0,
-    transition: { ...transition },
+  animate: {
+    transition: { staggerChildren: 0.07, delayChildren: 0.3 },
   },
-  enter: { opacity: 1, transition },
   exit: {
-    opacity: 0,
-    transition: { ...transition },
+    transition: {
+      staggerChildren: 0.05,
+      delayChildren: 0.2,
+    },
   },
 }
 
@@ -29,7 +27,7 @@ const Projects = () => {
   return (
     <motion.div
       initial="initial"
-      animate="enter"
+      animate="animate"
       exit="exit"
       variants={variants}
       className="contentContainer"

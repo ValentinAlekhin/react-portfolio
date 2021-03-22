@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components'
+import { motion } from 'framer-motion'
 
 import { glassEffect } from '../../shared/styles'
 
@@ -7,7 +8,7 @@ const flexWrap = css`
   flex-wrap: wrap;
 `
 
-export const Wrapper = styled.div`
+export const Wrapper = styled(motion.div)`
   ${glassEffect}
 
   margin-top: 3rem;

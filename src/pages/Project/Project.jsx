@@ -17,6 +17,20 @@ import {
   Skills,
 } from './styled'
 
+const transition = { duration: 0.3 }
+
+const variants = {
+  initial: {
+    opacity: 0,
+    transition: { ...transition },
+  },
+  enter: { opacity: 1, transition },
+  exit: {
+    opacity: 0,
+    transition: { ...transition },
+  },
+}
+
 const Project = ({ match }) => {
   const { theme } = useContext(ThemeContext)
 
@@ -27,7 +41,13 @@ const Project = ({ match }) => {
 
   return (
     <div className="contentContainer">
-      <Wrapper theme={theme}>
+      <Wrapper
+        theme={theme}
+        initial="initial"
+        animate="enter"
+        exit="exit"
+        variants={variants}
+      >
         <ProjectHeader>
           <Title theme={theme}>{title}</Title>
           <Links>

@@ -1,23 +1,27 @@
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
+import { motion } from 'framer-motion'
+
+import { glassEffect } from '../../shared/styles'
+
+export const Wrapper = styled(motion.div)`
+  ${glassEffect}
+  padding: 1rem;
+  transition: all 0.3s;
+
+  &:hover {
+    backdrop-filter: blur(5px);
+    background-color: ${({ theme }) => theme.projectCard.backgroundHover};
+  }
+`
 
 export const ProjectCardLink = styled(Link)`
+  height: 100%;
   position: relative;
-  padding: 1rem;
-  border-radius: 5px;
-  background-color: ${({ theme }) => theme.projectCard.background};
-  backdrop-filter: blur(4px);
-  transition: all 0.3s;
   cursor: pointer;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
-  &:hover {
-    transform: scale(1.03);
-    backdrop-filter: blur(5px);
-    background-color: ${({ theme }) => theme.projectCard.backgroundHover};
-  }
 `
 
 export const Status = styled.span`
