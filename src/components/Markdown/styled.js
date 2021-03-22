@@ -5,6 +5,8 @@ import { SVGStyles } from '../../shared/styles'
 import { ReactComponent as Icon } from './arrow.svg'
 
 export const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
   background-color: ${({ theme }) => theme.markdown.background};
   border-radius: 6px;
   padding: 1rem 2rem;
@@ -14,20 +16,6 @@ export const Wrapper = styled.div`
   line-height: 1.5;
   word-wrap: break-word;
   margin-bottom: 4rem;
-  min-height: 220px;
-  position: relative;
-
-  @media (min-width: 392px) {
-    min-height: 180px;
-  }
-
-  @media (min-width: 416px) {
-    min-height: 150px;
-  }
-
-  @media (min-width: 831px) {
-    min-height: 114px;
-  }
 `
 export const Title = styled.span`
   color: ${({ theme }) => theme.fontColor};
@@ -40,14 +28,12 @@ export const Title = styled.span`
 export const Toggler = styled(Icon)`
   ${SVGStyles}
 
-  position: absolute;
-  bottom: 1rem;
-  left: 50%;
   fill: ${({ theme }) => theme.markdown.togglerColor};
-  text-align: center;
+  align-self: center;
+  bottom: 1rem;
   height: 30px;
   width: 30px;
-  transform: rotate(90deg) translateY(50%);
+  transform: rotate(90deg);
   transition: all ease-in-out 0.3s;
   cursor: pointer;
 
@@ -57,11 +43,11 @@ export const Toggler = styled(Icon)`
 `
 
 export const MarkdownBody = styled.div`
+  color: ${({ theme }) => theme.fontColor};
   overflow: hidden;
   transition: all 0.5s ease-in-out;
   height: 0px;
   margin-bottom: 2rem;
-  color: ${({ theme }) => theme.fontColor};
 
   h1 {
     font-size: 2rem;
