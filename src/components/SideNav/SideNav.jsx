@@ -1,4 +1,5 @@
 import React, { useContext } from 'react'
+import { AnimatePresence } from 'framer-motion'
 
 import useWindowSize from '../../hooks/useWindowSize'
 
@@ -41,6 +42,7 @@ const circleVariants = {
 }
 
 const contentVariants = {
+  initial: { opacity: 0 },
   open: {
     opacity: 1,
     transition: {
@@ -52,7 +54,7 @@ const contentVariants = {
     opacity: 0,
     transition: {
       delay: 0,
-      duration: 0.2,
+      duration: 0.3,
     },
   },
 }
@@ -78,31 +80,35 @@ const SideNav = () => {
         animate={isMenuOpen ? 'open' : 'closed'}
         variants={circleVariants}
       />
-      <Content
-        initial={false}
-        animate={isMenuOpen ? 'open' : 'closed'}
-        variants={contentVariants}
-      >
-        <nav>
-          <NavList>
-            {links.map(({ to, title }, i) => (
-              <NavItem key={i}>
-                <SidedNavLink
-                  onClick={toggleMenuMode}
-                  exact
-                  to={to}
-                  theme={theme}
-                >
-                  {title}
-                </SidedNavLink>
-              </NavItem>
-            ))}
-          </NavList>
-        </nav>
+      <AnimatePresence initial={false}>
+        {isMenuOpen ? (
+          <Content
+            initial={contentVariants.initial}
+            animate={contentVariants.open}
+            exit={contentVariants.closed}
+          >
+            <nav>
+              <NavList>
+                {links.map(({ to, title }, i) => (
+                  <NavItem key={i}>
+                    <SidedNavLink
+                      onClick={toggleMenuMode}
+                      exact
+                      to={to}
+                      theme={theme}
+                    >
+                      {title}
+                    </SidedNavLink>
+                  </NavItem>
+                ))}
+              </NavList>
+            </nav>
 
-        <Socials direction="horizontal" iconSize="2rem" boxSize="12rem" />
-        <ThemeToggler iconSize="1.5rem" boxSize="6rem" />
-      </Content>
+            <Socials direction="horizontal" iconSize="2rem" boxSize="12rem" />
+            <ThemeToggler iconSize="1.5rem" boxSize="6rem" />
+          </Content>
+        ) : null}
+      </AnimatePresence>
     </Wrapper>
   )
 }

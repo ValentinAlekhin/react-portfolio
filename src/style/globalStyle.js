@@ -10,6 +10,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     color: ${({ theme }) => theme.fontColor};
     font-family: 'Manrope', sans-serif;
+    overflow-x: hidden;
 
     &::-webkit-scrollbar {
       display: none;
