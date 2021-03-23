@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import { motion } from 'framer-motion'
 
 import { ThemeContext } from '../../context/ThemeState'
-import { ProjectsContext } from '../../context/ProjectsContext'
+import { ProjectsContext } from '../../context/ProjectsState'
 
 import ProjectCard from '../../components/ProjectCard/ProjectCard'
 
@@ -22,7 +22,7 @@ const variants = {
 
 const Projects = () => {
   const { theme } = useContext(ThemeContext)
-  const projects = useContext(ProjectsContext)
+  const { projects } = useContext(ProjectsContext)
 
   return (
     <motion.div
