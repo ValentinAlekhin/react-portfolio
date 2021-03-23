@@ -5,6 +5,7 @@ import { AnimatePresence } from 'framer-motion'
 
 import GlobalStyle from './style/globalStyle'
 
+import ProjectsState from './context/ProjectsState'
 import ThemeState, { ThemeContext } from './context/ThemeState'
 import NavState from './context/NavState'
 
@@ -27,25 +28,27 @@ const App = () => {
   const { theme } = useContext(ThemeContext)
 
   return (
-    <ThemeState>
-      <NavState>
-        <GlobalStyle theme={theme} />
-        <Preloader />
-        <Background />
-        <Header />
+    <ProjectsState>
+      <ThemeState>
+        <NavState>
+          <GlobalStyle theme={theme} />
+          <Preloader />
+          <Background />
+          <Header />
 
-        <Socials onApp boxSize="12rem" iconSize="1.8rem" />
+          <Socials onApp boxSize="12rem" iconSize="1.8rem" />
 
-        <AnimatePresence initial={false} exitBeforeEnter>
-          <Switch location={location} key={location.pathname}>
-            <Route exact path="/" component={Home} />
-            <Route exact path="/projects" component={Projects} />
-            <Route exact path="/project/:id" component={Project} />
-            <Route component={Home} />
-          </Switch>
-        </AnimatePresence>
-      </NavState>
-    </ThemeState>
+          <AnimatePresence initial={false} exitBeforeEnter>
+            <Switch location={location} key={location.pathname}>
+              <Route exact path="/" component={Home} />
+              <Route exact path="/projects" component={Projects} />
+              <Route exact path="/project/:id" component={Project} />
+              <Route component={Home} />
+            </Switch>
+          </AnimatePresence>
+        </NavState>
+      </ThemeState>
+    </ProjectsState>
   )
 }
 

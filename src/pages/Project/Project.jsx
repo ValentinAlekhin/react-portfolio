@@ -3,7 +3,7 @@ import ImageGallery from 'react-image-gallery'
 import 'react-image-gallery/styles/css/image-gallery.css'
 
 import { ThemeContext } from '../../context/ThemeState'
-import { ProjectsContext } from '../../context/ProjectsContext'
+import { ProjectsContext } from '../../context/ProjectsState'
 
 import Badge from '../../ui/Badge/Badge'
 import Markdown from '../../components/Markdown/Markdown'
@@ -35,9 +35,15 @@ const Project = ({ match }) => {
   const { theme } = useContext(ThemeContext)
 
   const id = parseInt(match.params.id)
-  const { title, description, skills, markdown, links, images } = useContext(
-    ProjectsContext
-  ).find(el => el.id === id)
+  const { getProjectById } = useContext(ProjectsContext)
+  const {
+    title,
+    description,
+    skills,
+    markdown,
+    links,
+    images,
+  } = getProjectById(id)
 
   return (
     <div className="contentContainer">
@@ -63,7 +69,7 @@ const Project = ({ match }) => {
           <ImageGallery items={images} lazyLoad={true} showPlayButton={false} />
         ) : null}
 
-        {markdown ? <Markdown url={markdown} /> : null}
+        {markdown && markdown.body ? <Markdown body={markdown.body} /> : null}
 
         <Skills>
           {skills.map((el, i) => (

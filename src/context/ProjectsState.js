@@ -1,6 +1,9 @@
-import { Component, createContext } from 'react'
+import { createContext, useState, useEffect } from 'react'
+import axios from 'axios'
 
-const projects = [
+const NODE_ENV = process.env.NODE_ENV
+
+const initProjects = [
   {
     title: 'Ника Дмитриева new',
     shortDescription: 'sdfasdfasdf',
@@ -25,8 +28,11 @@ const projects = [
       { title: 'GitHub', href: 'github.com' },
       { title: 'GitHub', href: 'github.com' },
     ],
-    markdown:
-      'https://raw.githubusercontent.com/ValentinAlekhin/sort-files-by-type/master/README.md',
+    markdown: {
+      url:
+        'https://raw.githubusercontent.com/ValentinAlekhin/sort-files-by-type/master/README.md',
+      body: null,
+    },
   },
   {
     title: 'Ника Дмитриева new',
@@ -101,20 +107,48 @@ const projects = [
     status: 'in progress',
     links: [{ title: 'GitHub', href: 'github.com' }],
   },
-].map((el, i) => ({ ...el, id: i }))
+].map((el, i) => {
+  const result = { ...el, id: i }
 
-const ProjectsContext = createContext(projects)
+  return result
+})
+
+export const ProjectsContext = createContext({
+  projects: initProjects,
+  fetchMarkdown: async () => {},
+  getProjectById: () => {},
+})
 ProjectsContext.displayName = 'ProjectsContext'
-const { Provider, Consumer } = ProjectsContext
 
-class ProjectsContextProvider extends Component {
-  render() {
-    return <Provider value={projects}>{this.props.children}</Provider>
+const ProjectsState = ({ children }) => {
+  const [projects, setProjects] = useState(initProjects)
+
+  const fetchMarkdown = async () => {
+    if (NODE_ENV === 'development') return
+
+    const result = [...projects]
+
+    for (const proj of projects) {
+      const { id, markdown } = proj
+      if (markdown) {
+        const { data } = await axios.get(markdown.url)
+        result[id].markdown.body = data
+      }
+    }
+
+    setProjects(result)
   }
+
+  const getProjectById = id => projects.find(projItem => projItem.id === id)
+
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  useEffect(() => fetchMarkdown(), [])
+
+  return (
+    <ProjectsContext.Provider value={{ projects, getProjectById }}>
+      {children}
+    </ProjectsContext.Provider>
+  )
 }
 
-export {
-  ProjectsContextProvider,
-  Consumer as ProjectsContextConsumer,
-  ProjectsContext,
-}
+export default ProjectsState
