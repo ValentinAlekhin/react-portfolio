@@ -32,8 +32,11 @@ const App = () => {
       <ThemeState>
         <NavState>
           <GlobalStyle theme={theme} />
+
           <Preloader />
+
           <Background />
+
           <Header />
 
           <Socials onApp boxSize="12rem" iconSize="1.8rem" />

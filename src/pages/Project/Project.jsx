@@ -15,6 +15,8 @@ import {
   Skills,
 } from './styled'
 
+import Image from '../../components/Image/Image'
+
 const transition = { duration: 0.3 }
 
 const variants = {
@@ -63,7 +65,12 @@ const Project = ({ match }) => {
 
         <Description theme={theme}>{description}</Description>
 
-        {images ? <div /> : null}
+        {images ? (
+          <Image
+            original={images[0].original}
+            placeholder={images[0].placeholder}
+          />
+        ) : null}
 
         {markdown && markdown.body ? <Markdown body={markdown.body} /> : null}
 
