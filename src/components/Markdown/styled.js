@@ -108,8 +108,4 @@ export const MarkdownBody = styled.div`
     margin-top: 0;
     margin-bottom: 16px;
   }
-
-  & > :first-child {
-    margin-top: 0;
-  }
 `
