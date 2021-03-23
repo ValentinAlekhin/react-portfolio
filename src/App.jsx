@@ -13,7 +13,7 @@ import Home from './pages/Home/Home'
 
 import Preloader from './components/Preloader/Preloader'
 import Background from './components/Background/Background'
-import Header from './components/Header/Header'
+import Header from './views/Header/Header'
 import Socials from './components/Socials/Socials'
 
 const Projects = loadable(() =>

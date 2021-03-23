@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom'
 
 import { ThemeContext } from '../../context/ThemeState'
 
-import SideNav from '../SideNav/SideNav'
+import SideNav from '../../components/SideNav/SideNav'
 import ThemeToggler from '../../ui/ThemeToggler/ThemeToggler'
 
 import {
