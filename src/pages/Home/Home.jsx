@@ -17,7 +17,7 @@ const variants = {
     opacity: 0,
     transition: { ...transition },
   },
-  enter: { opacity: 1, transition },
+  animate: { opacity: 1, transition },
   exit: {
     opacity: 0,
     transition: { ...transition },
@@ -28,7 +28,12 @@ const Home = () => {
   const { theme } = useContext(ThemeContext)
 
   return (
-    <Wrapper initial="initial" animate="enter" exit="exit" variants={variants}>
+    <Wrapper
+      initial="initial"
+      animate="animate"
+      exit="exit"
+      variants={variants}
+    >
       <ImageWrapper>
         {/* <img
           className={classes.image}

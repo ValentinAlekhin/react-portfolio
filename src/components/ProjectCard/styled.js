@@ -7,7 +7,6 @@ import { glassEffect } from '../../shared/styles'
 export const Wrapper = styled(motion.div)`
   ${glassEffect}
   padding: 1rem;
-  transition: all 0.3s;
 
   &:hover {
     backdrop-filter: blur(5px);
