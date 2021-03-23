@@ -10,7 +10,8 @@ import { ReactComponent as MailSVG } from './images/Mail.svg'
 
 const iconStyles = css`
   ${SVGStyles};
-  transition: all 0.3s;
+
+  fill: ${({ theme }) => theme.fontColor};
   width: ${({ size }) => size || '1.5rem'};
   height: ${({ size }) => size || '1.5rem'};
 

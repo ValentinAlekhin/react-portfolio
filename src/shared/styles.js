@@ -9,7 +9,7 @@ export const SVGStyles = css`
   fill: ${({ theme }) => theme.fontColor};
   height: 1.5rem;
   width: 1.5rem;
-  transition: all 0.3s;
+  transition: fill 0.3s;
 `
 
 export const mainContainerStyles = css`
