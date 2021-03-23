@@ -1,6 +1,4 @@
 import React, { useContext } from 'react'
-import ImageGallery from 'react-image-gallery'
-import 'react-image-gallery/styles/css/image-gallery.css'
 
 import { ThemeContext } from '../../context/ThemeState'
 import { ProjectsContext } from '../../context/ProjectsState'
@@ -65,9 +63,7 @@ const Project = ({ match }) => {
 
         <Description theme={theme}>{description}</Description>
 
-        {images ? (
-          <ImageGallery items={images} lazyLoad={true} showPlayButton={false} />
-        ) : null}
+        {images ? <div /> : null}
 
         {markdown && markdown.body ? <Markdown body={markdown.body} /> : null}
 

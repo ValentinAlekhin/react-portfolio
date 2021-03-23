@@ -1,6 +1,9 @@
 import { createContext, useState, useEffect } from 'react'
 import axios from 'axios'
 
+import original from '../data/original.png'
+import placeholder from '../data/placeholder.jpg'
+
 const NODE_ENV = process.env.NODE_ENV
 
 const initProjects = [
@@ -49,16 +52,8 @@ const initProjects = [
     ],
     images: [
       {
-        original: 'https://picsum.photos/id/1018/1000/600/',
-        thumbnail: 'https://picsum.photos/id/1018/250/150/',
-      },
-      {
-        original: 'https://picsum.photos/id/1015/1000/600/',
-        thumbnail: 'https://picsum.photos/id/1015/250/150/',
-      },
-      {
-        original: 'https://picsum.photos/id/1019/1000/600/',
-        thumbnail: 'https://picsum.photos/id/1019/250/150/',
+        original,
+        placeholder,
       },
     ],
   },
