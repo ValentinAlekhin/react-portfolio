@@ -1,9 +1,11 @@
-import React, { useState, useRef } from 'react'
+import React, { useState, useContext } from 'react'
 import { AnimatePresence } from 'framer-motion'
+
+import { ThemeContext } from '../../context/ThemeState'
 
 import Image from '../Image/Image'
 
-import { Wrapper, Slide, Control } from './styled'
+import { Wrapper, Slide, NextBtn, PrevBtn, ArrowIcon } from './styled'
 
 const variants = {
   enter: direction => {
@@ -33,6 +35,7 @@ const swipePower = (offset, velocity) => {
 }
 
 const ImageGallery = ({ images }) => {
+  const { theme } = useContext(ThemeContext)
   const [[index, direction], setPage] = useState([0, 0])
 
   const paginate = newDirection => {
@@ -43,17 +46,25 @@ const ImageGallery = ({ images }) => {
 
   return (
     <Wrapper>
-      {/* <button onClick={() => paginate(-1)}>Prev</button>
-      <button onClick={() => paginate(1)}>Next</button> */}
+      {index === 0 ? null : (
+        <NextBtn onClick={() => paginate(-1)}>
+          <ArrowIcon theme={theme} />
+        </NextBtn>
+      )}
+      {index + 1 === images.length ? null : (
+        <PrevBtn onClick={() => paginate(1)}>
+          <ArrowIcon theme={theme} right />
+        </PrevBtn>
+      )}
 
       <AnimatePresence initial={false} custom={direction}>
         <Slide
-          key={images[index].original}
+          key={index}
           custom={direction}
           variants={variants}
-          initial={variants.enter}
-          animate={variants.center}
-          exit={variants.exit}
+          initial="enter"
+          animate="center"
+          exit="exit"
           transition={{
             x: { type: 'spring', stiffness: 300, damping: 30 },
             opacity: { duration: 0.2 },

@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 import { SVGStyles } from '../../shared/styles'
 
-import { ReactComponent as Icon } from './arrow.svg'
+import { ReactComponent as Icon } from '../../shared/images/arrow.svg'
 
 export const Wrapper = styled.div`
   display: flex;
