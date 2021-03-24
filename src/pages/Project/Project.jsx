@@ -4,6 +4,7 @@ import { ThemeContext } from '../../context/ThemeState'
 import { ProjectsContext } from '../../context/ProjectsState'
 
 import Badge from '../../ui/Badge/Badge'
+import ImageGallery from '../../components/ImageGallery/ImageGallery'
 import Markdown from '../../components/Markdown/Markdown'
 
 import {
@@ -14,8 +15,6 @@ import {
   Description,
   Skills,
 } from './styled'
-
-import Image from '../../components/Image/Image'
 
 const transition = { duration: 0.3 }
 
@@ -65,12 +64,7 @@ const Project = ({ match }) => {
 
         <Description theme={theme}>{description}</Description>
 
-        {images ? (
-          <Image
-            original={images[0].original}
-            placeholder={images[0].placeholder}
-          />
-        ) : null}
+        {images ? <ImageGallery images={images} /> : null}
 
         {markdown && markdown.body ? <Markdown body={markdown.body} /> : null}
 

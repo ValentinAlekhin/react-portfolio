@@ -3,6 +3,8 @@ import axios from 'axios'
 
 import original from '../data/original.png'
 import placeholder from '../data/placeholder.jpg'
+import orig2 from '../data/original2.jpg'
+import placeholder2 from '../data/placehilser2.jpg'
 
 const NODE_ENV = process.env.NODE_ENV
 
@@ -54,6 +56,26 @@ const initProjects = [
       {
         original,
         placeholder,
+      },
+      {
+        original: orig2,
+        placeholder: placeholder2,
+      },
+      {
+        original,
+        placeholder,
+      },
+      {
+        original: orig2,
+        placeholder: placeholder2,
+      },
+      {
+        original,
+        placeholder,
+      },
+      {
+        original: orig2,
+        placeholder: placeholder2,
       },
     ],
   },

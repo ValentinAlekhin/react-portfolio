@@ -1,22 +1,19 @@
 import React, { useState } from 'react'
 
-import { Wrapper, Picture, Placeholder } from './styled'
+import { Wrapper, Picture, StyledImg } from './styled'
 
 const Image = ({ original, placeholder }) => {
   const [imgLoad, setImgLoad] = useState(false)
 
-  const onLoadHandler = () => {
-    console.log('Load')
-    setImgLoad(true)
-  }
+  const onLoadHandler = () => setImgLoad(true)
 
   return (
     <Wrapper>
-      <Placeholder src={placeholder} />
+      <StyledImg src={placeholder} />
 
       <Picture style={{ opacity: imgLoad ? 1 : 0 }}>
         <source srcSet={original} type="image/jpeg" />
-        <img src={original} alt="original" onLoad={onLoadHandler} />
+        <StyledImg src={original} alt="original" onLoad={onLoadHandler} />
       </Picture>
     </Wrapper>
   )
