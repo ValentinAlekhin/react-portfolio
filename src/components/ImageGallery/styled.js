@@ -2,6 +2,7 @@ import styled, { css } from 'styled-components'
 import { motion } from 'framer-motion'
 
 import { SVGStyles } from '../../shared/styles'
+import { respondTo } from '../../style/_respondTo'
 
 import { ReactComponent as Icon } from '../../shared/images/arrow.svg'
 
@@ -17,8 +18,28 @@ export const Wrapper = styled.div`
   overflow: hidden;
   position: relative;
   width: 100%;
-  height: 500px;
+  height: 200px;
   border-radius: 5px;
+
+  ${respondTo.xs`
+    height: 300px;
+  `}
+
+  ${respondTo.sm`
+    height: 400px;
+  `}
+
+  ${respondTo.md`
+    height: 500px;
+  `}
+
+  ${respondTo.lg`
+    height: 700px;
+  `}
+
+  ${respondTo.xl`
+    height: 900px;
+  `}
 `
 
 export const Slide = styled(motion.div)`
