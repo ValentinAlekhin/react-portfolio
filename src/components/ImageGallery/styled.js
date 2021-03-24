@@ -1,7 +1,6 @@
 import styled, { css } from 'styled-components'
 import { motion } from 'framer-motion'
 
-import { SVGStyles } from '../../shared/styles'
 import { respondTo } from '../../style/_respondTo'
 
 import { ReactComponent as Icon } from '../../shared/images/arrow.svg'
@@ -9,9 +8,17 @@ import { ReactComponent as Icon } from '../../shared/images/arrow.svg'
 const btnStyles = css`
   position: absolute;
   z-index: 2;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 0;
+  bottom: 0;
+  width: 60px;
   cursor: pointer;
+  transition: opacity 0.3s;
+  background: ${({ theme }) => theme.imageGallery.controlBackground};
+  opacity: 0;
+
+  &:hover {
+    opacity: 1;
+  }
 `
 
 export const Wrapper = styled.div`
@@ -47,12 +54,12 @@ export const Slide = styled(motion.div)`
   position: absolute;
   border-radius: 5px;
   width: 100%;
+  height: 100%;
 `
 
 export const NextBtn = styled.button`
   ${btnStyles}
-  left: 20px;
-  background: none;
+  left: 0;
   border: none;
 
   svg {
@@ -62,17 +69,12 @@ export const NextBtn = styled.button`
 
 export const PrevBtn = styled.button`
   ${btnStyles}
-  right: 20px;
-  background: none;
+  right: 0;
   border: none;
 `
 
 export const ArrowIcon = styled(Icon)`
-  ${SVGStyles}
   width: 2rem;
   height: 2rem;
-
-  &:hover {
-    fill: ${({ theme }) => theme.navLink.notActiveColor};
-  }
+  fill: #fff;
 `

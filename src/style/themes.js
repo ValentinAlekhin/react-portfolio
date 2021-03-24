@@ -37,6 +37,9 @@ export const dark = {
   sideNav: {
     background: lighten(0.2, '#000'),
   },
+  imageGallery: {
+    controlBackground: rgba('#000', 0.5),
+  },
   markdown: {
     background: '#151619',
     linkColor: '#58a6ff',
@@ -71,6 +74,9 @@ export const light = {
   },
   sideNav: {
     background: darken(0.1, '#fff'),
+  },
+  imageGallery: {
+    controlBackground: rgba('#000', 0.4),
   },
   markdown: {
     background: darken(0.15, '#fff'),
