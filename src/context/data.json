@@ -1,0 +1,112 @@
+[
+  {
+    "status": "in progress",
+    "title": "Ника Дмитриева NEW",
+    "shortDescription": "Сайт с админ панелью для фотографа, написанный на Vue",
+    "description": "Этой мой самый свежий проект. Состоит из сервера и двух клиентов, один для администрирования, другой уже для посетителей. Сейчас готовы формы регистрации и добавления новой серии. Демо версию можно увидеть по ссылке внизу. Вместо взаимодействия с сервером стоят setTimeout обернутые в Promise. Логин и пароль любые.",
+    "skills": [
+      "Vue",
+      "Vuex",
+      "Vuetify",
+      "SCSS",
+      "Node",
+      "Express",
+      "Mongo",
+      "Docker"
+    ],
+    "links": [
+      {
+        "title": "GitHub",
+        "href": "https://github.com/ValentinAlekhin/nikadmitrieva-new"
+      },
+      {
+        "title": "Site",
+        "href": "https://valentinalekhin.github.io/nikadmitrieva-new/"
+      }
+    ],
+    "markdown": {
+      "url": "",
+      "body": null
+    },
+    "images": [
+      {
+        "original": "/images/nika-new/1.png",
+        "placeholder": "/images/nika-new/1p.jpg"
+      },
+      {
+        "original": "/images/nika-new/2.png",
+        "placeholder": "/images/nika-new/2p.jpg"
+      },
+      {
+        "original": "/images/nika-new/3.png",
+        "placeholder": "/images/nika-new/3p.jpg"
+      }
+    ]
+  },
+  {
+    "status": "done",
+    "title": "Ника Дмитриева",
+    "shortDescription": "Повторяет функционал предыдущего сайта, только более примитивен и написан на другом стеке",
+    "description": "Это сайт-портфолио для моей девушки, она фотограф. React и Redux явно избыточны для него, но мне хотелось попрактиковаться. К тому же это не просто статический сайт, его можно редактировать, нажав дважды в футере на надпись \"© 2020 НИКА ДМИТРИЕВА\". Откроется модальное окно регистрации администратора, после входа станут доступны элементы интерфейса для редактирования контента.",
+    "skills": ["React", "Redux", "SCSS", "Node", "Express", "Mongo", "Docker"],
+    "links": [
+      {
+        "title": "GitHub",
+        "href": "https://github.com/ValentinAlekhin/nikadmitrieva-client"
+      },
+      {
+        "title": "Site",
+        "href": "/"
+      }
+    ],
+    "markdown": {
+      "url": "",
+      "body": null
+    },
+    "images": [
+      {
+        "original": "/images/nika-old/1.jpg",
+        "placeholder": "/images/nika-old/1p.jpg"
+      },
+      {
+        "original": "/images/nika-old/2.jpg",
+        "placeholder": "/images/nika-old/2p.jpg"
+      },
+      {
+        "original": "/images/nika-old/3.jpg",
+        "placeholder": "/images/nika-old/3p.jpg"
+      }
+    ]
+  },
+  {
+    "status": "done",
+    "title": "Renovation",
+    "shortDescription": "Сайт написан без фреймворков, находит по адресу дома под снос по программе реновации",
+    "description": "Приложение помогает найти дату сноса дома по программе реновации, просто вписав адрес. Идея пришла после того, как на Mos.ru появился список в виде огромного и не особо читаемого PDF файла, который пришлось распарсить в JSON для работы программы.",
+    "skills": ["JavaScript", "WebPack", "SCSS"],
+    "links": [
+      {
+        "title": "GitHub",
+        "href": "https://github.com/ValentinAlekhin/renovation"
+      },
+      {
+        "title": "Site",
+        "href": "https://valentinalekhin.github.io/renovation/"
+      }
+    ],
+    "images": [
+      {
+        "original": "/images/renovation/1.png",
+        "placeholder": "/images/renovation/1p.jpg"
+      },
+      {
+        "original": "/images/renovation/2.png",
+        "placeholder": "/images/renovation/2p.jpg"
+      },
+      {
+        "original": "/images/renovation/2.png",
+        "placeholder": "/images/renovation/2p.jpg"
+      }
+    ]
+  }
+]
