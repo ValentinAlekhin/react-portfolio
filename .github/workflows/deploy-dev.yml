@@ -1,9 +1,9 @@
-name: Deploy
+name: Deploy Dev
 
 on:
   push:
     branches:
-      - master
+      - dev
 
 jobs:
   deploy:
@@ -25,4 +25,4 @@ jobs:
       - run: npm ci
       - run: npm run build
       # Deploy
-      - run: cd dist && rsync -e "ssh -i $HOME/.ssh/key -o StrictHostKeyChecking=no" --archive --compress --delete . valentin@alekhin.dev:/var/www/dev.alekhin.dev
+      - run: cd build && rsync -e "ssh -i $HOME/.ssh/key -o StrictHostKeyChecking=no" --archive --compress --delete . valentin@alekhin.dev:/var/www/dev.alekhin.dev
