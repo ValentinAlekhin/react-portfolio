@@ -31,6 +31,7 @@ export const Wrapper = styled.div`
   width: 100%;
   height: 200px;
   border-radius: 5px;
+  margin-bottom: 2rem;
 
   ${respondTo.xs`
     height: 300px;
