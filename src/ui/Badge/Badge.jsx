@@ -9,7 +9,7 @@ const Badge = ({ text, link }) => {
 
   const TextElement = <Text theme={theme}>{text}</Text>
   const LinkElement = (
-    <Link theme={theme} href={link}>
+    <Link theme={theme} href={link} target="_blank">
       {text}
     </Link>
   )

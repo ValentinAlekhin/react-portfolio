@@ -1,6 +1,8 @@
 import React, { createContext, useState } from 'react'
 import PropTypes from 'prop-types'
 
+import delay from '../utils/delay'
+
 export const MenuContext = createContext({
   isMenuOpen: true,
   toggleMenu: () => {},
@@ -10,14 +12,15 @@ const NavState = ({ children }) => {
   const [isMenuOpen, toggleMenu] = useState(false)
   const [coords, setCoords] = useState(null)
 
-  const toggleMenuMode = () => {
+  const toggleMenuMode = async () => {
     const body = document.body
 
     if (isMenuOpen) {
+      toggleMenu(false)
+
+      await delay(500)
       body.style.height = ''
       body.style.overflowY = ''
-
-      toggleMenu(false)
     } else {
       body.style.height = '100vh'
       body.style.overflowY = 'hidden'
