@@ -11,11 +11,7 @@ const App = () => {
   const { width, height } = useWindowSize()
   const orientation = width / height > 1.5 ? 'hor' : 'vert'
 
-  return (
-    <Wrapper>
-      <Background theme={theme} orient={orientation} />
-    </Wrapper>
-  )
+  return <Background theme={theme} orient={orientation} />
 }
 
 export default App
