@@ -2,16 +2,46 @@ import React, { useContext } from 'react'
 
 import { ThemeContext } from '../../context/ThemeState'
 
-import useWindowSize from '../../hooks/useWindowSize'
+import { dark, light } from '../../style/themes'
 
-import { Background, Wrapper } from './styled'
+import { Image } from './styled'
+
+const transition = { duration: 0.3 }
+
+const variants = {
+  initial: {
+    opacity: 0,
+    transition,
+  },
+  animate: {
+    opacity: 1,
+    transition,
+  },
+  exit: {
+    opacity: 0,
+    transition,
+  },
+}
 
 const App = () => {
   const { theme } = useContext(ThemeContext)
-  const { width, height } = useWindowSize()
-  const orientation = width / height > 1.5 ? 'hor' : 'vert'
 
-  return <Background theme={theme} orient={orientation} />
+  return (
+    <>
+      <Image
+        animate={theme.id === dark.id ? 'animate' : 'exit'}
+        variants={variants}
+        src={dark.background}
+        alt="Dark background"
+      />
+      <Image
+        animate={theme.id === light.id ? 'animate' : 'exit'}
+        variants={variants}
+        src={light.background}
+        alt="Light background"
+      />
+    </>
+  )
 }
 
 export default App
