@@ -3,9 +3,6 @@ import { darken, lighten, rgba } from 'polished'
 import anOldHope from 'react-syntax-highlighter/dist/esm/styles/hljs/an-old-hope'
 import monoBlue from 'react-syntax-highlighter/dist/esm/styles/hljs/mono-blue'
 
-import darkBg from './images/dark_bg.svg'
-import lightBg from './images/light_bg.svg'
-
 const darkThemeFontColor = '#fefefe'
 const lightThemeFontColor = '#000'
 
@@ -23,7 +20,7 @@ const createRenders = style => ({
 
 export const dark = {
   id: '0',
-  background: darkBg,
+  background: { fill: '#000', stroke: lighten(0.2, '#000') },
   fontColor: darkThemeFontColor,
   navLink: {
     notActiveColor: darken(0.4, darkThemeFontColor),
@@ -61,7 +58,7 @@ export const dark = {
 
 export const light = {
   id: '1',
-  background: lightBg,
+  background: { fill: '#fff', stroke: darken(0.4, '#fff') },
   fontColor: lightThemeFontColor,
   navLink: {
     notActiveColor: lighten(0.5, lightThemeFontColor),
