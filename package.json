@@ -24,7 +24,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy:dev": "npm run build && rsync --archive --compress --delete --progress --omit-dir-times --no-perms ./build/ valentin@alekhin.dev:/var/www/dev.alekhin.dev"
   },
   "eslintConfig": {
     "extends": [
