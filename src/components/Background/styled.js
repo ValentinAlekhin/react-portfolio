@@ -2,15 +2,20 @@ import styled from 'styled-components'
 
 import { ReactComponent as SVG } from './background.svg'
 
-export const Background = styled(SVG)`
+export const Wrapper = styled.div`
   position: fixed;
   top: 0;
+  bottom: 0;
+  right: 0;
   left: 0;
   object-fit: cover;
-  min-width: 100%;
-  min-height: 100%;
   z-index: -1;
+`
 
+export const Background = styled(SVG)`
+  width: ${({ orient }) => (orient === 'hor' ? '100%' : '')};
+  height: ${({ orient }) => (orient === 'hor' ? '' : '100%')};
+  scale: 1.01;
   .st0 {
     transition: all 0.3s;
     fill: ${({ theme }) => theme.background.fill};
