@@ -24,10 +24,6 @@
         "href": "https://valentinalekhin.github.io/nikadmitrieva-new/"
       }
     ],
-    "markdown": {
-      "url": "",
-      "body": null
-    },
     "images": [
       {
         "original": "/images/nika-new/1.png",
@@ -59,10 +55,7 @@
         "href": "/"
       }
     ],
-    "markdown": {
-      "url": "",
-      "body": null
-    },
+
     "images": [
       {
         "original": "/images/nika-old/1.jpg",
@@ -108,5 +101,26 @@
         "placeholder": "/images/renovation/2p.jpg"
       }
     ]
+  },
+  {
+    "status": "done",
+    "title": "Sort files by type module",
+    "shortDescription": "Модуль для NodeJS приложений, сортирующий файлы по папкам, исходя из их типа",
+    "description": "Модуль создавался для собственного бота в Телеграмме, сначала я решил реализовать весь нужный функционал в самом боте, но со временем пришло осознание, что лучше разделить логику работы, заодно создал пакет на npm",
+    "skills": ["NodeJS", "Jest"],
+    "links": [
+      {
+        "title": "GitHub",
+        "href": "https://github.com/ValentinAlekhin/sort-files-by-type"
+      },
+      {
+        "title": "NPM",
+        "href": "https://www.npmjs.com/package/sort-files-by-type"
+      }
+    ],
+    "markdown": {
+      "url": "https://raw.githubusercontent.com/ValentinAlekhin/sort-files-by-type/master/README.md",
+      "body": null
+    }
   }
 ]
