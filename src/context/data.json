@@ -122,5 +122,24 @@
       "url": "https://raw.githubusercontent.com/ValentinAlekhin/sort-files-by-type/master/README.md",
       "body": null
     }
+  },
+  {
+    "status": "done",
+    "title": "Обои для рабочего стола",
+    "shortDescription": "Обои на рабочий стол на Wallpaper Engine",
+    "description": "После скачивания Wallpaper Engine, к сожалению, не нашлось подходящих мне обоев для рабочего стола, поэтому решил создать собственные. Используется два API для их работы, одно определяет местоположение по IP, второе, получив данные от первого, запрашивает погоду по нужному региону.",
+    "skills": ["Vue"],
+    "links": [
+      {
+        "title": "GitHub",
+        "href": "https://github.com/ValentinAlekhin/desktop-wallpaper"
+      }
+    ],
+    "images": [
+      {
+        "original": "/images/wallpaper/1.png",
+        "placeholder": "/images/wallpaper/1p.jpg"
+      }
+    ]
   }
 ]

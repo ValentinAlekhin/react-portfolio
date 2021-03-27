@@ -19,6 +19,10 @@ const btnStyles = css`
   &:hover {
     opacity: 1;
   }
+
+  &:focus {
+    outline: none;
+  }
 `
 
 export const Wrapper = styled.div`
