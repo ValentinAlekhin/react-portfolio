@@ -13,9 +13,9 @@ export const Wrapper = styled.div`
 `
 
 export const Background = styled(SVG)`
-  width: ${({ orient }) => (orient === 'hor' ? '100%' : '')};
-  height: ${({ orient }) => (orient === 'hor' ? '' : '100%')};
-  scale: 1.01;
+  width: ${({ orient }) => (orient === 'hor' ? '110%' : '')};
+  height: ${({ orient }) => (orient === 'hor' ? '' : '110%')};
+
   .st0 {
     transition: all 0.3s;
     fill: ${({ theme }) => theme.background.fill};
