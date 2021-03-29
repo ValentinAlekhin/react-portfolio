@@ -18,10 +18,14 @@ import Header from './views/Header/Header'
 import Socials from './components/Socials/Socials'
 
 const Projects = loadable(() =>
-  import(/* webpackPrefetch: true */ './pages/Projects/Projects')
+  import(
+    /* webpackPrefetch: true, webpackChunkName: "ProjectsPage" */ './pages/Projects/Projects'
+  )
 )
 const Project = loadable(() =>
-  import(/* webpackPrefetch: true */ './pages/Project/Project')
+  import(
+    /* webpackPrefetch: true, webpackChunkName: "ProjectPage" */ './pages/Project/Project'
+  )
 )
 
 const App = () => {

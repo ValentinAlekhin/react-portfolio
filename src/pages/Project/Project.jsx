@@ -1,11 +1,11 @@
 import React, { useContext } from 'react'
+import loadable from '@loadable/component'
 
 import { ThemeContext } from '../../context/ThemeState'
 import { ProjectsContext } from '../../context/ProjectsState'
 
 import Badge from '../../ui/Badge/Badge'
 import ImageGallery from '../../components/ImageGallery/ImageGallery'
-import Markdown from '../../components/Markdown/Markdown'
 
 import {
   Wrapper,
@@ -15,6 +15,12 @@ import {
   Description,
   Skills,
 } from './styled'
+
+const Markdown = loadable(() =>
+  import(
+    /* webpackPrefetch: true, webpackChunkName: "Markdown" */ '../../components/Markdown/Markdown'
+  )
+)
 
 const transition = { duration: 0.3 }
 

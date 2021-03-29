@@ -1,4 +1,3 @@
-import loadable from '@loadable/component'
 import { darken, lighten, rgba } from 'polished'
 import anOldHope from 'react-syntax-highlighter/dist/esm/styles/hljs/an-old-hope'
 import monoBlue from 'react-syntax-highlighter/dist/esm/styles/hljs/mono-blue'
@@ -8,18 +7,6 @@ import lightBg from './images/light_bg.svg'
 
 const darkThemeFontColor = '#fefefe'
 const lightThemeFontColor = '#000'
-
-const SyntaxHighlighter = loadable(() =>
-  import('react-syntax-highlighter/dist/esm/default-highlight')
-)
-
-const createRenders = style => ({
-  code: ({ language, value }) => {
-    return (
-      <SyntaxHighlighter style={style} language={language} children={value} />
-    )
-  },
-})
 
 export const dark = {
   id: '0',
@@ -45,7 +32,7 @@ export const dark = {
     linkColor: '#58a6ff',
     hrLineColor: '#21262d',
     togglerColor: darken(0.6, darkThemeFontColor),
-    renders: createRenders(anOldHope),
+    codeTheme: anOldHope,
   },
   badge: {
     background: rgba(darkThemeFontColor, 0.1),
@@ -83,7 +70,7 @@ export const light = {
     linkColor: '#58a6ff',
     hrLineColor: lighten(0.5, lightThemeFontColor),
     togglerColor: lighten(0.5, lightThemeFontColor),
-    renders: createRenders(monoBlue),
+    codeTheme: monoBlue,
   },
   badge: {
     background: rgba(lightThemeFontColor, 0.12),
