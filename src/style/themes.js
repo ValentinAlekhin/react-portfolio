@@ -1,6 +1,4 @@
 import { darken, lighten, rgba } from 'polished'
-import anOldHope from 'react-syntax-highlighter/dist/esm/styles/hljs/an-old-hope'
-import monoBlue from 'react-syntax-highlighter/dist/esm/styles/hljs/mono-blue'
 
 import darkBg from './images/dark_bg.svg'
 import lightBg from './images/light_bg.svg'
@@ -32,7 +30,7 @@ export const dark = {
     linkColor: '#58a6ff',
     hrLineColor: '#21262d',
     togglerColor: darken(0.6, darkThemeFontColor),
-    codeTheme: anOldHope,
+    codeTheme: 'anOldHope',
   },
   badge: {
     background: rgba(darkThemeFontColor, 0.1),
@@ -70,7 +68,7 @@ export const light = {
     linkColor: '#58a6ff',
     hrLineColor: lighten(0.5, lightThemeFontColor),
     togglerColor: lighten(0.5, lightThemeFontColor),
-    codeTheme: monoBlue,
+    codeTheme: 'monoBlue',
   },
   badge: {
     background: rgba(lightThemeFontColor, 0.12),

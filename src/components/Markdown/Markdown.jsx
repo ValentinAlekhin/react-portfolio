@@ -1,15 +1,15 @@
 import React, { useState, useRef, useContext } from 'react'
-import loadable from '@loadable/component'
-
+import { Light as SyntaxHighlighter } from 'react-syntax-highlighter'
+import js from 'react-syntax-highlighter/dist/esm/languages/hljs/javascript'
+import anOldHope from 'react-syntax-highlighter/dist/esm/styles/hljs/an-old-hope'
+import monoBlue from 'react-syntax-highlighter/dist/esm/styles/hljs/an-old-hope'
 import ReactMarkdown from 'react-markdown'
 
 import { ThemeContext } from '../../context/ThemeState'
 
 import { Wrapper, Title, Toggler, MarkdownBody } from './styled'
 
-const SyntaxHighlighter = loadable(() =>
-  import('react-syntax-highlighter/dist/esm/default-highlight')
-)
+SyntaxHighlighter.registerLanguage('javascript', js)
 
 const createRenders = style => ({
   code: ({ language, value }) => {
@@ -24,7 +24,9 @@ const Markdown = ({ body }) => {
   const markdownBody = useRef()
   const [height, setHeight] = useState(false)
 
-  const renderers = createRenders(theme.markdown.codeTheme)
+  const renderers = createRenders(
+    { anOldHope, monoBlue }[theme.markdown.codeTheme]
+  )
 
   const toggle = () => {
     const { scrollHeight } = markdownBody.current
