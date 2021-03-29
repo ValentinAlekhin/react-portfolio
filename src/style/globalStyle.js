@@ -9,7 +9,7 @@ import { respondTo } from './_respondTo'
 const GlobalStyle = createGlobalStyle`
   body {
     color: ${({ theme }) => theme.fontColor};
-    font-family: Verdana, Geneva, sans-serif;
+    font-family: 'Manrope', 'Times New Roman', Times, sans-serif;
     overflow-x: hidden;
 
     &::-webkit-scrollbar {
