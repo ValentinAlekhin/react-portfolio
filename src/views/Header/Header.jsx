@@ -1,9 +1,9 @@
 import React, { useContext } from 'react'
 import { NavLink } from 'react-router-dom'
+import loadable from '@loadable/component'
 
 import { ThemeContext } from '../../context/ThemeState'
 
-import SideNav from '../../components/SideNav/SideNav'
 import ThemeToggler from '../../ui/ThemeToggler/ThemeToggler'
 
 import {
@@ -17,6 +17,10 @@ import {
 } from './styled'
 
 import { StyledNavLink } from '../../shared/components'
+
+const SideNav = loadable(() =>
+  import(/* webpackPrefetch: true */ '../../components/SideNav/SideNav')
+)
 
 const Header = () => {
   const { theme } = useContext(ThemeContext)
