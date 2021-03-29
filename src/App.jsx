@@ -3,7 +3,6 @@ import { Switch, Route, useLocation } from 'react-router-dom'
 import loadable from '@loadable/component'
 import { AnimatePresence } from 'framer-motion'
 
-import GlobalFonts from './fonts/GlobalFonts'
 import GlobalStyle from './style/globalStyle'
 
 import ProjectsState from './context/ProjectsState'
@@ -32,7 +31,6 @@ const App = () => {
     <ProjectsState>
       <ThemeState>
         <NavState>
-          <GlobalFonts />
           <GlobalStyle theme={theme} />
 
           <Preloader />
