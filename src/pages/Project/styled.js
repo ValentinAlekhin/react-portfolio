@@ -71,7 +71,7 @@ export const Links = styled.ul`
   ${flexWrap}
 `
 
-export const Description = styled.div`
+export const Description = styled.p`
   font-size: 1.2rem;
   line-height: 1.4;
   margin-bottom: 4rem;

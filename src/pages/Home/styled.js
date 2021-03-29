@@ -16,7 +16,7 @@ export const TextWrapper = styled.div`
   text-transform: uppercase;
 `
 
-export const MainText = styled.h4`
+export const MainText = styled.span`
   color: ${({ theme }) => theme.fontColor};
   font-size: 3.5rem;
   font-weight: 600;

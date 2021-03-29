@@ -36,6 +36,8 @@ export const Title = styled.h4`
 `
 
 export const Description = styled.p`
+  font-size: 1.2rem;
+  line-height: 1.4;
   margin-top: 0.5rem;
   color: ${({ theme }) => theme.projectCard.descriptionColor};
 `

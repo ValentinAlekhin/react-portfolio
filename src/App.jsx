@@ -31,7 +31,6 @@ const App = () => {
     <ProjectsState>
       <ThemeState>
         <NavState>
-          {/* <GlobalFonts /> */}
           <GlobalStyle theme={theme} />
 
           <Preloader />
