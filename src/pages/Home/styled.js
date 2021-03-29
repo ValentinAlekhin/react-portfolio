@@ -14,6 +14,8 @@ export const ImageWrapper = styled.div``
 
 export const TextWrapper = styled.div`
   text-transform: uppercase;
+  flex-direction: column;
+  display: flex;
 `
 
 export const MainText = styled.span`
