@@ -19,6 +19,7 @@ export const Loader = styled(SVG)`
   left: 50%;
   transform: translate(-50%, -50%);
   fill: #fff;
-  height: 100px;
-  width: 100px;
+  stroke: #fff;
+  height: 80px;
+  width: 80px;
 `
