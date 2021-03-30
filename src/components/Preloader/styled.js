@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { m as motion } from 'framer-motion'
-import Loader from 'react-loader-spinner'
-import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css'
+
+import { ReactComponent as SVG } from './loader.svg'
 
 export const Wrapper = styled(motion.div)`
   position: fixed;
@@ -13,9 +13,12 @@ export const Wrapper = styled(motion.div)`
   z-index: 100000;
 `
 
-export const StyledLoader = styled(Loader)`
+export const Loader = styled(SVG)`
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  fill: #fff;
+  height: 100px;
+  width: 100px;
 `

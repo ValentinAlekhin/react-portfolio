@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { AnimatePresence } from 'framer-motion/dist/es/components/AnimatePresence'
 
-import { Wrapper, StyledLoader } from './styled'
+import { Wrapper, Loader } from './styled'
 
 const exit = { opacity: 0, transition: { delay: 0.8 } }
 
@@ -24,7 +24,7 @@ const Preloader = () => {
     <AnimatePresence>
       {loading ? (
         <Wrapper initial={false} exit={exit}>
-          <StyledLoader type="Rings" color="#fff" height={100} width={100} />
+          <Loader />
         </Wrapper>
       ) : null}
     </AnimatePresence>
