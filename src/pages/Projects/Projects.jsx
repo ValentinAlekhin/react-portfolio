@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { motion } from 'framer-motion/dist/es/render/dom/motion'
+import { m as motion } from 'framer-motion'
 
 import { ThemeContext } from '../../context/ThemeState'
 import { ProjectsContext } from '../../context/ProjectsState'

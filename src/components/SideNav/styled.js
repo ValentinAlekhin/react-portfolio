@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { motion } from 'framer-motion/dist/es/render/dom/motion'
+import { m as motion } from 'framer-motion'
 
 import { respondTo } from '../../style/_respondTo'
 

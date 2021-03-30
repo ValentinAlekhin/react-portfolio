@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
-import { motion } from 'framer-motion/dist/es/render/dom/motion'
+import { m as motion } from 'framer-motion'
 
 import { glassEffect } from '../../shared/styles'
 
