@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components'
-import { motion } from 'framer-motion'
+import { motion } from 'framer-motion/dist/es/render/dom/motion'
 
 import { glassEffect } from '../../shared/styles'
 

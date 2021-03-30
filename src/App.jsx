@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { Switch, Route, useLocation } from 'react-router-dom'
 import loadable from '@loadable/component'
-import { AnimatePresence } from 'framer-motion'
+import { AnimatePresence } from 'framer-motion/dist/es/components/AnimatePresence/index'
 
 import GlobalFonts from './fonts/GlobalFonts'
 import GlobalStyle from './style/globalStyle'

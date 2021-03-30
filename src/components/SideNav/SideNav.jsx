@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { AnimatePresence } from 'framer-motion'
+import { AnimatePresence } from 'framer-motion/dist/es/components/AnimatePresence/index'
 
 import useWindowSize from '../../hooks/useWindowSize'
 

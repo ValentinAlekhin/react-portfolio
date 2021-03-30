@@ -1,5 +1,4 @@
 import { createContext, useState, useEffect } from 'react'
-import axios from 'axios'
 
 import data from './data.json'
 
@@ -29,7 +28,8 @@ const ProjectsState = ({ children }) => {
     for (const proj of projects) {
       const { id, markdown } = proj
       if (markdown) {
-        const { data } = await axios.get(markdown.url)
+        const response = await fetch(markdown.url)
+        const data = await response.text()
         result[id].markdown.body = data
       }
     }

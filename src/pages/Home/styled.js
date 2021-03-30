@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { motion } from 'framer-motion'
+import { motion } from 'framer-motion/dist/es/render/dom/motion'
 
 export const Wrapper = styled(motion.div)`
   position: fixed;

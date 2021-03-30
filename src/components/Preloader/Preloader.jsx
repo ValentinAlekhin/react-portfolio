@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { AnimatePresence } from 'framer-motion'
+import { AnimatePresence } from 'framer-motion/dist/es/components/AnimatePresence'
 
 import { Wrapper, StyledLoader } from './styled'
 

@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { motion } from 'framer-motion'
+import { motion } from 'framer-motion/dist/es/render/dom/motion'
 import Loader from 'react-loader-spinner'
 import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css'
 
