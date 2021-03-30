@@ -84,6 +84,8 @@ const ImageGallery = ({ images }) => {
           <Image
             original={images[index].original}
             placeholder={images[index].placeholder}
+            alt={images[index].alt}
+            placeholderAlt={images[index].placeholderAlt}
           />
         </Slide>
       </AnimatePresence>

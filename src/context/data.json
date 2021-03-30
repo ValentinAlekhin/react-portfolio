@@ -27,15 +27,18 @@
     "images": [
       {
         "original": "/images/nika-new/1.png",
-        "placeholder": "/images/nika-new/1p.jpg"
+        "placeholder": "/images/nika-new/1p.jpg",
+        "alt": "login page"
       },
       {
         "original": "/images/nika-new/2.png",
-        "placeholder": "/images/nika-new/2p.jpg"
+        "placeholder": "/images/nika-new/2p.jpg",
+        "alt": "create post page"
       },
       {
         "original": "/images/nika-new/3.png",
-        "placeholder": "/images/nika-new/3p.jpg"
+        "placeholder": "/images/nika-new/3p.jpg",
+        "alt": "create post with content page"
       }
     ]
   },
@@ -59,15 +62,18 @@
     "images": [
       {
         "original": "/images/nika-old/1.jpg",
-        "placeholder": "/images/nika-old/1p.jpg"
+        "placeholder": "/images/nika-old/1p.jpg",
+        "alt": "main page"
       },
       {
         "original": "/images/nika-old/2.jpg",
-        "placeholder": "/images/nika-old/2p.jpg"
+        "placeholder": "/images/nika-old/2p.jpg",
+        "alt": "galleries page"
       },
       {
         "original": "/images/nika-old/3.jpg",
-        "placeholder": "/images/nika-old/3p.jpg"
+        "placeholder": "/images/nika-old/3p.jpg",
+        "alt": "gallery page"
       }
     ]
   },
@@ -90,15 +96,18 @@
     "images": [
       {
         "original": "/images/renovation/1.png",
-        "placeholder": "/images/renovation/1p.jpg"
+        "placeholder": "/images/renovation/1p.jpg",
+        "alt": "main page"
       },
       {
         "original": "/images/renovation/2.png",
-        "placeholder": "/images/renovation/2p.jpg"
+        "placeholder": "/images/renovation/2p.jpg",
+        "alt": "enter text"
       },
       {
         "original": "/images/renovation/2.png",
-        "placeholder": "/images/renovation/2p.jpg"
+        "placeholder": "/images/renovation/2p.jpg",
+        "alt": "hover element"
       }
     ]
   },
@@ -138,7 +147,8 @@
     "images": [
       {
         "original": "/images/wallpaper/1.png",
-        "placeholder": "/images/wallpaper/1p.jpg"
+        "placeholder": "/images/wallpaper/1p.jpg",
+        "alt": "desktop"
       }
     ]
   }

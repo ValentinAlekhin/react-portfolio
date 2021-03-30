@@ -5,7 +5,16 @@ import data from './data.json'
 const NODE_ENV = process.env.NODE_ENV
 
 const initProjects = data.map((el, i) => {
-  const result = { ...el, id: i }
+  let result = { ...el, id: i }
+
+  if (el.images) {
+    const images = el.images.map(img => ({
+      ...img,
+      placeholderAlt: `${img.alt} placeholder`,
+    }))
+
+    result.images = images
+  }
 
   return result
 })
