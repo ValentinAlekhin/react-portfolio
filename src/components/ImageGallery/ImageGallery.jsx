@@ -46,12 +46,20 @@ const ImageGallery = ({ images }) => {
   return (
     <Wrapper>
       {index === 0 ? null : (
-        <NextBtn theme={theme} onClick={() => paginate(-1)}>
+        <NextBtn
+          theme={theme}
+          onClick={() => paginate(-1)}
+          aria-label="next slide"
+        >
           <ArrowIcon theme={theme} />
         </NextBtn>
       )}
       {index + 1 === images.length ? null : (
-        <PrevBtn theme={theme} onClick={() => paginate(1)}>
+        <PrevBtn
+          theme={theme}
+          onClick={() => paginate(1)}
+          aria-label="prev slide"
+        >
           <ArrowIcon theme={theme} right />
         </PrevBtn>
       )}
