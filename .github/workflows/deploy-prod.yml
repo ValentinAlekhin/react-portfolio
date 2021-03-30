@@ -24,5 +24,7 @@ jobs:
       # Build
       - run: npm ci
       - run: npm run build
+      # Compress
+      - run: npm run compress
       # Deploy
       - run: cd build && rsync -e "ssh -i $HOME/.ssh/key -o StrictHostKeyChecking=no" --archive --compress --delete --progress --omit-dir-times --no-perms . valentin@alekhin.dev:/var/www/alekhin.dev
