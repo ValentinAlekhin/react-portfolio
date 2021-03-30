@@ -9,6 +9,8 @@
     "@testing-library/user-event": "^13.0.11",
     "framer-motion": "^4.0.3",
     "polished": "^4.1.1",
+    "preact": "^10.5.13",
+    "preact-compat": "^3.19.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-loader-spinner": "^4.0.0",
@@ -20,8 +22,8 @@
     "web-vitals": "^1.1.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "deploy:dev": "npm run build && npm run compress && rsync --archive --compress --delete --progress --omit-dir-times --no-perms ./build/ valentin@alekhin.dev:/var/www/dev.alekhin.dev",
@@ -49,6 +51,7 @@
   "devDependencies": {
     "gzipper": "^4.4.0",
     "progress-bar-webpack-plugin": "^2.1.0",
+    "react-app-rewired": "^2.1.8",
     "webpack-bundle-analyzer": "^4.4.0"
   }
 }
