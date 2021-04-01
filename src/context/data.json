@@ -3,12 +3,16 @@
     "status": "in progress",
     "title": "React Portfolio",
     "shortDescription": "Мое текущее портфолио на React",
-    "description": "Это мой самый последний проект, попытался максимально оптимизировать его с помощью ленивой загрузки,сжатия билда в gzip и brotli. На сервере настроен nginx, который отдает либо gzip, либо brotli файлы - в зависимости от браузера. Ниже на фото результаты главной страницы Lighthouse в режиме для мобильных.",
+    "description": "Это мой самый последний проект, попытался максимально оптимизировать его с помощью ленивой загрузки компонентов, сжатия билда в gzip и brotli. На сервере настроен nginx, который отдает либо gzip, либо brotli файлы - в зависимости от браузера. Ниже на фото результаты главной страницы Lighthouse в режиме для мобильных. Так же настроен автодеплой production и development версий сайта на сервер с помощью GitHub Actions.",
     "skills": ["React", "Styled Components", "Framer Motion"],
     "links": [
       {
         "title": "GitHub",
         "href": "https://github.com/ValentinAlekhin/react-portfolio"
+      },
+      {
+        "title": "Dev Website",
+        "href": "https://dev.alekhin.dev"
       }
     ],
     "images": [
@@ -40,7 +44,7 @@
         "href": "https://github.com/ValentinAlekhin/nikadmitrieva-new"
       },
       {
-        "title": "Site",
+        "title": "Website",
         "href": "https://valentinalekhin.github.io/nikadmitrieva-new/"
       }
     ],
@@ -74,7 +78,7 @@
         "href": "https://github.com/ValentinAlekhin/nikadmitrieva-client"
       },
       {
-        "title": "Site",
+        "title": "Website",
         "href": "/"
       }
     ],
@@ -119,7 +123,7 @@
         "href": "https://github.com/ValentinAlekhin/renovation"
       },
       {
-        "title": "Site",
+        "title": "Website",
         "href": "https://valentinalekhin.github.io/renovation/"
       }
     ],
@@ -190,7 +194,7 @@
     "skills": ["Vue", "Vuex"],
     "links": [
       {
-        "title": "Site",
+        "title": "Website",
         "href": "https://valentinalekhin.github.io/portfolio/"
       },
       {
