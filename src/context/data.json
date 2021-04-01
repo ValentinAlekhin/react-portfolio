@@ -66,7 +66,7 @@
     "status": "done",
     "title": "Ника Дмитриева",
     "shortDescription": "Повторяет функционал предыдущего сайта, только более примитивен и написан на другом стеке",
-    "description": "Это сайт-портфолио для моей девушки, она фотограф. React и Redux явно избыточны для него, но мне хотелось попрактиковаться. К тому же это не просто статический сайт, его можно редактировать, нажав дважды в футере на надпись \"© 2020 НИКА ДМИТРИЕВА\". Откроется модальное окно регистрации администратора, после входа станут доступны элементы интерфейса для редактирования контента.",
+    "description": "Это сайт-портфолио для моей девушки, она фотограф. React и Redux явно избыточны для него, но мне хотелось попрактиковаться. К тому же это не просто статический сайт, его можно редактировать, нажав дважды в футере на надпись \"© 2020 НИКА ДМИТРИЕВА\". Откроется модальное окно регистрации администратора, после входа станут доступны элементы интерфейса для редактирования контента. При добавлении фото в базу данных сервер создает несколько версий фото разной ширины для разных устройств и заблюренное фото плейсхолдер, которое будет отображаться во время загрузки основного фото.",
     "skills": ["React", "Redux", "SCSS", "Node", "Express", "Mongo", "Docker"],
     "links": [
       {
@@ -178,6 +178,40 @@
       {
         "original": "/images/wallpaper/1.png",
         "placeholder": "/images/wallpaper/1p.jpg",
+        "alt": "desktop"
+      }
+    ]
+  },
+  {
+    "status": "done",
+    "title": "Old Portfolio",
+    "shortDescription": "Старый сайт портфолио на Vue",
+    "description": "Сайт был сделан полгода назад, настроен автодеплой билда на сервер",
+    "skills": ["Vue", "Vuex"],
+    "links": [
+      {
+        "title": "Site",
+        "href": "https://valentinalekhin.github.io/portfolio/"
+      },
+      {
+        "title": "GitHub",
+        "href": "https://github.com/ValentinAlekhin/portfolio"
+      }
+    ],
+    "images": [
+      {
+        "original": "/images/old-portfolio/1.jpg",
+        "placeholder": "/images/old-portfolio/1p.jpg",
+        "alt": "desktop"
+      },
+      {
+        "original": "/images/old-portfolio/2.jpg",
+        "placeholder": "/images/old-portfolio/2p.jpg",
+        "alt": "desktop"
+      },
+      {
+        "original": "/images/old-portfolio/3.jpg",
+        "placeholder": "/images/old-portfolio/3p.jpg",
         "alt": "desktop"
       }
     ]
