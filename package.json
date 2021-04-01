@@ -24,10 +24,10 @@
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
     "deploy:dev": "npm run build && npm run compress && rsync --archive --compress --delete --progress --omit-dir-times --no-perms ./build/ valentin@alekhin.dev:/var/www/dev.alekhin.dev",
     "compress": "node ./scripts/compress",
-    "analyse": "node ./scripts/analyse"
+    "analyse": "node ./scripts/analyse",
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [

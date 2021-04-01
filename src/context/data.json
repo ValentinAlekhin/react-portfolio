@@ -74,6 +74,16 @@
         "original": "/images/nika-old/3.jpg",
         "placeholder": "/images/nika-old/3p.jpg",
         "alt": "gallery page"
+      },
+      {
+        "original": "/images/nika-old/4.jpg",
+        "placeholder": "/images/nika-old/4p.jpg",
+        "alt": "gallery page"
+      },
+      {
+        "original": "/images/nika-old/5.jpg",
+        "placeholder": "/images/nika-old/5p.jpg",
+        "alt": "gallery page"
       }
     ]
   },
