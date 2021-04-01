@@ -64,7 +64,8 @@
         "placeholder": "/images/nika-new/3p.jpg",
         "alt": "create post with content page"
       }
-    ]
+    ],
+    "video": ""
   },
   {
     "status": "done",
@@ -109,7 +110,8 @@
         "placeholder": "/images/nika-old/5p.jpg",
         "alt": "gallery page"
       }
-    ]
+    ],
+    "video": ""
   },
   {
     "status": "done",

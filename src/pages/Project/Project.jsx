@@ -6,6 +6,7 @@ import { ProjectsContext } from '../../context/ProjectsState'
 
 import Badge from '../../ui/Badge/Badge'
 import ImageGallery from '../../components/ImageGallery/ImageGallery'
+import Video from '../../components/Video/Video'
 
 import {
   Wrapper,
@@ -48,6 +49,7 @@ const Project = ({ match }) => {
     markdown,
     links,
     images,
+    video,
   } = getProjectById(id)
 
   return (
@@ -71,6 +73,8 @@ const Project = ({ match }) => {
         <Description theme={theme}>{description}</Description>
 
         {images ? <ImageGallery images={images} /> : null}
+
+        {video ? <Video id={video} /> : null}
 
         {markdown && markdown.body ? <Markdown body={markdown.body} /> : null}
 
