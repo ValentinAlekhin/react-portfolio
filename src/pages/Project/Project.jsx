@@ -69,8 +69,8 @@ const Project = ({ match }) => {
         <ProjectHeader>
           <Title theme={theme}>{title}</Title>
           <Links>
-            {links.map(({ href, title }, i) => (
-              <Badge key={i} text={title} link={href} />
+            {links.map(({ href, title, type }, i) => (
+              <Badge key={i} text={title} link={href} icon={type} />
             ))}
           </Links>
         </ProjectHeader>

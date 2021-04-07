@@ -1,4 +1,17 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
+
+import { SVGStyles } from '../../shared/styles'
+
+import { ReactComponent as GitHubSVG } from '../../shared/images/GitHub.svg'
+import { ReactComponent as WebsiteSVG } from './icons/Website.svg'
+import { ReactComponent as NpmSVG } from './icons/Npm.svg'
+
+const iconStyles = css`
+  fill: ${({ theme }) => theme.badge.linkColor};
+  height: 20px;
+  width: 20px;
+  margin-right: 5px;
+`
 
 export const Wrapper = styled.li`
   background: ${({ theme }) => theme.badge.background};
@@ -15,9 +28,30 @@ export const Link = styled.a`
   color: ${({ theme }) => theme.badge.linkColor};
   border-bottom: 1px solid ${({ theme }) => theme.badge.linkColor};
   transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  padding-bottom: 3px;
 
   &:hover {
     color: ${({ theme }) => theme.badge.linkColorHover};
     border-color: ${({ theme }) => theme.badge.linkColorHover};
+
+    svg {
+      fill: ${({ theme }) => theme.badge.linkColorHover};
+    }
   }
+`
+export const GitHubIcon = styled(GitHubSVG)`
+  ${SVGStyles}
+  ${iconStyles}
+`
+
+export const WebsiteIcon = styled(WebsiteSVG)`
+  ${SVGStyles}
+  ${iconStyles}
+`
+
+export const NpmIcon = styled(NpmSVG)`
+  ${SVGStyles}
+  ${iconStyles}
 `
