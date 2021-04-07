@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components'
-import { m as motion } from 'framer-motion'
+import { motion } from 'framer-motion'
 
 import { respondTo } from '../../style/_respondTo'
 

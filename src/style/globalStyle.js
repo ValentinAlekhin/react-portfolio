@@ -11,6 +11,7 @@ const GlobalStyle = createGlobalStyle`
     color: ${({ theme }) => theme.fontColor};
     font-family: 'Manrope', 'Times New Roman', Times, sans-serif;
     overflow-x: hidden;
+    margin-bottom: 4rem;
 
     &::-webkit-scrollbar {
       display: none;
