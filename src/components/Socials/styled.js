@@ -5,7 +5,7 @@ import { respondTo } from '../../style/_respondTo'
 import { SVGStyles } from '../../shared/styles'
 
 import { ReactComponent as TelegramSVG } from './images/Telegram.svg'
-import { ReactComponent as GitHubSVG } from './images/GitHub.svg'
+import { ReactComponent as GitHubSVG } from '../../shared/images/GitHub.svg'
 import { ReactComponent as MailSVG } from './images/Mail.svg'
 
 const iconStyles = css`
