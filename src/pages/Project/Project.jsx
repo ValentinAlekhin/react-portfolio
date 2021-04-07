@@ -6,7 +6,6 @@ import { ProjectsContext } from '../../context/ProjectsState'
 
 import Badge from '../../ui/Badge/Badge'
 import ImageGallery from '../../components/ImageGallery/ImageGallery'
-import Video from '../../components/Video/Video'
 
 import {
   Wrapper,
@@ -20,6 +19,12 @@ import {
 const Markdown = loadable(() =>
   import(
     /* webpackPrefetch: true, webpackChunkName: "Markdown" */ '../../components/Markdown/Markdown'
+  )
+)
+
+const Video = loadable(() =>
+  import(
+    /* webpackPrefetch: true, webpackChunkName: "Video" */ '../../components/Video/Video'
   )
 )
 
