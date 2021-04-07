@@ -8,11 +8,13 @@
     "links": [
       {
         "title": "GitHub",
-        "href": "https://github.com/ValentinAlekhin/react-portfolio"
+        "href": "https://github.com/ValentinAlekhin/react-portfolio",
+        "type": "github"
       },
       {
         "title": "Dev Website",
-        "href": "https://dev.alekhin.dev"
+        "href": "https://dev.alekhin.dev",
+        "type": "website"
       }
     ],
     "images": [
@@ -41,11 +43,13 @@
     "links": [
       {
         "title": "GitHub",
-        "href": "https://github.com/ValentinAlekhin/nikadmitrieva-new"
+        "href": "https://github.com/ValentinAlekhin/nikadmitrieva-new",
+        "type": "github"
       },
       {
         "title": "Website",
-        "href": "https://valentinalekhin.github.io/nikadmitrieva-new/"
+        "href": "https://valentinalekhin.github.io/nikadmitrieva-new/",
+        "type": "website"
       }
     ],
     "images": [
@@ -76,11 +80,13 @@
     "links": [
       {
         "title": "GitHub",
-        "href": "https://github.com/ValentinAlekhin/nikadmitrieva-client"
+        "href": "https://github.com/ValentinAlekhin/nikadmitrieva-client",
+        "type": "github"
       },
       {
         "title": "Website",
-        "href": "/"
+        "href": "/",
+        "type": "website"
       }
     ],
 
@@ -122,11 +128,13 @@
     "links": [
       {
         "title": "GitHub",
-        "href": "https://github.com/ValentinAlekhin/renovation"
+        "href": "https://github.com/ValentinAlekhin/renovation",
+        "type": "github"
       },
       {
         "title": "Website",
-        "href": "https://valentinalekhin.github.io/renovation/"
+        "href": "https://valentinalekhin.github.io/renovation/",
+        "type": "website"
       }
     ],
     "images": [
@@ -156,11 +164,13 @@
     "links": [
       {
         "title": "GitHub",
-        "href": "https://github.com/ValentinAlekhin/sort-files-by-type"
+        "href": "https://github.com/ValentinAlekhin/sort-files-by-type",
+        "type": "github"
       },
       {
         "title": "NPM",
-        "href": "https://www.npmjs.com/package/sort-files-by-type"
+        "href": "https://www.npmjs.com/package/sort-files-by-type",
+        "type": "npm"
       }
     ],
     "markdown": {
@@ -177,7 +187,8 @@
     "links": [
       {
         "title": "GitHub",
-        "href": "https://github.com/ValentinAlekhin/desktop-wallpaper"
+        "href": "https://github.com/ValentinAlekhin/desktop-wallpaper",
+        "type": "github"
       }
     ],
     "images": [
@@ -197,11 +208,13 @@
     "links": [
       {
         "title": "Website",
-        "href": "https://valentinalekhin.github.io/portfolio/"
+        "href": "https://valentinalekhin.github.io/portfolio/",
+        "type": "website"
       },
       {
         "title": "GitHub",
-        "href": "https://github.com/ValentinAlekhin/portfolio"
+        "href": "https://github.com/ValentinAlekhin/portfolio",
+        "type": "github"
       }
     ],
     "images": [
