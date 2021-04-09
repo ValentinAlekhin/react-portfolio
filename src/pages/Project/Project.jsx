@@ -77,9 +77,9 @@ const Project = ({ match }) => {
 
         <Description theme={theme}>{description}</Description>
 
-        {images ? <ImageGallery images={images} /> : null}
-
         {video ? <Video id={video} /> : null}
+
+        {images ? <ImageGallery images={images} /> : null}
 
         {markdown && markdown.body ? <Markdown body={markdown.body} /> : null}
 
