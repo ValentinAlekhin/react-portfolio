@@ -9,6 +9,7 @@ import { respondTo } from './_respondTo'
 const GlobalStyle = createGlobalStyle`
   body {
     color: ${({ theme }) => theme.fontColor};
+    background-color: ${({ theme }) => theme.backgroundColor};
     font-family: 'Manrope', 'Times New Roman', Times, sans-serif;
     overflow-x: hidden;
     margin-bottom: 4rem;

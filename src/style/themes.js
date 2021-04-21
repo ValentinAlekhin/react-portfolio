@@ -8,6 +8,7 @@ const lightThemeFontColor = '#000'
 
 export const dark = {
   id: '0',
+  backgroundColor: '#000',
   background: darkBg,
   fontColor: darkThemeFontColor,
   navLink: {
@@ -48,6 +49,7 @@ export const dark = {
 
 export const light = {
   id: '1',
+  backgroundColor: '#fff',
   background: lightBg,
   fontColor: lightThemeFontColor,
   navLink: {
