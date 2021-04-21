@@ -10,6 +10,7 @@ import {
   Status,
   Title,
   Description,
+  StyledImage,
   Skills,
 } from './styled'
 
@@ -33,7 +34,9 @@ const variants = {
   },
 }
 
-const ProjectCard = ({ status, title, description, skills, id }) => {
+const ProjectCard = ({
+  project: { status, title, shortDescription, skills, id, images },
+}) => {
   const { theme } = useContext(ThemeContext)
 
   return (
@@ -46,7 +49,14 @@ const ProjectCard = ({ status, title, description, skills, id }) => {
       <ProjectCardLink to={`/project/${id}`}>
         <Status theme={theme}>{status}</Status>
         <Title theme={theme}>{title}</Title>
-        <Description theme={theme}>{description}</Description>
+        <Description theme={theme}>{shortDescription}</Description>
+        {images ? (
+          <StyledImage
+            original={images[0].original}
+            placeholder={images[0].placeholder}
+            alt={images[0].alt}
+          />
+        ) : null}
         <Skills>
           {skills.map((el, i) => (
             <Badge key={i} text={el} />

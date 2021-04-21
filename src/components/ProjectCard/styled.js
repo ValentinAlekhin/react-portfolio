@@ -2,6 +2,8 @@ import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import { m as motion } from 'framer-motion'
 
+import Image from '../Image/Image'
+
 import { glassEffect } from '../../shared/styles'
 
 export const Wrapper = styled(motion.div)`
@@ -41,6 +43,12 @@ export const Description = styled.p`
   line-height: 1.4;
   margin-top: 0.5rem;
   color: ${({ theme }) => theme.projectCard.descriptionColor};
+`
+
+export const StyledImage = styled(Image)`
+  margin-top: 0.5rem;
+  border-radius: 3px;
+  max-height: 50%;
 `
 
 export const Skills = styled.ul`

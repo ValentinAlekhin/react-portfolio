@@ -34,14 +34,7 @@ const Projects = () => {
     >
       <Wrapper theme={theme}>
         {projects.map((el, i) => (
-          <ProjectCard
-            key={i}
-            title={el.title}
-            description={el.shortDescription}
-            status={el.status}
-            skills={el.skills}
-            id={el.id}
-          />
+          <ProjectCard key={i} project={el} />
         ))}
       </Wrapper>
     </motion.div>
