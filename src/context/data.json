@@ -157,29 +157,6 @@
   },
   {
     "status": "done",
-    "title": "Sort files by type module",
-    "shortDescription": "Модуль для NodeJS приложений, сортирующий файлы по папкам, исходя из их типа",
-    "description": "Модуль создавался для собственного бота в Телеграмме, сначала я решил реализовать весь нужный функционал в самом боте, но со временем пришло осознание, что лучше разделить логику работы, заодно создал пакет на npm",
-    "skills": ["NodeJS", "Jest"],
-    "links": [
-      {
-        "title": "GitHub",
-        "href": "https://github.com/ValentinAlekhin/sort-files-by-type",
-        "type": "github"
-      },
-      {
-        "title": "NPM",
-        "href": "https://www.npmjs.com/package/sort-files-by-type",
-        "type": "npm"
-      }
-    ],
-    "markdown": {
-      "url": "https://raw.githubusercontent.com/ValentinAlekhin/sort-files-by-type/master/README.md",
-      "body": null
-    }
-  },
-  {
-    "status": "done",
     "title": "Обои для рабочего стола",
     "shortDescription": "Обои на рабочий стол на Wallpaper Engine",
     "description": "После скачивания Wallpaper Engine, к сожалению, не нашлось подходящих мне обоев для рабочего стола, поэтому решил создать собственные. Используется два API для их работы, одно определяет местоположение по IP, второе, получив данные от первого, запрашивает погоду по нужному региону.",
@@ -234,5 +211,28 @@
         "alt": "desktop"
       }
     ]
+  },
+  {
+    "status": "done",
+    "title": "Sort files by type module",
+    "shortDescription": "Модуль для NodeJS приложений, сортирующий файлы по папкам, исходя из их типа",
+    "description": "Модуль создавался для собственного бота в Телеграмме, сначала я решил реализовать весь нужный функционал в самом боте, но со временем пришло осознание, что лучше разделить логику работы, заодно создал пакет на npm",
+    "skills": ["NodeJS", "Jest"],
+    "links": [
+      {
+        "title": "GitHub",
+        "href": "https://github.com/ValentinAlekhin/sort-files-by-type",
+        "type": "github"
+      },
+      {
+        "title": "NPM",
+        "href": "https://www.npmjs.com/package/sort-files-by-type",
+        "type": "npm"
+      }
+    ],
+    "markdown": {
+      "url": "https://raw.githubusercontent.com/ValentinAlekhin/sort-files-by-type/master/README.md",
+      "body": null
+    }
   }
 ]
