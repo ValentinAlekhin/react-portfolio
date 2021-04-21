@@ -48,7 +48,9 @@ export const Description = styled.p`
 export const StyledImage = styled(Image)`
   margin-top: 0.5rem;
   border-radius: 3px;
-  max-height: 50%;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
 `
 
 export const Skills = styled.ul`

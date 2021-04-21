@@ -29,29 +29,10 @@ export const Wrapper = styled.div`
   overflow: hidden;
   position: relative;
   width: 100%;
-  height: 200px;
+  height: 0;
+  padding-bottom: 56.25%;
   border-radius: 5px;
   margin-bottom: 2rem;
-
-  ${respondTo.xs`
-    height: 300px;
-  `}
-
-  ${respondTo.sm`
-    height: 400px;
-  `}
-
-  ${respondTo.md`
-    height: 500px;
-  `}
-
-  ${respondTo.lg`
-    height: 700px;
-  `}
-
-  ${respondTo.xl`
-    height: 900px;
-  `}
 `
 
 export const Slide = styled(motion.div)`
