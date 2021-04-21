@@ -1,8 +1,6 @@
 import styled, { css } from 'styled-components'
 import { motion } from 'framer-motion'
 
-import { respondTo } from '../../style/_respondTo'
-
 import { ReactComponent as Icon } from '../../shared/images/arrow.svg'
 
 const btnStyles = css`
