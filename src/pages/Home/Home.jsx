@@ -3,12 +3,16 @@ import React, { useContext } from 'react'
 import { ThemeContext } from '../../context/ThemeState'
 
 import {
+  StyledContentContainer as ContentContainer,
   Wrapper,
   ImageWrapper,
   TextWrapper,
   MainText,
   OtherText,
+  ProjectsLink,
 } from './styled'
+
+import DarkPhoto from './images/dark.jpg'
 
 const transition = { duration: 0.3 }
 
@@ -28,25 +32,27 @@ const Home = () => {
   const { theme } = useContext(ThemeContext)
 
   return (
-    <Wrapper
-      initial="initial"
-      animate="animate"
-      exit="exit"
-      variants={variants}
-    >
-      <ImageWrapper>
-        {/* <img
-          className={classes.image}
-          // TODO: Добавить нужную фотку
-          src="https://c.pxhere.com/photos/d0/f2/black_wallpaper_black_and_white_casual_dark_fashion_jacket_man_model-924824.jpg!d"
-          alt="man"
-        /> */}
-      </ImageWrapper>
-      <TextWrapper>
-        <MainText theme={theme}>Frontend</MainText>
-        <OtherText theme={theme}>developer</OtherText>
-      </TextWrapper>
-    </Wrapper>
+    <ContentContainer>
+      <Wrapper
+        initial="initial"
+        animate="animate"
+        exit="exit"
+        variants={variants}
+        theme={theme}
+      >
+        <ImageWrapper>
+          <img src={DarkPhoto} alt="Valentin Alekhin" />
+        </ImageWrapper>
+        <TextWrapper>
+          <MainText theme={theme}>Hi, am Valentin</MainText>
+          <OtherText theme={theme}>Frontend developer</OtherText>
+        </TextWrapper>
+
+        <ProjectsLink href="/projects" theme={theme}>
+          My Projects
+        </ProjectsLink>
+      </Wrapper>
+    </ContentContainer>
   )
 }
 

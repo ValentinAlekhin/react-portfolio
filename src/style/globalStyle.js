@@ -10,7 +10,7 @@ const GlobalStyle = createGlobalStyle`
     background-color: ${({ theme }) => theme.backgroundColor};
     font-family: 'Manrope', 'Times New Roman', Times, sans-serif;
     overflow-x: hidden;
-    margin-bottom: 4rem;
+    padding-top: 2rem;
 
     &::-webkit-scrollbar {
       display: none;

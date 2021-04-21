@@ -10,7 +10,6 @@ export const StyledHeader = styled.header`
   justify-content: space-between;
   align-items: center;
   text-transform: uppercase;
-  margin-top: 2rem;
 
   ${respondTo.sm`justify-content: space-between;`}
 `
