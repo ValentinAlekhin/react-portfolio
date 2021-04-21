@@ -4,6 +4,7 @@ import loadable from '@loadable/component'
 import { ThemeContext } from '../../context/ThemeState'
 import { ProjectsContext } from '../../context/ProjectsState'
 
+import ContentContainer from '../../components/Containers/ContentContainer'
 import Badge from '../../ui/Badge/Badge'
 import ImageGallery from '../../components/ImageGallery/ImageGallery'
 
@@ -58,7 +59,7 @@ const Project = ({ match }) => {
   } = getProjectById(id)
 
   return (
-    <div className="contentContainer">
+    <ContentContainer>
       <Wrapper
         theme={theme}
         initial="initial"
@@ -89,7 +90,7 @@ const Project = ({ match }) => {
           ))}
         </Skills>
       </Wrapper>
-    </div>
+    </ContentContainer>
   )
 }
 

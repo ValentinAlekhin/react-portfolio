@@ -1,12 +1,10 @@
 import { createGlobalStyle } from 'styled-components'
 
-import {
-  mainContainerWidthInPercentage as mainContainerWidth,
-  contentContainerWidthInPercentage as contentContainerWidth,
-} from './_variables'
-import { respondTo } from './_respondTo'
-
 const GlobalStyle = createGlobalStyle`
+  html, body, #root {
+    height: 100%;
+  }
+
   body {
     color: ${({ theme }) => theme.fontColor};
     background-color: ${({ theme }) => theme.backgroundColor};
@@ -42,49 +40,6 @@ const GlobalStyle = createGlobalStyle`
 
   h1, h2, h3, h4, h5, h6, a, p, span {
     transition: color 0.3s;
-  }
-
-  .mainContainer, .contentContainer {
-    width: ${mainContainerWidth.xs}%;
-    margin: 0 auto;
-
-    
-  }
-
-  .mainContainer {
-    ${respondTo.sm`
-      width: ${mainContainerWidth.sm}%;
-    `}
-
-    ${respondTo.md`
-      width: ${mainContainerWidth.md}%;
-    `}
-
-    ${respondTo.lg`
-      width: ${mainContainerWidth.lg}%;
-    `}
-    
-    ${respondTo.xl`
-      width: ${mainContainerWidth.xl}%;
-    `}
-  }
-
-  .contentContainer {
-    ${respondTo.sm`
-      width: ${contentContainerWidth.sm}%;
-    `}
-
-    ${respondTo.md`
-      width: ${contentContainerWidth.md}%;
-    `}
-
-    ${respondTo.lg`
-      width: ${contentContainerWidth.lg}%;
-    `}
-    
-    ${respondTo.xl`
-      width: ${contentContainerWidth.xl}%;
-    `}
   }
 `
 

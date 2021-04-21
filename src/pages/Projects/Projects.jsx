@@ -4,6 +4,7 @@ import { m as motion } from 'framer-motion'
 import { ThemeContext } from '../../context/ThemeState'
 import { ProjectsContext } from '../../context/ProjectsState'
 
+import ContentContainer from '../../components/Containers/ContentContainer'
 import ProjectCard from '../../components/ProjectCard/ProjectCard'
 
 import { Wrapper } from './styled'
@@ -25,19 +26,20 @@ const Projects = () => {
   const { projects } = useContext(ProjectsContext)
 
   return (
-    <motion.div
-      initial="initial"
-      animate="animate"
-      exit="exit"
-      variants={variants}
-      className="contentContainer"
-    >
-      <Wrapper theme={theme}>
-        {projects.map((el, i) => (
-          <ProjectCard key={i} project={el} />
-        ))}
-      </Wrapper>
-    </motion.div>
+    <ContentContainer>
+      <motion.div
+        initial="initial"
+        animate="animate"
+        exit="exit"
+        variants={variants}
+      >
+        <Wrapper theme={theme}>
+          {projects.map((el, i) => (
+            <ProjectCard key={i} project={el} />
+          ))}
+        </Wrapper>
+      </motion.div>
+    </ContentContainer>
   )
 }
 

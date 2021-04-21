@@ -4,6 +4,7 @@ import loadable from '@loadable/component'
 
 import { ThemeContext } from '../../context/ThemeState'
 
+import MainContainer from '../../components/Containers/MainContainer'
 import ThemeToggler from '../../ui/ThemeToggler/ThemeToggler'
 
 import {
@@ -31,7 +32,7 @@ const Header = () => {
   ]
 
   return (
-    <div className={'mainContainer'}>
+    <MainContainer>
       <StyledHeader>
         <NameWrapper>
           <Icon theme={theme} />
@@ -54,7 +55,7 @@ const Header = () => {
           <ThemeToggler />
         </NavWrapper>
       </StyledHeader>
-    </div>
+    </MainContainer>
   )
 }
 
