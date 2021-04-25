@@ -31,6 +31,7 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     scrollbar-width: none;
+    -webkit-tap-highlight-color:  rgba(255, 255, 255, 0); 
 
     &::selection {
       background: ${({ theme }) => theme.selection.background};
