@@ -18,6 +18,19 @@ import {
   SidedNavLink,
 } from './styled'
 
+const wrapperVariants = {
+  initial: { opacity: 0 },
+  open: {
+    zIndex: 10,
+  },
+  closed: {
+    zIndex: -10,
+    transition: {
+      delay: 0.6,
+    },
+  },
+}
+
 const circleVariants = {
   open: size => ({
     width: size * 3,
@@ -70,7 +83,12 @@ const SideNav = () => {
   ]
 
   return (
-    <Wrapper theme={theme}>
+    <Wrapper
+      theme={theme}
+      initial={false}
+      animate={isMenuOpen ? 'open' : 'closed'}
+      variants={wrapperVariants}
+    >
       <Circle
         theme={theme}
         initial={false}

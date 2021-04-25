@@ -11,7 +11,6 @@ export const Wrapper = styled(motion.div)`
   right: 0;
   left: 0;
   bottom: 0;
-  z-index: -10;
 
   ${respondTo.sm`display: none;`};
 `
@@ -26,7 +25,6 @@ export const Circle = styled(motion.div)`
 `
 
 export const Content = styled(motion.div)`
-  opacity: ${({ open }) => (open ? 1 : 0)};
   position: absolute;
   top: 50%;
   left: 50%;
