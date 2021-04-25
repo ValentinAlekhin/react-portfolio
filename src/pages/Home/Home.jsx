@@ -12,7 +12,7 @@ import {
   ProjectsLink,
 } from './styled'
 
-import DarkPhoto from './images/dark.jpg'
+import DarkPhoto from './images/dark.png'
 
 const transition = { duration: 0.3 }
 
@@ -40,11 +40,11 @@ const Home = () => {
         variants={variants}
         theme={theme}
       >
-        <ImageWrapper>
+        <ImageWrapper theme={theme}>
           <img src={DarkPhoto} alt="Valentin Alekhin" />
         </ImageWrapper>
         <TextWrapper>
-          <MainText theme={theme}>Hi, am Valentin</MainText>
+          <MainText theme={theme}>Hi, a'm Valentin</MainText>
           <OtherText theme={theme}>Frontend developer</OtherText>
         </TextWrapper>
 

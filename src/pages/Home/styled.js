@@ -23,29 +23,36 @@ export const Wrapper = styled(motion.div)`
 `
 
 export const ImageWrapper = styled.div`
-  width: 100%;
+  width: 90vw;
+  height: 90vw;
   overflow: hidden;
   border-radius: 3px;
+  border-radius: 50%;
+  background-color: #000;
+  /* background-color: #fff; */
+  /* border: 1px solid ${({ theme }) => theme.projectCard.borderColor}; */
+  box-shadow: 0px 7px 20px 14px ${({ theme }) => theme.projectCard.boxShadow};
 
   img {
-    object-fit: cover;
+    object-fit: contain;
     width: 100%;
     height: 100%;
+    transform: translateY(8%);
   }
 `
 
 export const TextWrapper = styled.div`
   position: relative;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   flex-direction: column;
   display: flex;
   text-align: center;
 `
 
 export const MainText = styled.span`
-  position: absolute;
-  top: -160px;
-  transform: translateX(-50%);
+  /* position: absolute; */
+  /* top: -160px; */
+  /* transform: translateX(-50%); */
   opacity: 0.8;
   color: ${({ theme }) => theme.fontColor};
   font-size: 3.5rem;
