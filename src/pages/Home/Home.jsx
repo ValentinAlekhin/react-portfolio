@@ -44,7 +44,7 @@ const Home = () => {
           <img src={DarkPhoto} alt="Valentin Alekhin" />
         </ImageWrapper>
         <TextWrapper>
-          <MainText theme={theme}>Hi, a'm Valentin</MainText>
+          <MainText theme={theme}>Hi, I'm Valentin</MainText>
           <OtherText theme={theme}>Frontend developer</OtherText>
         </TextWrapper>
 

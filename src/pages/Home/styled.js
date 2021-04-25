@@ -42,6 +42,7 @@ export const ImageWrapper = styled.div`
 `
 
 export const TextWrapper = styled.div`
+  margin-top: 1rem;
   position: relative;
   text-transform: uppercase;
   flex-direction: column;
@@ -75,5 +76,5 @@ export const ProjectsLink = styled(Link)`
   padding: 0.5rem 1rem;
   font-size: 1.5rem;
   border-radius: 5px;
-  letter-spacing: 10px;
+  letter-spacing: 2px;
 `
