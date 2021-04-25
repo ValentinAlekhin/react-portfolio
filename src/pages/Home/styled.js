@@ -43,17 +43,13 @@ export const ImageWrapper = styled.div`
 
 export const TextWrapper = styled.div`
   position: relative;
-  /* text-transform: uppercase; */
+  text-transform: uppercase;
   flex-direction: column;
   display: flex;
   text-align: center;
 `
 
 export const MainText = styled.span`
-  /* position: absolute; */
-  /* top: -160px; */
-  /* transform: translateX(-50%); */
-  opacity: 0.8;
   color: ${({ theme }) => theme.fontColor};
   font-size: 3.5rem;
   font-weight: 600;
