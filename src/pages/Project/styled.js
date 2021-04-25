@@ -12,6 +12,7 @@ export const Wrapper = styled(motion.div)`
   ${glassEffect}
 
   margin-top: 3rem;
+  margin-bottom: 2rem;
   padding: 1rem;
 
   .image-gallery {

@@ -9,6 +9,7 @@ export const Wrapper = styled.div`
   grid-template-rows: minmax(200px, 1fr);
   grid-gap: 1rem;
   margin-top: 2rem;
+  margin-bottom: 2rem;
 
   ${respondTo.sm`
     grid-template-columns: repeat(2, minmax(200px, 1fr));
