@@ -50,8 +50,6 @@ const App = () => {
 
             <Header />
 
-            <SideNav />
-
             <Socials onApp boxSize="12rem" iconSize="1.8rem" />
 
             <AnimatePresence initial={false} exitBeforeEnter>
@@ -62,6 +60,8 @@ const App = () => {
                 <Route component={Home} />
               </Switch>
             </AnimatePresence>
+
+            <SideNav />
           </LazyMotion>
         </NavState>
       </ThemeState>

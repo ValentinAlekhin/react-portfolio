@@ -13,6 +13,7 @@ const NavState = ({ children }) => {
   const [coords, setCoords] = useState(null)
 
   const toggleMenuMode = async () => {
+    const body = document.body
     const root = document.querySelector('#root')
 
     if (isMenuOpen) {
@@ -20,8 +21,12 @@ const NavState = ({ children }) => {
 
       await delay(500)
 
+      body.style.height = ''
+      body.style.overflowY = ''
       root.style.overflow = ''
     } else {
+      body.style.height = '100vh'
+      body.style.overflowY = 'hidden'
       root.style.overflow = 'hidden'
 
       toggleMenu(true)

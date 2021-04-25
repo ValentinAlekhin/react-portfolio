@@ -11,7 +11,6 @@ export const Wrapper = styled(motion.div)`
   right: 0;
   left: 0;
   bottom: 0;
-  z-index: 100;
 
   ${respondTo.sm`display: none;`};
 `
@@ -23,7 +22,6 @@ export const Circle = styled(motion.div)`
   transform: translate(50%, -50%);
   background-color: ${({ theme }) => theme.sideNav.background};
   border-radius: 100%;
-  z-index: 10;
 `
 
 export const Content = styled(motion.div)`
@@ -37,7 +35,6 @@ export const Content = styled(motion.div)`
   justify-content: space-between;
   align-items: center;
   height: 80vh;
-  z-index: 10;
 `
 
 export const NavList = styled.ul`
