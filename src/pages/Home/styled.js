@@ -37,6 +37,7 @@ export const ImageWrapper = styled.div`
   border-radius: 50%;
   background-color: #000;
   box-shadow: 0px 7px 20px 14px ${({ theme }) => theme.projectCard.boxShadow};
+  transition: all 0.3s;
 
   ${respondTo.xs`
     width: 70vw;
@@ -74,6 +75,7 @@ export const TextWrapper = styled.div`
   text-transform: uppercase;
   flex-direction: column;
   display: flex;
+  align-items: center;
   text-align: center;
 
   ${respondTo.md`
@@ -107,6 +109,8 @@ export const OtherText = styled.span`
 export const LinkWrapper = styled(motion.div)`
   ${glassEffect}
 
+  display: flex;
+  justify-content: center;
   margin-top: 1rem;
   width: 100%;
   transition: all 0.2s;
@@ -115,6 +119,14 @@ export const LinkWrapper = styled(motion.div)`
     backdrop-filter: blur(5px);
     background-color: ${({ theme }) => theme.projectCard.backgroundHover};
   }
+
+  ${respondTo.md`
+    margin-top: 2rem;
+  `}
+
+  ${respondTo.lg`
+    margin-top: 3rem;
+  `}
 `
 
 export const ProjectsLink = styled(Link)`

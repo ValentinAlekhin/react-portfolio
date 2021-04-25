@@ -16,7 +16,7 @@ const Socials = ({ direction, iconSize, boxSize, onApp }) => {
   const socials = [
     { Ico: TelegramIcon, href: 'https://t.me/alekhin_vv' },
     { Ico: GitHubIcon, href: 'https://github.com/ValentinAlekhin' },
-    { Ico: MailIcon, href: 'mailto:headbangernetwork@gmail.com' },
+    { Ico: MailIcon, href: 'mailto:alekhin.v99@gmail.com' },
   ]
 
   const Component = () => (

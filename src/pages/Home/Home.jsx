@@ -13,7 +13,7 @@ import {
   ProjectsLink,
 } from './styled'
 
-import DarkPhoto from './images/dark.png'
+import DarkPhoto from './images/dark.jpg'
 
 const transition = { duration: 0.3 }
 
