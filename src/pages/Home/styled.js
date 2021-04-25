@@ -29,8 +29,6 @@ export const ImageWrapper = styled.div`
   border-radius: 3px;
   border-radius: 50%;
   background-color: #000;
-  /* background-color: #fff; */
-  /* border: 1px solid ${({ theme }) => theme.projectCard.borderColor}; */
   box-shadow: 0px 7px 20px 14px ${({ theme }) => theme.projectCard.boxShadow};
 
   img {

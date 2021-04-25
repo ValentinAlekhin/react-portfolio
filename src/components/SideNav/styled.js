@@ -7,6 +7,7 @@ import { StyledNavLink } from '../../shared/components'
 
 export const Wrapper = styled(motion.div)`
   position: relative;
+
   ${respondTo.sm`display: none;`}
 `
 
