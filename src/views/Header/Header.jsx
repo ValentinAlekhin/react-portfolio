@@ -1,11 +1,12 @@
 import React, { useContext } from 'react'
 import { NavLink } from 'react-router-dom'
-import loadable from '@loadable/component'
 
 import { ThemeContext } from '../../context/ThemeState'
+import { MenuContext } from '../../context/NavState'
 
 import MainContainer from '../../components/Containers/MainContainer'
 import ThemeToggler from '../../ui/ThemeToggler/ThemeToggler'
+import BurgerMenu from '../../ui/BurgerMenu/BurgerMenu'
 
 import {
   StyledHeader,
@@ -19,12 +20,9 @@ import {
 
 import { StyledNavLink } from '../../shared/components'
 
-const SideNav = loadable(() =>
-  import(/* webpackPrefetch: true */ '../../components/SideNav/SideNav')
-)
-
 const Header = () => {
   const { theme } = useContext(ThemeContext)
+  const { toggleMenuMode } = useContext(MenuContext)
 
   const links = [
     { to: '/', title: 'Home' },
@@ -41,7 +39,8 @@ const Header = () => {
           </Title>
         </NameWrapper>
 
-        <SideNav />
+        <BurgerMenu onClick={toggleMenuMode} />
+
         <NavWrapper>
           <NavList>
             {links.map(({ to, title }, i) => (

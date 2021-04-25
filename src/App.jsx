@@ -28,6 +28,10 @@ const Project = loadable(() =>
   )
 )
 
+const SideNav = loadable(() =>
+  import(/* webpackPrefetch: true */ './components/SideNav/SideNav')
+)
+
 const App = () => {
   const location = useLocation()
   const { theme } = useContext(ThemeContext)
@@ -45,6 +49,8 @@ const App = () => {
             <Background />
 
             <Header />
+
+            <SideNav />
 
             <Socials onApp boxSize="12rem" iconSize="1.8rem" />
 

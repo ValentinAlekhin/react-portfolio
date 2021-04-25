@@ -6,13 +6,18 @@ import { respondTo } from '../../style/_respondTo'
 import { StyledNavLink } from '../../shared/components'
 
 export const Wrapper = styled(motion.div)`
-  position: relative;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 100;
 
-  ${respondTo.sm`display: none;`}
+  ${respondTo.sm`display: none;`};
 `
 
 export const Circle = styled(motion.div)`
-  position: fixed;
+  position: absolute;
   top: 0;
   right: 0;
   transform: translate(50%, -50%);
@@ -23,7 +28,7 @@ export const Circle = styled(motion.div)`
 
 export const Content = styled(motion.div)`
   opacity: ${({ open }) => (open ? 1 : 0)};
-  position: fixed;
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);

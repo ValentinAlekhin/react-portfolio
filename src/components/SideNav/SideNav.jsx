@@ -6,7 +6,6 @@ import useWindowSize from '../../hooks/useWindowSize'
 import { ThemeContext } from '../../context/ThemeState'
 import { MenuContext } from '../../context/NavState'
 
-import BurgerMenu from '../../ui/BurgerMenu/BurgerMenu'
 import Socials from '../Socials/Socials'
 import ThemeToggler from '../../ui/ThemeToggler/ThemeToggler'
 
@@ -72,7 +71,6 @@ const SideNav = () => {
 
   return (
     <Wrapper theme={theme}>
-      <BurgerMenu />
       <Circle
         theme={theme}
         initial={false}

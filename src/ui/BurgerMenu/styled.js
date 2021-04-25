@@ -3,8 +3,6 @@ import styled from 'styled-components'
 import { respondTo } from '../../style/_respondTo'
 
 export const BurgerWrapper = styled.div`
-  position: absolute;
-  transform: translate(-100%, -50%);
   display: flex;
   flex-direction: column;
   justify-content: space-around;
