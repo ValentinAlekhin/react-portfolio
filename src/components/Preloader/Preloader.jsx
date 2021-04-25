@@ -12,7 +12,7 @@ const Preloader = () => {
 
   window.onload = () => {
     const t2 = Date.now()
-    const loadingTimeInSeconds = (t2 - t1) / 1000
+    const loadingTimeInSeconds = (t2 - t1) / 500
     if (loadingTimeInSeconds > 1) {
       exit.transition.delay = 0
     }
