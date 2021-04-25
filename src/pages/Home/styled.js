@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 
 import ContentContainer from '../../components/Containers/ContentContainer'
 
+import { respondTo } from '../../style/_respondTo'
 import { glassEffect } from '../../shared/styles'
 
 export const StyledContentContainer = styled(ContentContainer)`
@@ -13,13 +14,19 @@ export const StyledContentContainer = styled(ContentContainer)`
 `
 
 export const Wrapper = styled(motion.div)`
-  /* ${glassEffect} */
-
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   margin-top: 3rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 1rem;
+
+  ${respondTo.md`
+    flex-direction: row;
+  `}
 `
 
 export const ImageWrapper = styled.div`
@@ -30,6 +37,28 @@ export const ImageWrapper = styled.div`
   border-radius: 50%;
   background-color: #000;
   box-shadow: 0px 7px 20px 14px ${({ theme }) => theme.projectCard.boxShadow};
+
+  ${respondTo.xs`
+    width: 70vw;
+    height: 70vw;
+  `}
+
+  ${respondTo.sm`
+    width: 50vw;
+    height: 50vw;
+  `}
+
+  ${respondTo.md`
+    width: 40vw;
+    height: 40vw;
+    margin-right: 3vw;
+  `}
+
+  ${respondTo.lg`
+    width: 30vw;
+    height: 30vw;
+    margin-right: 5vw;
+  `}
 
   img {
     object-fit: contain;
@@ -46,13 +75,21 @@ export const TextWrapper = styled.div`
   flex-direction: column;
   display: flex;
   text-align: center;
+
+  ${respondTo.md`
+    width: 30vw;
+  `}
 `
 
 export const MainText = styled.span`
   color: ${({ theme }) => theme.fontColor};
-  font-size: 3.5rem;
+  font-size: 2.5rem;
   font-weight: 600;
   letter-spacing: 6px;
+
+  ${respondTo.xs`
+    font-size: 3.5rem;
+  `}
 `
 
 export const OtherText = styled.span`
@@ -61,17 +98,32 @@ export const OtherText = styled.span`
   margin-top: 0.8rem;
   font-size: 1.8rem;
   letter-spacing: 21px;
+
+  ${respondTo.lg`
+    display: block;
+  `}
 `
 
-export const ProjectsLink = styled(Link)`
+export const LinkWrapper = styled(motion.div)`
   ${glassEffect}
 
   margin-top: 1rem;
   width: 100%;
+  transition: all 0.2s;
+
+  &:hover {
+    backdrop-filter: blur(5px);
+    background-color: ${({ theme }) => theme.projectCard.backgroundHover};
+  }
+`
+
+export const ProjectsLink = styled(Link)`
+  color: ${({ theme }) => theme.fontColor};
+  display: block;
   text-transform: uppercase;
   text-align: center;
-  /* background-color: rgba(255, 255, 255, 0.01); */
-  padding: 0.5rem 1rem;
+  margin: 0.5rem 1rem;
+
   font-size: 1.5rem;
   border-radius: 5px;
   letter-spacing: 2px;

@@ -11,6 +11,7 @@ export const Wrapper = styled(motion.div)`
   right: 0;
   left: 0;
   bottom: 0;
+  z-index: -10;
 
   ${respondTo.sm`display: none;`};
 `

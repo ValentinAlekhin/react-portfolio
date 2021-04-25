@@ -9,6 +9,7 @@ import {
   TextWrapper,
   MainText,
   OtherText,
+  LinkWrapper,
   ProjectsLink,
 } from './styled'
 
@@ -46,11 +47,17 @@ const Home = () => {
         <TextWrapper>
           <MainText theme={theme}>Hi, I'm Valentin</MainText>
           <OtherText theme={theme}>Frontend developer</OtherText>
-        </TextWrapper>
 
-        <ProjectsLink to="/projects" theme={theme}>
-          My Projects
-        </ProjectsLink>
+          <LinkWrapper
+            theme={theme}
+            whileHover={{ scale: 1.03 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <ProjectsLink to="/projects" theme={theme}>
+              My Projects
+            </ProjectsLink>
+          </LinkWrapper>
+        </TextWrapper>
       </Wrapper>
     </ContentContainer>
   )
