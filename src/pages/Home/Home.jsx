@@ -48,7 +48,7 @@ const Home = () => {
           <OtherText theme={theme}>Frontend developer</OtherText>
         </TextWrapper>
 
-        <ProjectsLink href="/projects" theme={theme}>
+        <ProjectsLink to="/projects" theme={theme}>
           My Projects
         </ProjectsLink>
       </Wrapper>
