@@ -48,6 +48,7 @@
     ]
   },
   "devDependencies": {
+    "@axe-core/react": "^4.1.1",
     "gzipper": "^4.4.0",
     "progress-bar-webpack-plugin": "^2.1.0",
     "react-app-rewired": "^2.1.8",
