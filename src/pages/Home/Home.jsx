@@ -13,7 +13,8 @@ import {
   ProjectsLink,
 } from './styled'
 
-import DarkPhoto from './images/dark.jpg'
+import DarkJpg from './images/dark.jpg'
+import DarkWebp from './images/dark.webp'
 
 const transition = { duration: 0.3 }
 
@@ -42,7 +43,10 @@ const Home = () => {
         theme={theme}
       >
         <ImageWrapper theme={theme}>
-          <img src={DarkPhoto} alt="Valentin Alekhin" />
+          <picture>
+            <source srcSet={DarkWebp} type="image/webp" />
+            <img src={DarkJpg} alt="Valentin Alekhin" />
+          </picture>
         </ImageWrapper>
         <TextWrapper>
           <MainText theme={theme}>Hi, I'm Valentin</MainText>
