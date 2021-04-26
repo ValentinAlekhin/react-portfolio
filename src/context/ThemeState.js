@@ -23,10 +23,19 @@ const ThemeState = ({ children }) => {
   }
 
   const toggleTheme = () => {
+    const body = document.body
+    const themeColor = document.querySelector('meta[name="theme-color"]')
+
     if (theme.id === '0') {
+      body.style.backgroundColor = '#fff'
+      themeColor.setAttribute('content', '#fff')
+
       setTheme(light)
       saveThemeToLocalStorage(light.id)
     } else {
+      body.style.backgroundColor = '#000'
+      themeColor.setAttribute('content', '#000')
+
       setTheme(dark)
       saveThemeToLocalStorage(dark.id)
     }

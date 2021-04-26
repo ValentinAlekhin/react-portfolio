@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import { Switch, Route, useLocation } from 'react-router-dom'
 import loadable from '@loadable/component'
 import { AnimatePresence, LazyMotion, domAnimation } from 'framer-motion'
+import { ThemeProvider } from 'styled-components'
 
 import GlobalFonts from './fonts/GlobalFonts'
 import GlobalStyle from './style/globalStyle'
@@ -38,33 +39,35 @@ const App = () => {
 
   return (
     <ProjectsState>
-      <ThemeState>
-        <NavState>
-          <LazyMotion features={domAnimation}>
-            <GlobalFonts />
-            <GlobalStyle theme={theme} />
+      <ThemeProvider theme={theme}>
+        <ThemeState>
+          <NavState>
+            <LazyMotion features={domAnimation}>
+              <GlobalFonts />
+              <GlobalStyle />
 
-            <Preloader />
+              <Preloader />
 
-            <Background />
+              <Background />
 
-            <Header />
+              <Header />
 
-            <Socials onApp boxSize="12rem" iconSize="1.8rem" />
+              <Socials onApp boxSize="12rem" iconSize="1.8rem" />
 
-            <AnimatePresence initial={false} exitBeforeEnter>
-              <Switch location={location} key={location.pathname}>
-                <Route exact path="/" component={Home} />
-                <Route exact path="/projects" component={Projects} />
-                <Route exact path="/project/:id" component={Project} />
-                <Route component={Home} />
-              </Switch>
-            </AnimatePresence>
+              <AnimatePresence initial={false} exitBeforeEnter>
+                <Switch location={location} key={location.pathname}>
+                  <Route exact path="/" component={Home} />
+                  <Route exact path="/projects" component={Projects} />
+                  <Route exact path="/project/:id" component={Project} />
+                  <Route component={Home} />
+                </Switch>
+              </AnimatePresence>
 
-            <SideNav />
-          </LazyMotion>
-        </NavState>
-      </ThemeState>
+              <SideNav />
+            </LazyMotion>
+          </NavState>
+        </ThemeState>
+      </ThemeProvider>
     </ProjectsState>
   )
 }
