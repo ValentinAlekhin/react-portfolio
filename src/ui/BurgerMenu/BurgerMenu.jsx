@@ -31,6 +31,7 @@ const BurgerMenu = props => {
       onClick={clickHandler}
       className={className}
       ref={burgerRef}
+      aria-label={isMenuOpen ? 'Close Menu' : 'Open Menu'}
     >
       {Array(3)
         .fill('')

@@ -2,7 +2,9 @@ import styled from 'styled-components'
 
 import { respondTo } from '../../style/_respondTo'
 
-export const BurgerWrapper = styled.div`
+export const BurgerWrapper = styled.button`
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -20,6 +22,7 @@ export const BurgerItem = styled.div`
   position: relative;
   top: 0;
   height: ${({ height }) => height};
+  width: 100%;
   background-color: ${({ theme }) => theme.fontColor};
   transition: all 0.3s linear;
   border-radius: 3px;
