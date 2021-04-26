@@ -25,7 +25,9 @@ export const SunIcon = styled(SunSVG).attrs(({ theme, size }) => ({
   ${iconStyles}
 `
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.button`
+  border: none;
+  background: none;
   display: flex;
   justify-content: space-between;
   align-items: center;

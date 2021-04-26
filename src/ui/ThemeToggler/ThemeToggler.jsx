@@ -8,7 +8,12 @@ const ThemeToggler = ({ boxSize, iconSize }) => {
   const { toggleTheme, theme } = useContext(ThemeContext)
 
   return (
-    <Wrapper theme={theme} onClick={toggleTheme} size={boxSize}>
+    <Wrapper
+      theme={theme}
+      onClick={toggleTheme}
+      size={boxSize}
+      aria-label="Toggle theme"
+    >
       <MoonIcon theme={theme} size={iconSize} />
       <SunIcon theme={theme} size={iconSize} />
     </Wrapper>
