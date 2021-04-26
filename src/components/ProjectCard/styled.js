@@ -6,7 +6,7 @@ import Image from '../Image/Image'
 
 import { glassEffect } from '../../shared/styles'
 
-export const Wrapper = styled(motion.div)`
+export const Wrapper = styled(motion.section)`
   ${glassEffect}
   padding: 1rem;
   transition: all 0.2s;
@@ -32,7 +32,7 @@ export const Status = styled.span`
   font-size: 0.8rem;
 `
 
-export const Title = styled.h4`
+export const Title = styled.h2`
   color: ${({ theme }) => theme.fontColor};
   margin-top: 0.3rem;
   font-size: 1.5rem;

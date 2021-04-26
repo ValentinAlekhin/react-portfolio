@@ -8,7 +8,7 @@ const flexWrap = css`
   flex-wrap: wrap;
 `
 
-export const Wrapper = styled(motion.div)`
+export const Wrapper = styled(motion.main)`
   ${glassEffect}
 
   margin-top: 3rem;
@@ -62,7 +62,7 @@ export const ProjectHeader = styled.div`
   margin-bottom: 2.5rem;
 `
 
-export const Title = styled.div`
+export const Title = styled.h2`
   color: ${({ theme }) => theme.fontColor};
   font-size: 3rem;
   margin-right: 2rem;

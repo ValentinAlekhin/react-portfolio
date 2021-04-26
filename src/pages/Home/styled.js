@@ -13,7 +13,7 @@ export const StyledContentContainer = styled(ContentContainer)`
   justify-content: center;
 `
 
-export const Wrapper = styled(motion.div)`
+export const Wrapper = styled(motion.main)`
   position: fixed;
   top: 50%;
   left: 50%;
@@ -109,8 +109,6 @@ export const OtherText = styled.span`
 export const LinkWrapper = styled(motion.div)`
   ${glassEffect}
 
-  display: flex;
-  justify-content: center;
   margin-top: 1rem;
   width: 100%;
   transition: all 0.2s;
@@ -134,8 +132,7 @@ export const ProjectsLink = styled(Link)`
   display: block;
   text-transform: uppercase;
   text-align: center;
-  margin: 0.5rem 1rem;
-
+  padding: 0.5rem 0;
   font-size: 1.5rem;
   border-radius: 5px;
   letter-spacing: 2px;
